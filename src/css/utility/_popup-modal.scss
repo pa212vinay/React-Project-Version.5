@@ -1,0 +1,41 @@
+@import '../abstracts/mixins';
+.modal{
+    .modal-dialog{
+        max-width: 600px;
+        .modal-content{
+            .modal-header{
+                padding: 10px 15px;
+                background-color: $theme-color;
+                color: $color-white;
+                .modal-title{
+                    font-size: 18px;
+                }
+                .btn-close{
+                    filter: invert(1);
+                    opacity: 1;
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    &:focus-visible{
+                        outline: none;
+                    }
+                }
+            }
+            .modal-body{
+                .cus-mb{
+                    margin-bottom: 20px;
+                }
+                .modal-footer{
+                    button{
+                        height: 40px !important;
+                        &:focus{
+                            outline: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

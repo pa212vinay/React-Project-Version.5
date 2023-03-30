@@ -1,0 +1,156 @@
+$breakpoints: (
+    "xs" : 0,
+    "sm" : 575.9px,
+    "md" : 767.9px,
+    "lg" : 991.9px,
+    "xl" : 1199.9px,
+    "xl-xxl" : 1339.9px,
+    "xxl": 1399.9px,
+    "sm-b": 576px,
+    "md-b":768px,
+    "lg-b":992px,
+    "xl-b":1200px,
+    "xl-b-xxl":1340px,
+    "xxl-b":1400px,
+    "sm-d":320px
+);
+
+@mixin xs {
+    @media (max-width: map-get($breakpoints, "xs")) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: map-get($breakpoints, "sm")) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: map-get($breakpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: map-get($breakpoints, "lg")) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (max-width: map-get($breakpoints, "xl")) {
+        @content;
+    }
+}
+
+@mixin xl-xxl {
+    @media (max-width: map-get($breakpoints, "xl-xxl")) {
+        @content;
+    }
+}
+
+@mixin xl-bt-xxl {
+    @media (max-width: map-get($breakpoints, "xl-b-xxl")) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (max-width: map-get($breakpoints, "xxl")) {
+        @content;
+    }
+}
+
+@mixin sm-b {
+    @media (min-width: map-get($breakpoints, "sm-b")) {
+        @content;
+    }
+}
+
+@mixin md-b {
+    @media (min-width: map-get($breakpoints, "md-b")) {
+        @content;
+    }
+}
+
+@mixin lg-b {
+    @media (min-width: map-get($breakpoints, "lg-b")) {
+        @content;
+    }
+}
+
+@mixin xl-b {
+    @media (min-width: map-get($breakpoints, "xl-b")) {
+        @content;
+    }
+}
+
+@mixin xl-b-xxl {
+    @media (min-width: map-get($breakpoints, "xl-b-xxl")) {
+        @content;
+    }
+}
+
+@mixin xxl-b {
+    @media (min-width: map-get($breakpoints, "xxl-b")) {
+        @content;
+    }
+}
+
+@mixin sm-d {
+    @media (max-width: map-get($breakpoints, "sm-d")) {
+        @content;
+    }
+}
+
+// 1200px and 1340px
+@mixin xl_bt_xl-b-xxl {
+    @media (min-width: map-get($breakpoints, "xl-b")) and (max-width: map-get($breakpoints, "xl-b-xxl")) {
+        @content;
+    }
+}
+
+// 992px and 1340px
+@mixin lg-b_bt_xl-b-xxl {
+    @media (min-width: map-get($breakpoints, "lg-b")) and (max-width: map-get($breakpoints, "xl-b-xxl")) {
+        @content;
+    }
+}
+
+// 992px and 1199.9px
+@mixin lg-b_bt_xl-b {
+    @media (min-width: map-get($breakpoints, "lg-b")) and (max-width: map-get($breakpoints, "xl")) {
+        @content;
+    }
+}
+
+// 767.9px and 992px
+@mixin md_bt_lg {
+    @media (min-width: map-get($breakpoints, "md-b")) and (max-width: map-get($breakpoints, "lg")) {
+        @content;
+    }
+}
+
+// 575.9px and 767.9px
+@mixin sm_bt_md {
+    @media (min-width: map-get($breakpoints, "sm-b")) and (max-width: map-get($breakpoints, "md-b")) {
+        @content;
+    }
+}
+
+
+//767.9px
+@mixin min-md {
+    @media(min-width: map-get($breakpoints, "md-b")) {
+        @content;
+    }
+}
+
+// 1199px and 1400px
+@mixin xl_bt_lg {
+    @media (min-width: map-get($breakpoints, "xl-b")) and (max-width: map-get($breakpoints, "xxl")) {
+        @content;
+    }
+}

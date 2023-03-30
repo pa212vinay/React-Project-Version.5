@@ -1,0 +1,47 @@
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+@import './abstracts/variables';
+@import './base/base-dir';
+
+    @font-face {
+    font-family: "poppins_light";
+    src: local("poppinsLight"),
+        url("../fonts/Poppins-Light.ttf") format("truetype");
+    font-weight: light;
+    }
+
+    @font-face {
+        font-family: "poppins_regular";
+        src: local("poppinsRegular"),
+            url("../fonts/Poppins-Regular.ttf") format("truetype");
+        font-weight: normal;
+        }
+
+    @font-face {
+        font-family: "poppins_medium";
+        src: local("poppinsMedium"),
+            url("../fonts/Poppins-Medium.ttf") format("truetype");
+        font-weight: medium;
+        }
+    
+    @font-face {
+        font-family: "poppins_semibold";
+        src: local("poppinsSemibold"),
+            url("../fonts/Poppins-SemiBold.ttf")
+             format("truetype");
+        font-weight: semibold;
+    }
+    
+    @font-face {
+        font-family: "poppins_bold";
+        src: local("poppinsBold"),
+            url("../fonts/Poppins-Bold.ttf") format("truetype");
+        font-weight: bold;
+    }
+
+    @font-face {
+        font-family: "poppinsexibold";
+        src: local("poppinsExtraBold"),
+            url("../fonts/Poppins-ExtraBold.ttf") format("truetype");
+        font-weight: extrabold;
+    }

@@ -1,0 +1,73 @@
+{
+  "name": "customer",
+  "version": "0.1.0",
+  "homepage": "https://pa212vinay.github.io/react-project",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.3",
+    "@mui/styled-engine-sc": "^5.10.3",
+    "@react-icons/all-files": "^4.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.0",
+    "bootstrap-select": "^1.13.18",
+    "bootstrap-select-dropdown": "^0.14.6",
+    "boxicons": "^2.1.2",
+    "cdbreact": "^1.5.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-bootstrap-floating-label": "^1.6.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-email-editor": "^1.6.3",
+    "react-icons": "^4.4.0",
+    "react-pro-sidebar": "^0.7.1",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-signature-canvas": "^1.0.6",
+    "react-tabs": "^5.1.0",
+    "react-tag-input-component": "^2.0.2",
+    "react-vertical-timeline-component": "^3.5.2",
+    "sass": "^1.55.0",
+    "skypack": "^0.3.2",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@iconify/react": "^4.1.0",
+    "@iconify/react-with-api": "^1.0.0-rc.7",
+    "gh-pages": "^5.0.0"
+  }
+}

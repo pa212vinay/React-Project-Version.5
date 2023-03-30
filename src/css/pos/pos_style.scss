@@ -1,0 +1,516 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '../abstracts/abstract-dir';
+@import '../base/base-dir';
+@import '../utility/utility-dir';
+
+
+.pos_header {
+    padding: 0;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+    #basic-navbar-nav {
+        padding: 0px;
+    }
+
+    .custom_name {
+        display: flex;
+        align-items: center;
+
+        .pos_hamburger {
+            font-size: $font-size-base-px + 9;
+        }
+
+        .PosModal {
+            & a {
+                font-size: $font-size-base-px + 4;
+                // font-weight: 500;
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .cus_pos_nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        & svg {
+            font-size: 20px;
+            color: $theme-color;
+        }
+
+        & span {
+            color: $color-text;
+        }
+
+        &.cus_pos_login {
+            border-left: 2px solid #00000024;
+
+            & svg {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+.pos_cus_name {
+    .modal-dialog {
+        margin-left: 10px;
+        top: 20px;
+        max-width: 220px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 4%;
+            border-top-color: #ffffff !important;
+            height: 4%;
+            top: -7px;
+            left: 60px;
+            border: 7px solid transparent;
+            border-width: 0.5rem 0.5rem 0;
+            transform: rotate(180deg);
+        }
+
+
+        .modal-content {
+            max-height: 300px;
+
+            .modal-header {
+                border-bottom: 0px;
+
+                & form {
+                    width: 100%;
+
+                    & input {
+                        border: 1px solid #0000007d;
+                        height: 35px;
+                        width: 100%;
+                        border-radius: 5px;
+                        padding-left: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                    .pos_cus_name_btn {
+                        text-align: end;
+
+                        .pos_cus_name_save_btn {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .modal-body {
+            border-top: 1px solid #dee2e6;
+            overflow: auto;
+        }
+
+    }
+}
+
+.selecOutstock {
+    display: flex;
+
+    .stockCategory {
+        padding-right: 20px;
+    }
+}
+
+.searchItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .selectCategory {
+        width: 47%;
+        padding-right: 12px;
+
+        & select {
+            height: 40px;
+            color: $black-color !important;
+        }
+    }
+
+    .SearchProduct {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 47%;
+
+        & input {
+            height: 40px;
+            margin-right: 0 !important;
+        }
+
+        .SearchIcon {
+            border: none;
+            position: absolute;
+            right: 3px;
+            background-color: white;
+            z-index: 99999;
+            padding: 6px;
+            border-radius: 4px;
+
+            & svg {
+                font-size: $font-size-base-px + 9px;
+                color: $theme-color ;
+            }
+        }
+    }
+
+    .qrSearch {
+        display: flex;
+        width: 6%;
+        justify-content: end;
+
+        .qrSearchIcon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .qrSearchImg {
+                width: 25px;
+            }
+
+            .qrSearchText {
+                font-size: $font-size-base-narrow-px - 2;
+                font-weight: $font-weight-bold ;
+            }
+        }
+    }
+
+}
+
+/* ----- POS First Design CSS ----- */
+// .productCategoryPos {
+//     & .cusPosItem {
+//         & .productCardLink {
+//             position: relative;
+//             color: inherit;
+
+//             .productCard {
+//                 // box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+//                 box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.25);
+//                 background: $color-white;
+//                 border-radius: 12px;
+//                 position: relative;
+//                 overflow: hidden;
+//                 transition: transform 0.5s;
+
+//                 &:hover {
+//                     transform: translateY(-5px);
+//                 }
+
+//                 .cardImg {
+//                     background: #0b76c91a;
+//                     border-radius: 12px;
+//                     text-align: center;
+
+//                     & img {
+//                         width: 135px;
+//                     }
+//                 }
+
+//                 .posCardDetail {
+//                     padding: 10px;
+
+//                     .posCardHeading {
+//                         overflow: hidden;
+//                         text-overflow: ellipsis;
+//                         display: -webkit-box;
+//                         -webkit-line-clamp: 2;
+//                         -webkit-box-orient: vertical;
+
+//                     }
+
+//                     .posCodePrice {
+//                         display: flex;
+//                         justify-content: space-between;
+
+//                         .posPrice {
+//                             color: #0B76C9;
+//                         }
+//                     }
+//                 }
+
+//                 .productInfoIcon {
+//                     position: absolute;
+//                     top: 0;
+//                     right: 0;
+//                     display: flex;
+//                     align-items: center;
+//                     border-top-right-radius: 11px;
+//                     border-bottom-left-radius: 11px;
+//                     overflow: hidden;
+
+//                     & .InfoIcon {
+//                         display: inline-flex;
+//                         color: $color-white;
+//                         padding: 5px;
+//                         background-color: $theme-color;
+//                         font-size: 20px;
+//                     }
+//                 }
+
+//                 .productOutofStock {
+//                     position: absolute;
+//                     top: 19px;
+//                     left: -27px;
+//                     font-size: 10px;
+//                     background: #0B76C9;
+//                     padding: 3px 23px;
+//                     color: #fff;
+//                     font-weight: 600;
+//                     rotate: -43deg;
+//                 }
+//             }
+
+//         }
+
+//     }
+
+// }
+
+/* ----- POS Second Design CSS ----- */
+.productCategoryPos {
+    & .cusPosItem {
+        & .productCardLink {
+            position: relative;
+            color: inherit;
+
+            .productCard {
+                // box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+                box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+                background: $color-white;
+                border-radius: 12px;
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.5s;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                .posCardHeading {
+                    padding: 10px 10px 0px 10px;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    font-size: 13px !important;
+                    min-height: 53px;
+
+                }
+
+                .cardImg {
+                    background: #0b76c91a;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+
+                    & img {
+                        width: 135px;
+                    }
+                }
+
+                .posCardDetail {
+                    padding: 10px;
+
+
+
+                    .posCodePrice {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .posPrice {
+                            color: #0B76C9;
+                        }
+                    }
+                }
+
+                .productInfoIcon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    border-bottom-left-radius: 11px;
+                    overflow: hidden;
+
+                    & .InfoIcon {
+                        display: inline-flex;
+                        color: $color-white;
+                        padding: 5px;
+                        background-color: $theme-color;
+                        font-size: 20px;
+                    }
+                }
+
+                .productOutofStock {
+                    position: absolute;
+                    top: 19px;
+                    left: -27px;
+                    font-size: 10px;
+                    background: #0B76C9;
+                    padding: 3px 23px;
+                    color: #fff;
+                    font-weight: 600;
+                    rotate: -43deg;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.addCustomerHead {
+    background: #0b76c9;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .addCustomer {
+        display: flex;
+        align-items: center;
+
+        .addCusUserIcon {
+            color: #fff;
+            font-size: 21px;
+        }
+
+        .addCusText {
+            padding-left: 10px;
+            color: #fff;
+        }
+    }
+
+    .addCusIcon {
+        font-size: 22px;
+        color: #fff;
+    }
+}
+
+.productDetail {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    margin-bottom: 20px;
+
+    .productDetailItem {
+        display: flex;
+        padding: 20px;
+
+        .productDetailItemImg {
+            width: 79px;
+            height: 79px;
+            background: $color-white;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .productDetailItemHeading {
+            display: flex;
+            flex-direction: column;
+
+            .proHeadingBtn {
+                display: flex;
+            }
+
+            .proEditDeletIcon {
+                margin-left: 10px;
+                display: flex;
+
+                .proEditIcon {
+                    font-size: 20px;
+                    display: inline-flex;
+                    padding-right: 5px;
+                }
+
+                .prodeleteIcon {
+                    font-size: 20px;
+                    display: inline-flex;
+                    color: $btn_red;
+                }
+            }
+        }
+    }
+}
+
+.addDiscountTab {
+    background: rgba(185, 222, 250, 0.44);
+    border: 0.5px solid #0B76C9;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+    .addDiscountBtn {
+        display: flex;
+        justify-content: space-between;
+
+        .discountBtn {
+            font-size: 16px;
+
+            & svg {
+                font-size: 20px;
+            }
+        }
+
+        & svg {
+            font-size: 20px;
+        }
+    }
+}
+
+.priceTotalTab {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+    .priceSubTotal {
+        padding: 5px 0px;
+        display: flex;
+        justify-content: space-between;
+
+        &.priceTotal {
+            border-top: 1px solid #CCCCCC;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+
+            .subTotalHeading {
+                font-size: 18px;
+                color: $theme-color;
+                font-weight: $font-weight-headings;
+            }
+
+            .subTotalHeading {
+                font-size: 18px;
+                color: $theme-color;
+                font-weight: $font-weight-headings;
+            }
+        }
+    }
+}
+
+.PaymentBtnTab {
+    .PaymentBtn {
+        width: 100%;
+        height: 40px;
+    }
+}

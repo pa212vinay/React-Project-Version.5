@@ -1,0 +1,511 @@
+@import '../abstracts/variables';
+
+.error {
+    font-size: 12px;
+    color: $error-color;
+}
+
+.nav-tabs {
+    & .nav-item {
+        & .nav-link {
+            border-radius: 0px !important;
+            padding: 10px 15px;
+            margin-right: 2px;
+            font-size: $font-size-base - 2px;
+            color: $color-text;
+
+            &:hover {
+                background-color: #eee;
+                color: #666666 !important;
+            }
+        }
+    }
+}
+
+
+
+form {
+    .card {
+        border-radius: 0;
+
+        .card-header {
+            font-size: $font-size-base - 1px;
+            font-weight: $font-weight-headings;
+            background-color: $heading-background;
+            border-radius: 0;
+            border-color: $border-color;
+        }
+
+        & .row {
+            padding: 15px;
+        }
+
+        .form-group {
+            position: relative;
+
+            & label {
+                font-size: 12px;
+                line-height: 1.2;
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+                pointer-events: none;
+                width: auto;
+                transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+            }
+
+            & input {
+                height: $field-height ;
+                box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                font-size: $font-size-base - 2px;
+
+                ::placeholder {
+                    font-size: $font-size-base - 2px;
+                }
+            }
+
+            & select {
+                height: $field-height;
+                box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                font-size: $font-size-base - 2px;
+            }
+
+            & textarea {
+                box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                font-size: $font-size-base - 2px;
+            }
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+
+    & label {
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+        pointer-events: none;
+        width: auto;
+        transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+    }
+
+    & input {
+        height: $field-height !important;
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        font-size: $font-size-base - 2px;
+
+        ::placeholder {
+            font-size: $font-size-base - 2px;
+        }
+    }
+
+    & select {
+        height: $field-height !important;
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        font-size: $font-size-base - 2px;
+    }
+
+    & textarea {
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        font-size: $font-size-base - 2px;
+    }
+}
+
+.cus-form-group {
+
+    & label {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 9;
+        color: $black-color;
+    }
+
+    & input {
+        z-index: 1;
+
+        &::placeholder {
+            opacity: 0;
+            visibility: hidden;
+            color: transparent;
+        }
+
+        &:focus {
+            border-color: $outline-color;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+
+            &~label {
+                top: -0.50rem;
+                font-size: 11px;
+                padding: 0px 4px;
+                background-color: $color-white;
+            }
+        }
+
+        &:not(:placeholder-shown).fill-input {
+            &:not(:focus) {
+                &~.float-label {
+                    top: -0.50rem;
+                    left: 0.75rem;
+                    z-index: 9;
+                    font-size: 11px;
+                    padding: 0px 4px;
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+
+    & textarea {
+        height: 54px !important;
+
+        &::placeholder {
+            opacity: 0;
+            visibility: hidden;
+            color: transparent;
+        }
+
+        &:focus {
+            border-color: $outline-color;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+
+            &~label {
+                top: -0.50rem;
+                font-size: 11px;
+                padding: 0px 4px;
+                background-color: $color-white;
+            }
+        }
+
+        &:not(:placeholder-shown).form-control {
+            &:not(:focus) {
+                &~.float-label {
+                    top: -0.50rem;
+                    left: 0.75rem;
+                    z-index: 9;
+                    font-size: 11px;
+                    padding: 0px 4px;
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+
+    & select {
+        &:focus {
+            border-color: $outline-color  !important;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+        }
+    }
+
+    & .react-tagsinput {
+        cursor: text;
+
+        &.react-tagsinput--focused {
+            transition: all 0.3s ease-in-out;
+
+            &~label {
+                top: -0.50rem;
+                left: 0.75rem;
+                background-color: $color-white;
+                font-size: 11px !important;
+                padding: 0px 4px !important;
+            }
+        }
+    }
+
+    .cus_barcode_label {
+        position: absolute;
+        right: 9px;
+        top: 5px;
+        text-align: center;
+        line-height: 10px;
+        color: $border-theme-color;
+    }
+
+    .cus-taginput {
+        top: -0.5rem;
+        left: 0.75rem;
+        background-color: #fff;
+        font-size: 11px !important;
+        padding: 0px 4px !important;
+    }
+
+}
+
+.cus-select-group {
+    label {
+        position: absolute;
+        top: -0.50rem;
+        left: 0.75rem;
+        background-color: $color-white;
+        font-size: 11px !important;
+        padding: 0px 4px !important;
+    }
+
+    & select {
+        &:focus {
+            border-color: $outline-color  !important;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+        }
+    }
+}
+
+.cus-quantity-checkbox {
+    span {
+        font-size: 14px;
+
+        input {
+            height: auto !important;
+        }
+    }
+
+    &>:first-child {
+        margin-right: 15px;
+    }
+}
+
+.cus-checkbox-input {
+    & .select-category {
+        label {
+            font-size: $font-size-base - 2px !important;
+            font-weight: 700;
+
+            input {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .dx-widget {
+        .dx-treelist-header-panel {
+            .dx-toolbar-after {
+                width: 100%;
+                padding-left: 0px;
+
+                .dx-treelist-search-panel {
+                    width: 100% !important;
+                    margin-left: 0px !important;
+
+                    .dx-icon-search {
+                        input {
+                            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .dx-treelist-rowsview {
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        }
+    }
+
+    .dx-show-invalid-badge {
+        margin-bottom: 10px;
+
+        .dx-lookup-field-wrapper {
+            box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        }
+    }
+}
+
+
+.form-group {
+    .accordion {
+        .accordion-item {
+            border: 1px solid $border-sec-color  !important;
+
+            .accordion-header {
+                button {
+                    padding: 10px !important;
+                    font-size: 14px;
+                    font-weight: 700;
+                    height: 42px;
+                    background-color: $accordion-background-color;
+                    color: $color-text;
+
+                    &:focus {
+                        box-shadow: none !important;
+                    }
+                }
+            }
+
+            .accordion-body {
+                padding: 5px 10px !important;
+            }
+
+        }
+    }
+}
+
+.react-tagsinput {
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    height: $field-height;
+
+    &.react-tagsinput--focused {
+        border-color: #66afe9 !important;
+        outline: 0 !important;
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
+    }
+
+    input {
+        box-shadow: none !important;
+        border: none;
+
+        &:focus {
+            box-shadow: none !important;
+            border: none !important;
+
+            &~label {
+                top: -0.75rem;
+            }
+        }
+
+    }
+
+    .react-tagsinput-tag {
+        padding: 5px 10px;
+        font-size: 10.5px;
+        color: $color-white;
+        font-weight: 900;
+        line-height: $line-height-headings;
+        background-color: $barcode-color;
+        border-radius: 0.25em;
+        border: none;
+
+        a {
+            font-size: 16px;
+
+            &::before {
+                content: " ×";
+                color: $color-white;
+                position: relative;
+                top: 2px;
+                left: 3px;
+            }
+        }
+    }
+
+
+}
+
+// .react-tagsinput span:not(.react-tagsinput-tag) .float-label{
+//     top: -0.50rem;
+//     left: 0.75rem;
+//     z-index: 9;
+//     font-size: 11px;
+//     padding: 0px 4px;
+//     background-color: $color-white;
+// }
+
+.cus-upload-img {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cus-add-category {
+    margin-top: 75px;
+
+    .cus-category-field {
+        margin-bottom: 20px;
+    }
+
+    .dx-show-invalid-badge {
+        margin-bottom: 20px;
+    }
+
+    button {
+        float: right;
+    }
+}
+
+.cus-invt-form {
+    .accordion-button {
+        &::after {
+            flex-shrink: 0;
+            width: 1.1rem !important;
+            height: 1.1rem !important;
+            margin-left: auto;
+            content: "";
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" /></svg>') !important;
+            background-repeat: no-repeat;
+            background-size: 1.1rem !important;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        &:not(.collapsed)::after {
+            transform: none !important;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z" /></svg>') !important;
+        }
+    }
+}
+
+.cus-radio-group {
+    .cus-radio-btn {
+        display: flex;
+        align-items: center;
+
+        .radio-label {
+            font-size: 13px;
+            font-weight: 700;
+            padding-left: 5px;
+        }
+    }
+
+    .current_add {
+        font-size: 13px;
+        padding-left: 20px;
+    }
+}
+
+.cus-checkbox-group {
+    .cus-checkbox-btn {
+        display: flex;
+        align-items: center;
+
+        .checkbox-label {
+            font-size: 13px;
+            font-weight: 700;
+            padding-left: 5px;
+        }
+        .without-checkbox-label{
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+
+    .current_add {
+        font-size: 13px;
+        padding-left: 20px;
+    }
+    .recomm_add{
+        font-size: 13px;
+    }
+}
+
+form{
+    .form-group{
+        &.cus-form{
+            label{
+                pointer-events: all !important;
+            }
+        }
+    }
+    
+}

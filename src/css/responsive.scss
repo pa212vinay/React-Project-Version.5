@@ -1,0 +1,134 @@
+@import "./abstracts/_variables.scss";
+    
+@media(max-width: 1401px) and (min-width: 375px) {
+    .subheader a {
+        min-width: 120px !important;
+    }
+}
+
+@media(max-width:1024px) {
+    .btn_cancel {
+        width: 90px;
+    }
+}
+
+@media(max-width:991px) {
+    .subheader {
+        background: $color-white;
+        box-shadow: unset;
+        border-radius: unset;
+        margin: 0;
+        height: 56px !important;
+        display: table;
+        width: 100%;
+    }
+    .subheader .nav-item {
+        margin-top: 10px;
+    }
+    .r_mt-4 {
+        margin-top: 20px !important;
+    }
+    .r_mt-3{
+        margin-top: 12px !important;
+    }
+    .active::after{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+   
+    .r_mt-4 {
+        margin-top: 20px !important;
+    }
+    .r_mb-4 {
+        margin-bottom: 20px;
+    }
+    .txt_balence {
+        margin-top: 20px;
+    }
+    .md_mt-2{
+        margin-top: 10px !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .r_mt-2 {
+        margin-top: 10px !important;
+    }
+    .r_mt-4 {
+        margin-top: 20px !important;
+    }
+    .r_font-16 {
+        font-size: $font-size-base;
+    }
+    .p-4 {
+        padding: 15px !important;
+    }
+    .line {
+        display: none;
+    }
+    .r_w-100{
+        width: 100% !important;
+    }
+    .r_ms-0{
+        margin-left: 0px !important;
+    }
+    .r_mt-1 {
+        margin-top: 7px !important;
+    }
+    .btn-hover{
+        width: 100% !important;
+    }
+    .orderText{
+        position: unset !important;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .r_font-12 {
+        font-size: $font-size-base-px - 4;
+    }
+    .orderText {
+        position: unset !important;
+    }
+    .sm_w-100{
+        width: 100% !important;
+    }
+    .header_toggle {
+        position: absolute;
+        top: 6px !important;
+        right: 7px !important;
+    }
+    button.navbar-toggler.collapsed {
+        padding: 5px 7px !important;
+        // margin-top: 6px;
+    }
+    .navbar-toggler-icon {
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+
+    button.navbar-toggler {
+        padding: 5px 7px !important;
+    }
+    .shiftRigh{
+        position: unset !important;
+    }
+}
+
+@media (min-width: 969px){
+    .custom_nav {
+        padding: 10px;
+        flex-direction: unset !important;
+    }
+}
+
+@media(max-width: 1700px) and (min-width: 1200px) {
+    .orderTab {
+        .orderText{
+            position: unset !important;
+        }
+    }
+}
