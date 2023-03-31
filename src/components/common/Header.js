@@ -19,9 +19,10 @@ function head() {
           <div className='getstart'>
             <a className='btn-hover getStartBtn'>
               Getting started
-            </a>            <span className='globe'>
+            </a>
+            <a className='globe'>
               <img src={globe} alt="globe" />
-            </span>
+            </a>
           </div>
           <Nav className='cus-search-bar'>
             <Nav.Item className='searchInput r_mt-1'>
