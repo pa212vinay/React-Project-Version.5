@@ -452,7 +452,10 @@ accordion-header {
 }
 
 .getstart {
-    .btn-hover.getStartBtn {
+    display: flex;
+    align-items: center;
+
+    .getStartBtn {
         background-image: linear-gradient(to right, $theme-color, $theme-color, #04befe, $theme-color);
         border: unset;
         border-radius: 50px;
@@ -974,7 +977,7 @@ button#controlled-tab-example-tab-Manual-1 {
 
                 .find_input {
                     width: 135px;
-            
+
                     @include sm {
                         width: 100%;
                     }
