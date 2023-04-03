@@ -697,6 +697,10 @@ button#controlled-tab-example-tab-Manual-1 {
 /* ------------------- Header Start------------------- */
 .l_navbar,
 .sidebar {
+    @include md {
+        display: none;
+    }
+
     .pro-sidebar {
         min-width: 230px;
         width: 230px;
@@ -2012,5 +2016,65 @@ button.refeshBtn {
         font-size: $font-size-base-px + 14;
         margin-right: 15px;
         color: $theme-color
+    }
+}
+
+.mobileSideBar {
+    @include md-b {
+        display: none;
+    }
+
+    .sideBarIcon {
+        justify-content: start;
+        cursor: pointer;
+        transition: 0.5s ease-out;
+
+        img {
+            width: 50%;
+        }
+
+        svg {
+            font-size: 20px;
+        }
+    }
+
+    .mobileSideBarMenu {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        background-color: #000000a6;
+        z-index: 9999;
+        transition: all 0.5s;
+
+        .mSBcloseIcon {
+            text-align: end;
+            color: #fff;
+            position: absolute;
+            right: 0;
+            padding: 5px;
+        }
+
+        .mSBMenu {
+            width: 250px;
+            background: #0b76c9;
+            height: 100vh;
+            padding: 10px 15px;
+
+            ul {
+                padding-top: 20px;
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .mSBLogo {
+            width: 140px;
+        }
     }
 }
