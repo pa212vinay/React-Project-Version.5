@@ -8,7 +8,7 @@ export default function Layout() {
         <>
             <div className='app_page'>
                 <Sidebar />
-                <div className='layout_content'>
+                <div className='layout_content' id='layoutContentId'>
                     <Header />
                     <Outlet />
                 </div>

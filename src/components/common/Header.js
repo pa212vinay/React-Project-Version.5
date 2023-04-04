@@ -92,11 +92,16 @@ export default function Header() {
 
   const ShowMenu = () => {
     console.log('Run');
+    document.body.style.overflow = "hidden";
     setShowSidebar(cssNadd);
+    document.getElementById('layoutContentId').classList.add("layoutContentScroll");
+    
   }
 
   const hideSidebar = () => {
     setShowSidebar(cssadd);
+    document.body.style.overflow = "scroll";
+    document.getElementById('layoutContentId').classList.remove("layoutContentScroll");
   }
 
   return (
@@ -106,16 +111,31 @@ export default function Header() {
           <div className='getstart'>
             <div className='mobileSideBar' >
               <a className='sideBarIcon' onClick={ShowMenu}>
-                <img src={sidebarIcon} alt="globe" /> <Icon icon="material-symbols:arrow-right-alt-rounded" />
+                <img src={sidebarIcon} alt="globe" /> <Icon className='mSBArrow' icon="material-symbols:arrow-right-alt-rounded" />
               </a>
               <div className='mobileSideBarMenu' style={showSidebar}>
                 <div className='mSBcloseIcon'><Icon icon="mingcute:close-fill" onClick={hideSidebar} /></div>
                 <div className='mSBMenu'>
                 <div className='mSBLogo'><img src={hiecorLogo} alt="" /></div>
                   <ul>    
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Customer Service</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><Icon icon="fa-solid:home" /> <span>Dashboard</span></a></li>
+                    <li><a href="#"><Icon icon="mdi:table" /> <span>Customer Service</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Contact</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Email</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Ecommerce</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Social</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Inventory</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Fulfillment</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Routing</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Tracking</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Report</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Routing</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Tracking</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Report</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>404 page</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Help</span> </a></li>
+                    <li><a href="#"><Icon icon="carbon:user-filled" /> <span>Setting</span> </a></li>
+                    
                   </ul>
                 </div>
               </div>
