@@ -29,6 +29,10 @@ body {
     }
 }
 
+.layoutContentScroll{
+    overflow-y: hidden !important;
+}
+
 .head_text {
     font-size: calc(1.3rem + .6vw);
     font-weight: $font-weight-headings;
@@ -2033,8 +2037,30 @@ button.refeshBtn {
             width: 50%;
         }
 
-        svg {
+        .mSBArrow {
             font-size: 20px;
+            color: #0b76c9;
+
+            @include keyframes(slide-in) {
+                0% {
+                    transform: translateX(-30%);
+                }
+
+                50% {
+                    transform: translateX(30%);
+                }
+
+                100% {
+                    transform: translateX(-30%);
+                }
+
+                //   100% {
+                //     transform: translateX(40%);
+                //   }
+            }
+
+            //   animation: slide-in 1000ms;
+            @include animate(slide-in, 2000ms, infinite);
         }
     }
 
@@ -2053,6 +2079,10 @@ button.refeshBtn {
             position: absolute;
             right: 0;
             padding: 5px;
+
+            svg {
+                font-size: 25px;
+            }
         }
 
         .mSBMenu {
@@ -2065,9 +2095,25 @@ button.refeshBtn {
                 padding-top: 20px;
 
                 li {
+
                     a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
                         text-decoration: none;
                         color: #fff;
+                        padding: 8px 5px;
+                        margin-bottom: 5px;
+
+                        &:hover {
+                            background: #ffffff;
+                            border-radius: 4px;
+                            color: #0b76c9;
+                        }
+
+                        span {
+                            padding-left: 15px;
+                        }
                     }
                 }
             }
