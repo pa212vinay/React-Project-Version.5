@@ -73,6 +73,8 @@ import PosLayout from "./components/pos/PosLayout";
 
 // -----Report------- 
 import Report from './components/report/Report';
+import Report_Sidebar from './components/report/Report_Sidebar';
+
 
 
 function App() {
@@ -145,6 +147,7 @@ function App() {
 
                 {/* -----Report------- */}
                 <Route path="/Report" element={<Report />} />
+                <Route path="/Report_Sidebar" element={<Report_Sidebar />} />
               </Route>
 
 
