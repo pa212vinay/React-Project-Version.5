@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Nav, Tab, Form, Table, NavLink } from 'react-bootstrap';
+import { Row, Col, Nav, Tab, Form, Table } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import "react-datepicker/dist/react-datepicker.css";
+
+import Report_Sidebar from "./Report_Sidebar";
 
 const Report_Inner = () => {
     const [date, setDate] = useState(new Date());
@@ -27,7 +29,7 @@ const Report_Inner = () => {
             console.log('else case', Side, Sidemargin);
         }
     }
-
+    const [isActive, setIsActive] = useState(false);
     return (
         <>
             <div fluid className='report'>
@@ -38,25 +40,21 @@ const Report_Inner = () => {
                                 <Row className='g-3'>
                                     <div className='col-md-12'>
                                         <div id="sidebar-wrapper" style={Side}>
-                                            <Icon icon="ic:round-close" className="close-icon" onClick={showHide} />
-                                            <ul class="sidebar-nav">
-                                                <li class="sidebar-brand"> <a href="#"> Report </a> </li>
-                                                <li> <NavLink>Sales Summary</NavLink> </li>
-                                                <li> <NavLink>Transactions By Agent</NavLink> </li>
-                                                <li> <NavLink>Product Profitability</NavLink> </li>
-                                                <li> <NavLink>Inventory Summary</NavLink> </li>
-                                                <li> <NavLink>Inventory by Category</NavLink> </li>
-                                                <li> <NavLink>Inventory Totals</NavLink> </li>
-                                                <li> <NavLink>Customer Data Collection</NavLink> </li>
-                                                <li> <NavLink>zReport</NavLink> </li>
-                                                <li> <NavLink>zSample1</NavLink> </li>
-                                            </ul>
-                                        </div>
+                                        <Report_Sidebar/>
+                                        </div >
                                         <div id="page-content-wrapper" style={Sidemargin}>
                                             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                                                 <Row className="p-3">
                                                     <Col sm={12} md={12} lg={12} className='mb-3'>
-                                                        <Icon icon="uis:bars" className="baricon" onClick={showHide} />
+                                                        <div className="mb-3" onClick={showHide} >
+                                                        {isActive? 
+                                                        <Icon icon="ic:round-close" className="baricon  close-icon" onClick={()=>{
+                                                            setIsActive(!isActive)}}/>:
+                                                        
+                                                            <Icon icon="uis:bars" className="baricon" onClick={()=>{
+                                                                setIsActive(!isActive)}}/>
+                                                        }
+                                                        </div>
                                                         <Nav variant="pills " >
                                                             <Nav.Item>
                                                                 <Nav.Link eventKey="first">Sales Summary Parameters</Nav.Link>
@@ -106,13 +104,14 @@ const Report_Inner = () => {
                                                                             <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                         </div>
                                                                     </Col>
-                                                                    <div className="text-end">
+                                                                    <div className="text-center">
                                                                         <button className="btn-hover color-3 my-3">View Report</button>
                                                                     </div>
 
                                                                     <Col md={12}>
+                                                                        <h3 className="txt_color fw-bold mb-4">HieCOR - Beta Sales Summary Report</h3>
                                                                         <div>
-                                                                            <h3>HieCOR - Beta Sales Summary Report</h3>
+                                                                           
                                                                             <p>Date Range: 3/1/2023 - 3/15/2023</p>
                                                                             <p>Source: </p>
                                                                             <p>Customer Type: </p>
@@ -239,7 +238,6 @@ const Report_Inner = () => {
                                                                         <Form.Check aria-label="option 4" label="Auto Combine" inline />
                                                                     </div>
                                                                 </Row>
-
 
                                                                 <Row className="g-3 mt-4">
                                                                     <Col md={3}>
