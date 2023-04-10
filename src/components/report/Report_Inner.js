@@ -30,6 +30,11 @@ const Report_Inner = () => {
         }
     }
     const [isActive, setIsActive] = useState(false);
+    const [schedule, setschedule] = useState(false);
+    const [day, setday] = useState(false);
+
+
+
     return (
         <>
             <div fluid className='report'>
@@ -40,20 +45,22 @@ const Report_Inner = () => {
                                 <Row className='g-3'>
                                     <div className='col-md-12'>
                                         <div id="sidebar-wrapper" style={Side}>
-                                        <Report_Sidebar/>
+                                            <Report_Sidebar />
                                         </div >
                                         <div id="page-content-wrapper" style={Sidemargin}>
                                             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                                                <Row className="p-3">
+                                                <Row className="p-2">
                                                     <Col sm={12} md={12} lg={12} className='mb-3'>
                                                         <div className="mb-3" onClick={showHide} >
-                                                        {isActive? 
-                                                        <Icon icon="ic:round-close" className="baricon  close-icon" onClick={()=>{
-                                                            setIsActive(!isActive)}}/>:
-                                                        
-                                                            <Icon icon="uis:bars" className="baricon" onClick={()=>{
-                                                                setIsActive(!isActive)}}/>
-                                                        }
+                                                            {isActive ?
+                                                                <Icon icon="ic:round-close" className="baricon  close-icon" onClick={() => {
+                                                                    setIsActive(!isActive)
+                                                                }} /> :
+
+                                                                <Icon icon="uis:bars" className="baricon" onClick={() => {
+                                                                    setIsActive(!isActive)
+                                                                }} />
+                                                            }
                                                         </div>
                                                         <Nav variant="pills " >
                                                             <Nav.Item>
@@ -111,7 +118,7 @@ const Report_Inner = () => {
                                                                     <Col md={12}>
                                                                         <h3 className="txt_color fw-bold mb-4">HieCOR - Beta Sales Summary Report</h3>
                                                                         <div>
-                                                                           
+
                                                                             <p>Date Range: 3/1/2023 - 3/15/2023</p>
                                                                             <p>Source: </p>
                                                                             <p>Customer Type: </p>
@@ -210,13 +217,11 @@ const Report_Inner = () => {
                                                                         </div>
                                                                     </Col>
                                                                 </Row>
-
-
                                                             </Tab.Pane>
                                                             <Tab.Pane eventKey="second">
-                                                                <Row>
+                                                                <Row className="g-3">
                                                                     <Col md={4}>
-                                                                        <div className="form-group cus-select-group">
+                                                                        <div className="form-group cus-select-group my-4">
                                                                             <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                 <option>Yes</option>
                                                                                 <option value="1">One</option>
@@ -227,160 +232,294 @@ const Report_Inner = () => {
                                                                             <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                         </div>
                                                                     </Col>
-                                                                    <div>
-                                                                        <Form.Check inline label="Run Immediately" name="group1" type="radio" />
-                                                                        <Form.Check inline label="Schedule" name="group1" type="radio" />
-                                                                    </div>
-                                                                    <div className="mt-5">
-                                                                        <Form.Check aria-label="option 1" label="Purchase Postage" inline />
-                                                                        <Form.Check aria-label="option 2" label="Packing Slip" inline />
-                                                                        <Form.Check aria-label="option 3" label="Mark Shipped" inline />
-                                                                        <Form.Check aria-label="option 4" label="Auto Combine" inline />
-                                                                    </div>
-                                                                </Row>
 
-                                                                <Row className="g-3 mt-4">
-                                                                    <Col md={3}>
-                                                                        <div className="form-group cus-form-group">
-                                                                            <Form.Control className='fill-input' type="date" name="datepic" placeholder="DateRange" value={date} onChange={(e) => setDate(e.target.value)} />
-                                                                            <label htmlFor="shipping" className='float-label'>Date From</label>
-                                                                        </div>
-                                                                    </Col>
-                                                                    <Col md={3}>
-                                                                        <div className="form-group cus-form-group">
-                                                                            <Form.Control className='fill-input' type="date" name="datepic" placeholder="DateRange" value={date} onChange={(e) => setDate(e.target.value)} />
-                                                                            <label htmlFor="shipping" className='float-label'>Date To</label>
-                                                                        </div>
-                                                                    </Col>
-                                                                    <Col md={3}>
-                                                                        <div className="form-group cus-select-group">
-                                                                            <Form.Control className="form-control fill-input" as="select" name="require_shipping">
-                                                                                <option>Yes</option>
-                                                                                <option value="1">One</option>
-                                                                                <option value="2">Two</option>
-                                                                                <option value="3">Three</option>
-                                                                            </Form.Control>
-                                                                            <label className='float-label' htmlFor="require_shipping">Source</label>
-                                                                            <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
-                                                                        </div>
-                                                                    </Col>
-                                                                    <Col md={3}>
-                                                                        <div className="form-group cus-select-group">
-                                                                            <Form.Control className="form-control fill-input" as="select" name="require_shipping">
-                                                                                <option>Yes</option>
-                                                                                <option value="1">One</option>
-                                                                                <option value="2">Two</option>
-                                                                                <option value="3">Three</option>
-                                                                            </Form.Control>
-                                                                            <label className='float-label' htmlFor="require_shipping">Customer Type</label>
-                                                                            <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
-                                                                        </div>
-                                                                    </Col>
-                                                                    <div className="text-end">
-                                                                        <button className="btn-hover color-3 my-3">View Report</button>
-                                                                    </div>
-                                                                    <Col md={12}>
-                                                                        <div>
-                                                                            <h3>HieCOR - Beta Sales Summary Report</h3>
-                                                                            <p>Date Range: 3/1/2023 - 3/15/2023</p>
-                                                                            <p>Source: </p>
-                                                                            <p>Customer Type: </p>
-                                                                            <p>Refreshed on: 3/15/2023 2:54:33 AM PDT</p>
-                                                                        </div>
-                                                                        <div className=" row mt-3">
-                                                                            <h6 className='mt-4 mb-3 fw-bold'>Details</h6>
-                                                                            <Col md={6}>
-                                                                                <Table responsive table-striped>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>#</th>
-                                                                                            <th>Description</th>
-                                                                                            <th>Part Number</th>
-                                                                                            <th>Sequence Number</th>
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-                                                                                        <tr>
-                                                                                            <td>1</td>
-                                                                                            <td>IF COMPRESSOR HAS BEEN REPLACED, CHECK LABEL-OVLD & RELA</td>
-                                                                                            <td>NOTE:</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>2</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>3</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>4</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>5</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                    </tbody>
-                                                                                </Table>
-                                                                            </Col>
-                                                                            <Col md={6}>
-                                                                                <Table responsive>
-                                                                                    <thead>
-                                                                                        <tr>
-                                                                                            <th>#</th>
-                                                                                            <th>Description</th>
-                                                                                            <th>Part Number</th>
-                                                                                            <th>Sequence Number</th>
-                                                                                        </tr>
-                                                                                    </thead>
-                                                                                    <tbody>
-                                                                                        <tr>
-                                                                                            <td>1</td>
-                                                                                            <td>IF COMPRESSOR HAS BEEN REPLACED, CHECK LABEL-OVLD & RELA</td>
-                                                                                            <td>NOTE:</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>2</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>3</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>4</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                        <tr>
-                                                                                            <td>5</td>
-                                                                                            <td>BREAKER STRIP-CABINET, HINGE S</td>
-                                                                                            <td>A2198P2</td>
-                                                                                            <td>NI</td>
-                                                                                        </tr>
-                                                                                    </tbody>
-                                                                                </Table>
-                                                                            </Col>
+                                                                    <Col md={4}>
+                                                                        <div className="mt-4 pt-2">
+                                                                            <Form.Check inline label="Run Immediately" name="group1" type="radio" />
+                                                                            <Form.Check inline label="Schedule" name="group1" type="radio" onClick={() => setschedule(!schedule)} />
                                                                         </div>
                                                                     </Col>
                                                                 </Row>
+                                                                {
+                                                                    schedule ?
+                                                                        <div className="bg_col p-3">
+                                                                            <Row className=" g-3 mt-0">
+                                                                                <Col md={3}>
+                                                                                    <div className="form-group cus-form-group">
+                                                                                        <Form.Control placeholder="Description" className='fill-input' />
+                                                                                        <label htmlFor="shipping" className='float-label'>Description</label>
+                                                                                    </div>
+                                                                                </Col>
+                                                                                <Col md={3}>
+                                                                                    <div className="form-group cus-form-group">
+                                                                                        <Form.Control placeholder="Email To" className='fill-input' />
+                                                                                        <label htmlFor="shipping" className='float-label'>Email To</label>
+                                                                                    </div>
+                                                                                </Col>
+                                                                                <Col md={3}>
+                                                                                    <div className="form-group cus-select-group">
+                                                                                        <Form.Control className="form-control fill-input" as="select" name="require_shipping">
+                                                                                            <option>Yes</option>
+                                                                                            <option value="1">One</option>
+                                                                                            <option value="2">Two</option>
+                                                                                            <option value="3">Three</option>
+                                                                                        </Form.Control>
+                                                                                        <label className='float-label' htmlFor="require_shipping">Source</label>
+                                                                                        <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
+                                                                                    </div>
+                                                                                </Col>
+                                                                                <Col md={3}>
+                                                                                    <div className="form-group cus-select-group">
+                                                                                        <Form.Control className="form-control fill-input" as="select" name="require_shipping">
+                                                                                            <option>Yes</option>
+                                                                                            <option value="1">One</option>
+                                                                                            <option value="2">Two</option>
+                                                                                            <option value="3">Three</option>
+                                                                                        </Form.Control>
+                                                                                        <label className='float-label' htmlFor="require_shipping">Customer Type</label>
+                                                                                        <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
+                                                                                    </div>
+                                                                                </Col>
+                                                                                <div className="mt-3">
+                                                                                    <Form.Check inline label="Hour" name="group1" type="radio" />
+                                                                                    <Form.Check inline label="Day" name="group1" type="radio" checked onClick={() => setday(!day)} />
+                                                                                    <Form.Check inline label="Week" name="group1" type="radio" />
+                                                                                    <Form.Check inline label="Month" name="group1" type="radio" />
+                                                                                    <Form.Check inline label="Once" name="group1" type="radio" />
+                                                                                </div>
+                                                                                {
+                                                                                    day ?
+                                                                                        <Row>
+                                                                                            <Col md={6}>
+                                                                                                <Row className="g-3">
+                                                                                                    <h3 className="txt_color mt-4">Run the schedule every:</h3>
+                                                                                                    <Col md={6}>
+                                                                                                        <div className="form-group cus-form-group">
+                                                                                                            <Form.Control placeholder="Hourse" className='fill-input' />
+                                                                                                            <label htmlFor="shipping" className='float-label'>Hourse</label>
+                                                                                                        </div>
+                                                                                                    </Col>
+                                                                                                    <Col md={6}>
+                                                                                                        <div className="form-group cus-form-group">
+                                                                                                            <Form.Control placeholder="Minutes" className='fill-input' />
+                                                                                                            <label htmlFor="shipping" className='float-label'>Minutes</label>
+                                                                                                        </div>
+                                                                                                    </Col>
+                                                                                                    
+                                                                                                </Row>
+                                                                                            </Col>
+                                                                                            <Col md={6}>
+                                                                                                <Row className="g-3">
+                                                                                                    <h3 className="txt_color mt-4">Start Time</h3>
+                                                                                                    <Col md={6}>
+                                                                                                        <div className="form-group cus-select-group">
+                                                                                                            <Form.Control className="form-control fill-input" as="select" name="require_shipping">
+                                                                                                                <option>Select Hours</option>
+                                                                                                                <option value="1">1</option>
+                                                                                                                <option value="2">2</option>
+                                                                                                                <option value="3">3</option>
+                                                                                                            </Form.Control>
+                                                                                                            <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
+                                                                                                        </div>
+                                                                                                    </Col>
+                                                                                                    <Col md={6}>
+                                                                                                        <div className="form-group cus-select-group">
+                                                                                                            <Form.Control className="form-control fill-input" as="select" name="require_shipping">
+                                                                                                                <option>Select Minuts</option>
+                                                                                                                <option value="1">00</option>
+                                                                                                                <option value="2">01</option>
+                                                                                                                <option value="3">02</option>
+                                                                                                            </Form.Control>
+                                                                                                            <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
+                                                                                                        </div>
+                                                                                                    </Col>
+                                                                                                    <div className="mt-3">
+                                                                                                        <Form.Check inline label="AM" name="group3" type="radio" />
+                                                                                                        <Form.Check inline label="PM" name="group3" type="radio" />
+                                                                                                    </div>
+                                                                                                    <div className="text-end">
+                                                                                                        <button className="btn-hover color-1 me-2">Cancel</button>
+                                                                                                        <button className="btn-hover color-3 r_mt-3">Save</button>
+                                                                                                    </div>
+                                                                                                </Row>
+                                                                                            </Col>
+                                                                                        </Row>
+                                                                                        : null
+                                                                                }
 
+                                                                                {
+                                                                                    day ?
+                                                                                        <Row>
+                                                                                            <Col md={6}>
+                                                                                                <div className="mt-4">
+                                                                                                    <h3 className="txt_color mt-3">Daily Schedule</h3>
+                                                                                                    <Form.Check inline label="On the following Days" name="group2" type="radio" />
+                                                                                                    <div className="mt-3">
+                                                                                                        <Form.Check aria-label="option 1" label="Mon" inline />
+                                                                                                        <Form.Check aria-label="option 2" label="Tue" inline />
+                                                                                                        <Form.Check aria-label="option 3" label="Wed" inline />
+                                                                                                        <Form.Check aria-label="option 4" label="Thur" inline />
+                                                                                                        <Form.Check aria-label="option 5" label="Fri" inline />
+                                                                                                        <Form.Check aria-label="option 6" label="Sat" inline />
+                                                                                                        <Form.Check aria-label="option 7" label="Sun" inline />
+                                                                                                    </div>
+                                                                                                    <Form.Check className="mt-3" inline label="On the following Days" name="group2" type="radio" />
+                                                                                                    <Form.Group as={Row} className="" controlId="formHorizontalEmail">
+                                                                                                        <Col md={5}>
+                                                                                                            <Form.Check className="mt-3" inline label="Repeat After this number of days" name="group2" type="radio" />
+                                                                                                        </Col>
+                                                                                                        <Col md={2}>
+                                                                                                            <Form.Control type="text" placeholder="" />
+                                                                                                        </Col>
+                                                                                                    </Form.Group>
+                                                                                                </div>
+                                                                                            </Col>
+                                                                                            <Col md={6}>
+                                                                                                <Row className="g-3">
+                                                                                                    <h3 className="txt_color mt-4">Start Time</h3>
+                                                                                                    <Col md={6}>
+                                                                                                        <div className="form-group cus-select-group">
+                                                                                                            <Form.Control className="form-control fill-input" as="select" name="require_shipping">
+                                                                                                                <option>Select Hours</option>
+                                                                                                                <option value="1">1</option>
+                                                                                                                <option value="2">2</option>
+                                                                                                                <option value="3">3</option>
+                                                                                                            </Form.Control>
+                                                                                                            <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
+                                                                                                        </div>
+                                                                                                    </Col>
+                                                                                                    <Col md={6}>
+                                                                                                        <div className="form-group cus-select-group">
+                                                                                                            <Form.Control className="form-control fill-input" as="select" name="require_shipping">
+                                                                                                                <option>Select Minuts</option>
+                                                                                                                <option value="1">00</option>
+                                                                                                                <option value="2">01</option>
+                                                                                                                <option value="3">02</option>
+                                                                                                            </Form.Control>
+                                                                                                            <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
+                                                                                                        </div>
+                                                                                                    </Col>
+                                                                                                    <div className="mt-3">
+                                                                                                        <Form.Check inline label="AM" name="group3" type="radio" />
+                                                                                                        <Form.Check inline label="PM" name="group3" type="radio" />
+                                                                                                    </div>
+                                                                                                    <div className="text-end">
+                                                                                                        <button className="btn-hover color-1 me-2">Cancel</button>
+                                                                                                        <button className="btn-hover color-3 r_mt-3">Save</button>
+                                                                                                    </div>
+                                                                                                </Row>
+                                                                                            </Col>
+                                                                                        </Row>
+                                                                                        : null
+                                                                                }
+                                                                            </Row>
+                                                                        </div>
+                                                                        : null
+                                                                }
+                                                                <div className="bg_col p-3 mt-3">
+                                                                    <Row className="g-3">
+                                                                        <Col md={12}>
+                                                                            <div>
+                                                                                <h3 className="txt_color">HieCOR - Beta Sales Summary Report</h3>
+                                                                                <p>Date Range: 3/1/2023 - 3/15/2023</p>
+                                                                                <p>Source: </p>
+                                                                                <p>Customer Type: </p>
+                                                                                <p>Refreshed on: 3/15/2023 2:54:33 AM PDT</p>
+                                                                            </div>
+                                                                            <div className=" row mt-3">
+                                                                                <h6 className='mt-4 mb-3 fw-bold'>Details</h6>
+                                                                                <Col md={6}>
+                                                                                    <Table responsive table-striped>
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>#</th>
+                                                                                                <th>Description</th>
+                                                                                                <th>Part Number</th>
+                                                                                                <th>Sequence Number</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>1</td>
+                                                                                                <td>IF COMPRESSOR HAS BEEN REPLACED, CHECK LABEL-OVLD & RELA</td>
+                                                                                                <td>NOTE:</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>2</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>3</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>4</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>5</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </Table>
+                                                                                </Col>
+                                                                                <Col md={6}>
+                                                                                    <Table responsive>
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>#</th>
+                                                                                                <th>Description</th>
+                                                                                                <th>Part Number</th>
+                                                                                                <th>Sequence Number</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>1</td>
+                                                                                                <td>IF COMPRESSOR HAS BEEN REPLACED, CHECK LABEL-OVLD & RELA</td>
+                                                                                                <td>NOTE:</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>2</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>3</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>4</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>5</td>
+                                                                                                <td>BREAKER STRIP-CABINET, HINGE S</td>
+                                                                                                <td>A2198P2</td>
+                                                                                                <td>NI</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </Table>
+                                                                                </Col>
+                                                                            </div>
+                                                                        </Col>
+                                                                    </Row>
+                                                                </div>
                                                             </Tab.Pane>
                                                         </Tab.Content>
                                                     </Col>
