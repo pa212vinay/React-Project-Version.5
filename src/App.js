@@ -73,10 +73,11 @@ import PosLayout from "./components/pos/PosLayout";
 
 // -----Report------- 
 import Report from './components/report/Report';
-import Report_Sidebar from './components/report/Report_Sidebar';
 
 // -----Tracking------- 
 import Tracking from './components/tracking/Tracking';
+import Tracking_Ad from './components/tracking/Tracking_Ad';
+
 
 
 function App() {
@@ -149,10 +150,11 @@ function App() {
 
                 {/* -----Report------- */}
                 <Route path="/Report" element={<Report />} />
-                <Route path="/Report_Sidebar" element={<Report_Sidebar />} />
+                {/* <Route path="/Report_Sidebar" element={<Report_Sidebar />} /> */}
 
                 {/* -----Tracking------- */}
                 <Route path="/Tracking" element={<Tracking />} />
+                <Route path="/Tracking_Ad" element={<Tracking_Ad />} />
               </Route>
 
 

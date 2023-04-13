@@ -1,7 +1,8 @@
 import * as React from 'react';
 import Row from 'react-bootstrap/Row';
 import { Container } from 'react-bootstrap';
-import Ad_Tracking_Inner from './Ad_Tracking_Inner';
+import Tracking_Ad from './Tracking_Ad';
+
 
 
 const Tracking = () => {
@@ -13,7 +14,7 @@ const Tracking = () => {
         <Row className="g-3">
           <div className=" col-lg-12 col-md-12">
             <div className=''>
-              <Ad_Tracking_Inner />
+              <Tracking_Ad />
             </div>
           </div>
         </Row>
