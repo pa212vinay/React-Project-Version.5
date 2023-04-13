@@ -1916,7 +1916,7 @@ button.refeshBtn {
 
     #left-tabs-example-tab-first .nav-link,
     #left-tabs-example-tab-second .nav-link {
-        color: $darl_blue !important;
+        color: $theme-color!important;
     }
 
     #left-tabs-example-tab-first {
@@ -1929,6 +1929,7 @@ button.refeshBtn {
         border: 1px solid $theme-color;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+
     }
 }
 
