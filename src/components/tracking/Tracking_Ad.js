@@ -9,9 +9,32 @@ import { BsSearch } from "react-icons/bs";
 
 const Tracking_Ad = () => {
     const [Traick, setTrack] = useState(false);
+    // const [, setTrack] = useState(false);
+    const [Affiliate, setAffiliate] = useState(  [{
+        Affiliate_user: ' ',
+    }]);
+
+    const addAffiliate = () => {
+        setAffiliate([...Affiliate, {
+            Affiliate_user: '',
+        }])
+    }
+
+    const removeAffiliate = (Custom) => {
+        const rows = [...Affiliate];
+        rows.splice(Custom, 1);
+        setAffiliate(rows);
+    }
+
+    const handleChangeCustom = (Custom, evnt) => {
+        const { name, value } = evnt.target;
+        const list = [...Affiliate];
+        list[Custom][name] = value;
+        setAffiliate(list);
+    }
     return (
-        <>
-            <Modal size="lg" show={Traick} onHide={() => setTrack(false)} aria-labelledby="example-modal-1">
+        <div className="tracking_Ad">
+            <Modal size="lg" show={Traick} onHide={() => setTrack(false)} aria-labelledby="example-modal-1" className="edit_tracking">
                 <div className="">
                     <Modal.Header closeButton>
                         <Modal.Title id="example-modal-1">
@@ -20,32 +43,74 @@ const Tracking_Ad = () => {
                     <Modal.Body>
                         <Row>
                             <Col md={12}>
-                            <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                                <Nav variant="pills " >
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="first">Sales Summary Parameters</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="second">Sales Summary Export</Nav.Link>
-                                    </Nav.Item>
-                                    <Nav.Item>
-                                        <Nav.Link eventKey="Third">Sales Summary Export</Nav.Link>
-                                    </Nav.Item>
-                                </Nav>
+                                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                                    <Nav variant="pills " >
+                                        <Nav.Item>
+                                            <Nav.Link eventKey="first">General Info</Nav.Link>
+                                        </Nav.Item>
+                                        <Nav.Item>
+                                            <Nav.Link eventKey="second">Tracking Pixel</Nav.Link>
+                                        </Nav.Item>
+                                        <Nav.Item>
+                                            <Nav.Link eventKey="Third">Pay out</Nav.Link>
+                                        </Nav.Item>
+                                    </Nav>
 
-                                <Tab.Content>
-                                    <Tab.Pane eventKey="first">
+                                    <Tab.Content>
+                                        <Tab.Pane eventKey="first">
+                                            <Row className="g-3">
+                                                <Col md={12}>
+                                                    <Form>
+                                                        <div className="form-group cus-form-group mt-5">
+                                                            <Form.Control placeholder="Campaign Code" className='fill-input' />
+                                                            <label htmlFor="Campaign Code" className='float-label'>Campaign Code</label>
+                                                        </div>
+                                                        <div className="form-group cus-form-group mt-3">
+                                                            <Form.Control placeholder="Campaign Description" className='fill-input' />
+                                                            <label htmlFor="Campaign Description" className='float-label'>Campaign Description</label>
+                                                        </div>
+                                                        <h3 className="fw-bold my-4">Limit to subID(comma separated)</h3>
 
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="second">
+                                                        <Form.Group as={Row} className="my-3" controlId="formHorizontalEmail">
+                                                            <Col sm={12}><p>Affiliate User</p></Col>
+                                                            <Col sm={5}>
+                                                                <Form.Control type="email" placeholder="Email" />
+                                                            </Col>
+                                                            <Col sm={5}>
+                                                                <Form.Control type="email" placeholder="Email" />
+                                                            </Col>
+                                                            <Col sm={2}><Icon icon="material-symbols:add-circle-outline" className="icon-add " onClick={addAffiliate}/></Col>
+                                                        </Form.Group>
+                                                        {
+                                            Affiliate.map((data, Custom) => {
+                                                const { Affiliate_user } = data;
+                                                return (
+                                                        <Form.Group as={Row} className="my-3" controlId="formHorizontalEmail" onChange={(evnt) => handleChangeCustom(Custom, evnt)} value={Affiliate_user} name="Affiliate_user">
+                                                            <Col sm={12}><p>Affiliate User</p></Col>
+                                                            <Col sm={5}>
+                                                                <Form.Control type="email" placeholder="Email" />
+                                                            </Col>
+                                                            <Col sm={5}>
+                                                                <Form.Control type="email" placeholder="Email" />
+                                                            </Col>
+                                                            <Col sm={2}>{(Affiliate.length !== 0) ? <Icon icon="ph:minus-circle-bold" className="icon-minus" onClick={removeAffiliate}/> : ''}</Col>
+                                                        </Form.Group>
+                                                         )
+                                                        })
+                                                    }
+                                                    </Form>
+                                                </Col>
+                                                
+                                            </Row>
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="second">
 
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="Third">
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="Third">
 
-                                    </Tab.Pane>
-                                </Tab.Content>
-                            </Tab.Container>
-
+                                        </Tab.Pane>
+                                    </Tab.Content>
+                                </Tab.Container>
                             </Col>
                         </Row>
                     </Modal.Body>
@@ -64,14 +129,14 @@ const Tracking_Ad = () => {
                     <div className='col-md-12'>
                         <div className='float-end'>
 
-                            <button type="button" class="btn-hover color-2 me-2">Reset</button>
-                            <button type="button" class="btn-hover color-2 me-2">New Campaign</button>
-                            <button type="button" class="btn-hover color-2 me-2">New Affiliate</button>
+                            <button type="button" class="btn-hover color-2 me-2 r_mt-2">Reset</button>
+                            <button type="button" class="btn-hover color-2 me-2 r_mt-2">New Campaign</button>
+                            <button type="button" class="btn-hover color-2 me-2 r_mt-2">New Affiliate</button>
 
-                            <button type="button" class="btn btn-outline-primary me-2">Reset</button>
-                            <button type="button" class="btn btn-outline-success me-2"><Icon icon="uiw:file-excel" className='text-green' /></button>
-                            <button type="button" class="btn btn-outline-primary me-2"><Icon icon="uiw:table" /></button>
-                            <div className="form-group cus-form-group d-inline-block">
+                            <button type="button" class="btn btn-outline-primary me-2 r_mt-2">Reset</button>
+                            <button type="button" class="btn btn-outline-success me-2 r_mt-2"><Icon icon="uiw:file-excel" className='text-green' /></button>
+                            <button type="button" class="btn btn-outline-primary me-2 r_mt-2"><Icon icon="uiw:table" /></button>
+                            <div className="form-group cus-form-group d-inline-block r_mt-2">
                                 <Form.Control placeholder="Supplier Name" className='fill-input' />
                                 <label className='float-label'>Search</label>
                                 <BsSearch className='inputIcon' />
@@ -472,7 +537,7 @@ const Tracking_Ad = () => {
                 </Row>
             </div>
 
-        </>
+        </div>
     );
 
 }
