@@ -189,8 +189,7 @@ const Fulfillment_Inner = () => {
                                         </tr>
                                         : null
                                 }
-
-                            </tbody>
+                            </tbody> 
                         </Table>
                     </div>
                 </Row>
