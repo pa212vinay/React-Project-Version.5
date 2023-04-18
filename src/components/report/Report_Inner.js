@@ -297,7 +297,7 @@ const Report_Inner = () => {
                                                                             </div>
                                                                             {
                                                                                 hour &&
-                                                                                <Row className="hour">
+                                                                                <Row className="hour"> 
                                                                                     <Col md={6}>
                                                                                         <Row className="g-3">
                                                                                             <h3 className="txt_color mt-4">Run the schedule every:</h3>
@@ -313,7 +313,6 @@ const Report_Inner = () => {
                                                                                                     <label htmlFor="shipping" className='float-label'>Minutes</label>
                                                                                                 </div>
                                                                                             </Col>
-
                                                                                         </Row>
                                                                                     </Col>
                                                                                     <Col md={6}>
