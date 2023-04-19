@@ -144,8 +144,7 @@ const Fulfillment_Inner = () => {
                                         <FulfillmentOrderSummary />
                                         : null
                                 }
-
-                            </tbody>
+                            </tbody> 
                         </Table>
                     </div>
                 </Row>
