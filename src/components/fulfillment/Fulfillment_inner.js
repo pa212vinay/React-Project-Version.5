@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { Form, Row, Table, Modal, ProgressBar, Link } from 'react-bootstrap';
 import { AiOutlinePrinter, AiOutlineClear } from "react-icons/ai";
+import FulfillmentOrderSummary from './FulfillmentOrderSummary';
+import '../../css/fulfillment/fulfillment.scss';
+
 const Fulfillment_Inner = () => {
     const [Delete, setDelete] = useState(false);
     const [Postage, setPostage] = useState(false);
     const [order, setOrder] = useState(false);
     const now = 100;
+
     return (
         <>
             <Modal size="md" show={Delete} onHide={() => setDelete(false)} aria-labelledby="example-modal-4">
@@ -38,7 +42,8 @@ const Fulfillment_Inner = () => {
                             <Form.Check aria-label="option 4" label="Auto Combine" inline />
                             <button className='btn-hover color-2 me-2'>Process</button>
                             <button className='btn-hover color-2 me-2'>Refund</button>
-                            <button className='btn-hover color-2' onClick={() => setPostage(!Postage)}>Postage Queue</button>
+                            <button className='btn-hover color-2 me-2' onClick={() => setPostage(!Postage)}>Postage Queue</button>
+                            <button className='btn-hover color-2'>Reset</button>
                         </div>
                     </div>
                     {
@@ -81,6 +86,7 @@ const Fulfillment_Inner = () => {
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr></tr>
                                         </tbody>
                                     </Table>
                                 </div>
@@ -93,100 +99,49 @@ const Fulfillment_Inner = () => {
                             <thead>
                                 <tr>
                                     <th><Form.Check inline name="group1" /></th>
-                                    <th>User ID</th>
-                                    <th>Customer Status</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Company</th>
-                                    <th>City</th>
+                                    <th>Order</th>
+                                    <th>Order Status</th>
+                                    <th>Shipping Status</th>
+                                    <th>Order Date</th>
+                                    <th>Date Shipped</th>
+                                    <th>Scheduled Date</th>
+                                    <th>Source</th>
+                                    <th>Carrier</th>
+                                    <th>Service</th>
+                                    <th>Tracking Number</th>
+                                    <th>Weight</th>
+                                    <th>Postage</th>
                                     <th>Address</th>
-                                    <th>Address 2</th>
-                                    <th>State</th>
-                                    <th>Postal code</th>
-                                    <th>Contact source</th>
-                                    <th>State</th>
-                                    <th>ABV ID</th>
-                                    <th>Additionl Phone</th>
+                                    <th>Verified</th>
                                     <th>Phone</th>
-                                    <th>Dollers Spend</th>
-                                    <th>Last Order Date</th>
+                                    <th>Name</th>
+                                    <th>Company</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><Form.Check inline name="group1" /></td>
-                                    <td className="text-decoration-none cursor"><lable onClick={() => setOrder(!order)} >1</lable></td>
-                                    <td>menual testing</td>
+                                    <td className="text-decoration-none cursor"><a href="#" onClick={() => setOrder(!order)} >372</a></td>
+                                    <td>PURCHASE ORDER</td>
+                                    <td>In Process</td>
+                                    <td>10/03/2022</td>
+                                    <td>13/03/2022</td>
+                                    <td>13/03/2022</td>
+                                    <td>PURCHASE ORDER</td>
+                                    <td>No Carrier</td>
+                                    <td>New Service</td>
+                                    <td>456123</td>
+                                    <td>45Kg</td>
+                                    <td>$0.00</td>
+                                    <td>US</td>
                                     <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
-                                    <td>$399.00</td>
+                                    <td>Invalid</td>
+                                    <td>Vinay Verma</td>
+                                    <td>Hiecor</td>
                                 </tr>
                                 {
                                     order ?
-                                        <tr>
-                                            <td colSpan={18} className="py-3">
-
-                                                <div className='row g-3 my-3'>
-                                                    <div className='col-md-4'>
-                                                        <div className=" bg_col p-3">
-                                                            <h6 className='fw-bold mb-3'>Order Summary</h6>
-                                                            <Row>
-                                                                <div className='col-md-8'>
-                                                                    <p>
-                                                                        <span className='fw-bold'>Source:</span>
-                                                                        <span className='float-end'>API</span>
-                                                                    </p>
-                                                                    <p>
-                                                                        <span className='fw-bold'>Order Date:</span>
-                                                                        <span className='float-end'>09/28/2022</span>
-                                                                    </p>
-                                                                    <p>
-                                                                        <span className='fw-bold'>Paid Date:</span>
-                                                                        <span className='float-end'>09/28/2022</span>
-                                                                    </p>
-                                                                </div>
-                                                                <div className='col-md-4'>
-                                                                    <p>Print Packing Slip</p>
-                                                                    <p>Print Full Receipt</p>
-                                                                    <p>Add Note</p>
-                                                                </div>
-                                                                <div className="p-3">
-                                                            <div className="form-group cus-form-group">
-                                                                <Form.Control placeholder="Wholesale Price" className='fill-input' />
-                                                                <label htmlFor="shipping" className='float-label'>Search Product</label>
-
-                                                            </div>
-
-                                                        </div>
-                                                            </Row>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-8">
-                                                        <div className=" bg_col p-3">
-                                                            <div className="form-group cus-form-group">
-                                                                <Form.Control placeholder="Wholesale Price" className='fill-input' />
-                                                                <label htmlFor="shipping" className='float-label'>Search Product</label>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </td>
-                                        </tr>
+                                        <FulfillmentOrderSummary />
                                         : null
                                 }
                             </tbody> 
