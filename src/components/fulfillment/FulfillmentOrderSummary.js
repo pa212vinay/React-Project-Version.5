@@ -7,7 +7,7 @@ export default function FulfillmentOrderSummary() {
             <tr>
                 <td colSpan={18} className="py-3">
 
-                    <div className='row g-3 my-3'>
+                    <div className='row '>
                         <div className='col-md-4'>
                             <div className=" bg_col p-3">
                                 <h6 className='fw-bold mb-3'>Order Summary</h6>

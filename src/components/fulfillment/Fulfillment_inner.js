@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import { Form, Row, Table, Modal, ProgressBar, Link } from 'react-bootstrap';
 import { AiOutlinePrinter, AiOutlineClear } from "react-icons/ai";
 import FulfillmentOrderSummary from './FulfillmentOrderSummary';
+import '../../css/fulfillment/fulfillment.scss';
+
 const Fulfillment_Inner = () => {
     const [Delete, setDelete] = useState(false);
     const [Postage, setPostage] = useState(false);
     const [order, setOrder] = useState(false);
     const now = 100;
 
-    const fullFillmentDetail = ()=>{
-        console.log("fullfillmentDetail run")
-    }
     return (
         <>
             <Modal size="md" show={Delete} onHide={() => setDelete(false)} aria-labelledby="example-modal-4">
@@ -43,7 +42,8 @@ const Fulfillment_Inner = () => {
                             <Form.Check aria-label="option 4" label="Auto Combine" inline />
                             <button className='btn-hover color-2 me-2'>Process</button>
                             <button className='btn-hover color-2 me-2'>Refund</button>
-                            <button className='btn-hover color-2' onClick={() => setPostage(!Postage)}>Postage Queue</button>
+                            <button className='btn-hover color-2 me-2' onClick={() => setPostage(!Postage)}>Postage Queue</button>
+                            <button className='btn-hover color-2'>Reset</button>
                         </div>
                     </div>
                     {
