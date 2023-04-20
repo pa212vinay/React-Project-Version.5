@@ -20,7 +20,7 @@ const Sidebar = () => {
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu defaultActiveKey="/">
             <Nav.Item>
-            <NavLink exact to="/no" activeClassName="activeClicked" eventKey="link-3.0">
+            <NavLink exact to="/Dashboard" activeClassName="activeClicked" eventKey="link-3.0">
               <CDBSidebarMenuItem icon="home">Dashboard</CDBSidebarMenuItem>
             </NavLink>
             </Nav.Item>

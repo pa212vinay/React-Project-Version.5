@@ -11,7 +11,7 @@ import React from 'react';
 import '../../../css/utility/_utility-dir.scss'
 
 
-const Dashboard = () => {
+const Customer_Dashboard = () => {
 
   return (
     <>
@@ -35,4 +35,4 @@ const Dashboard = () => {
     </>
   );
 }
-export default Dashboard;
+export default Customer_Dashboard;

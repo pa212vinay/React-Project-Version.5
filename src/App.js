@@ -6,7 +6,7 @@ import './css/dashboard.scss';
 import './css/index.scss'
 
 import Layout from './components/common/Layout';
-import Dashboard from "./components/customer/dashboard_components/Dashboard";
+import Customer_Dashboard from "./components/customer/dashboard_components/Customer_Dashboard";
 import Invoice from './components/customer/orders_details/Invoice';
 import Attachment from './components/customer/attachment/Attachment';
 import Subscription from './components/customer/subscription/Subscription';
@@ -76,7 +76,10 @@ import Report from './components/report/Report';
 
 // -----Tracking------- 
 import Tracking from './components/tracking/Tracking';
-import Tracking_Ad from './components/tracking/Tracking_Ad';
+
+// -----Dashboard------- 
+import Dashboard from './components/dashboard/Dashboard';
+
 
 
 
@@ -89,7 +92,7 @@ function App() {
           <Routes>
             <Route>
               <Route path="/" element={<Layout />}>
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/" element={<Customer_Dashboard />} />
                 <Route path="/Invoice" element={<Invoice />} />
                 <Route path="/Attachment" element={<Attachment />} />
                 <Route path="/Subscription" element={<Subscription />} />
@@ -150,11 +153,12 @@ function App() {
 
                 {/* -----Report------- */}
                 <Route path="/Report" element={<Report />} />
-                {/* <Route path="/Report_Sidebar" element={<Report_Sidebar />} /> */}
 
                 {/* -----Tracking------- */}
                 <Route path="/Tracking" element={<Tracking />} />
-                <Route path="/Tracking_Ad" element={<Tracking_Ad />} />
+
+                 {/* -----Dashboard------- */}
+                 <Route path="/Dashboard" element={<Dashboard />} />
               </Route>
 
 
