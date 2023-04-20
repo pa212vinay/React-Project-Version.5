@@ -1702,11 +1702,9 @@ const Tracking_Ad = () => {
                 <Row>
                     <div className='col-md-12'>
                         <div className='float-end'>
-
                             <button type="button" class="btn-hover color-2 me-2 r_mt-2">Reset</button>
                             <button type="button" class="btn-hover color-2 me-2 r_mt-2" onClick={() => setNewcamp(true)}>New Campaign</button>
                             <button type="button" class="btn-hover color-2 me-2 r_mt-2" onClick={() => setManagement(true)}>New Affiliate</button>
-
                             <button type="button" class="btn btn-outline-primary me-2 r_mt-2">Reset</button>
                             <button type="button" class="btn btn-outline-success me-2 r_mt-2"><Icon icon="uiw:file-excel" className='text-green' /></button>
                             <button type="button" class="btn btn-outline-primary me-2 r_mt-2"><Icon icon="uiw:table" /></button>
