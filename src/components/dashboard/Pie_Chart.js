@@ -15,7 +15,7 @@ const Pie_Chart = () => {
             </div>
           </div>
         </Row>
-      </Container>
+      </Container>                                          
     </>
   );
 }
