@@ -1,21 +1,27 @@
 import * as React from 'react';
 import Row from 'react-bootstrap/Row';
-import { Container } from 'react-bootstrap';
-import Pie_Chart from './Pie_Chart';
-
+import BarChart from './Barchart.js';
+import { useState } from 'react';
+import { UserData } from './Data';
 
 const Dashboard_Inner = () => {
+  const [userData, setUserData] = useState({
+    lables: UserData.map((data) => data.year),
+    datasets: [{
+      lable: "Users Gained",
+      data: UserData.map((data) => data.userGain),
+
+    }]
+  })
   return (
     <>
-      <Container fluid className='p-3'>
-        <Row className="g-3">
-          <div className=" col-lg-12 col-md-12">
-            <div className=''>
-            <Pie_Chart/>
-            </div>
+      <Row className="g-3">
+        <div className=" col-lg-4 col-md-4">
+          <div className=''>
+            <BarChart chartData={userData} />
           </div>
-        </Row>
-      </Container>
+        </div>
+      </Row>
     </>
   );
 }
