@@ -5,7 +5,7 @@ table {
         tr {
             th {
                 // border: 1px solid $border-color;
-                font-size: $font-size-base-px - 2;
+                font-size: $font-size-base-px - 3;
             }
         }
     }
@@ -17,7 +17,7 @@ table {
             td {
                 border: 1px solid $border-color;
                 padding: 7px;
-                font-size: $font-size-base-px - 2;
+                font-size: $font-size-base-px - 3;
 
                 .dx-draggable {
                     cursor: pointer;
