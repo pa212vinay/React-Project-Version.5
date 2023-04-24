@@ -1698,7 +1698,7 @@ const Tracking_Ad = () => {
             </Modal>
 
 
-            <div className="bg_col p-3">
+            
                 <Row>
                     <div className='col-md-12'>
                         <div className='float-end'>
@@ -2104,7 +2104,7 @@ const Tracking_Ad = () => {
                 </Row>
             </div>
 
-        </div>
+        
     );
 
 }

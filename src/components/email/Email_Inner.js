@@ -26,11 +26,11 @@ const Email_Inner = () => {
     return (
         <>
             <div className="container-fluid">
-                <div className="bg_col mt-2">
+                <div className="bg_col">
                     <Row>
 
                         <div className="col-md-12">
-                            <div className="mt-3 contact">
+                            <div className="contact">
                                 <Table responsive>
                                     <thead>
                                         <tr>
