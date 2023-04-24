@@ -13,7 +13,7 @@ const Tracking = () => {
 
         <Row className="g-3">
           <div className=" col-lg-12 col-md-12">
-            <div className=''>
+            <div className='bg_col p-3'>
               <Tracking_Ad />
             </div>
           </div>

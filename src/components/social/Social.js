@@ -9,7 +9,7 @@ const Social = () =>{
 
 return(
     <>
-      <Container fluid className='p-3'>
+      <Container fluid className=''>
             <Row className="">
                 <Social_Comment />
             </Row>
