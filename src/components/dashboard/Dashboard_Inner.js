@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Row from 'react-bootstrap/Row';
-import BarChart from './Barchart.js';
+// import BarChart from './Barchart.js';
 import { useState } from 'react';
 import { UserData } from './Data';
 
@@ -18,7 +18,7 @@ const Dashboard_Inner = () => {
       <Row className="g-3">
         <div className=" col-lg-4 col-md-4">
           <div className=''>
-            <BarChart chartData={userData} />
+            {/* <BarChart chartData={userData} /> */}
           </div>
         </div>
       </Row>
