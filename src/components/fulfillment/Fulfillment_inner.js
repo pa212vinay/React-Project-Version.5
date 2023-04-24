@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Form, Row, Table, Modal, ProgressBar, Link } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Form, Row, Table, Modal, ProgressBar } from 'react-bootstrap';
 import { AiOutlinePrinter, AiOutlineClear } from "react-icons/ai";
 import FulfillmentOrderSummary from './FulfillmentOrderSummary';
 import '../../css/fulfillment/fulfillment.scss';
+import { Icon } from '@iconify/react';
+
 
 const Fulfillment_Inner = () => {
     const [Delete, setDelete] = useState(false);
@@ -10,13 +13,18 @@ const Fulfillment_Inner = () => {
     const [order, setOrder] = useState(false);
     const now = 100;
 
+    const OrderSummary = ()=>{
+        setOrder(!order);
+
+    }
+
     return (
         <>
             <Modal size="md" show={Delete} onHide={() => setDelete(false)} aria-labelledby="example-modal-4">
                 <div className="px-4">
                     <Modal.Header closeButton>
                         <Modal.Title id="example-modal-4">
-                            <h6 className="fw-bold">Delete</h6>
+                             <h6 className="fw-bold">Delete</h6>
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -25,25 +33,24 @@ const Fulfillment_Inner = () => {
                     <Modal.Footer>
                         <div className="float-end mb-2 mt-4">
                             <button className="btn-hover color-1 me-2">No</button>
-                            <button className="btn-hover color-2 r_mt-2">Yes</button>
+                            <button className="btn-hover btn-blue-border r_mt-2">Yes</button>
                         </div>
                     </Modal.Footer>
                 </div>
             </Modal>
 
-
-            <div className="bg_col p-3">
-                <Row>
-                    <div className='col-md-12'>
-                        <div className=''>
-                            <Form.Check aria-label="option 1" label="Purchase Postage" inline />
-                            <Form.Check aria-label="option 2" label="Packing Slip" inline />
-                            <Form.Check aria-label="option 3" label="Mark Shipped" inline />
-                            <Form.Check aria-label="option 4" label="Auto Combine" inline />
-                            <button className='btn-hover color-2 me-2'>Process</button>
-                            <button className='btn-hover color-2 me-2'>Refund</button>
-                            <button className='btn-hover color-2 me-2' onClick={() => setPostage(!Postage)}>Postage Queue</button>
-                            <button className='btn-hover color-2'>Reset</button>
+                    <div className='col-md-12 cus-fftheader-col'>
+                        <div className='cus-fftheader'>
+                            <Form.Check className='form-check-input-blue' aria-label="option 1" label="Purchase Postage" inline />
+                            <Form.Check className='form-check-input-blue' aria-label="option 2" label="Packing Slip" inline />
+                            <Form.Check className='form-check-input-blue' aria-label="option 3" label="Mark Shipped" inline />
+                            <Form.Check className='form-check-input-blue' aria-label="option 4" label="Auto Combine" inline />
+                            <button className='btn btn-sm btn-blue-border me-2'>Process</button>
+                            <button className='btn btn-sm btn-blue-border me-2'>Refund</button>
+                            <button className='btn btn-sm btn-blue-border me-2' onClick={() => setPostage(!Postage)}>Postage Queue</button>
+                            <button className='btn btn-sm btn-blue-border me-2'>Reset</button>
+                            <Link to="#" className='btn btn-sm link-green-border me-2'><Icon icon="bi:filetype-xls" /></Link>
+                            <Link to="#" className='btn btn-sm link-green-border'><Icon icon="iconoir:table-2-columns" /></Link>
                         </div>
                     </div>
                     {
@@ -94,7 +101,7 @@ const Fulfillment_Inner = () => {
                             : null
                     }
 
-                    <div className='table-responsive'>
+                    <div className='table-responsive cus-fftable-col'>
                         <Table className='mt-4'>
                             <thead>
                                 <tr>
@@ -121,7 +128,7 @@ const Fulfillment_Inner = () => {
                             <tbody>
                                 <tr>
                                     <td><Form.Check inline name="group1" /></td>
-                                    <td className="text-decoration-none cursor"><a href="#" onClick={() => setOrder(!order)} >372</a></td>
+                                    <td className="text-decoration-none cursor"><a href="#" onClick={OrderSummary} >372</a></td>
                                     <td>PURCHASE ORDER</td>
                                     <td>In Process</td>
                                     <td>10/03/2022</td>
@@ -147,8 +154,8 @@ const Fulfillment_Inner = () => {
                             </tbody> 
                         </Table>
                     </div>
-                </Row>
-            </div>
+                
+            
 
         </>
     );

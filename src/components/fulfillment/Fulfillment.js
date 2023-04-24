@@ -9,8 +9,8 @@ const Fulfillment = () =>{
 
 return(
     <>
-      <Container fluid className='p-3 fulFillmentSection'>
-            <Row className="">
+      <Container fluid className='fulFillmentSection'>
+            <Row className="cus-fulfillment-row">
                 <Fulfillment_Inner />
             </Row>
       </Container>
