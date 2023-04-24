@@ -1,50 +1,15 @@
-import { useState, useEffect, useRef, useLayoutEffect } from 'react';
+import React from 'react';
 import { Form, Row } from 'react-bootstrap';
 
 export default function FulfillmentOrderSummary() {
-    // const [width, setWidth] = useState();
-    // const [height, setHeight] = useState();
-
-    // const observedDiv = useRef(null);
-    // const resizeObserver = new ResizeObserver(handleElementResized);
-
-    // useEffect(() => {
-    //     resizeObserver.observe(observedDiv.current);
-
-
-    //     return function cleanup() {
-    //         resizeObserver.disconnect();
-    //     }
-    // });
-
-
-    // const handleElementResized = () => {
-    //     if (observedDiv.current.offsetWidth !== width) {
-    //         setWidth(observedDiv.current.offsetWidth);
-    //     }
-    //     if (observedDiv.current.offsetHeight !== height) {
-    //         setHeight(observedDiv.current.offsetHeight);
-    //     }
-    // }
-
-    const ref = useRef(null);
-
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-
-  useLayoutEffect(() => {
-    setWidth(ref.current.clientWidth);
-    setHeight(ref.current.clientHeight);
-  }, []);
-
     return (
         <>
             <tr>
-                <td colSpan={18} className="py-3" >
-                    <div className='row' ref={ref}>
-                        <div className='col-md-4'>
+                <td colSpan={18} className="cus-os-td" >
+                    <div className='row cus-ffos-row'>
+                        <div className='col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-3 mb-lg-0'>
                             <div className=" bg_col p-3">
-                                <h6 className='fw-bold mb-3' > Order Summary {width - 230}</h6>
+                                <h6 className='fw-bold mb-3' > Order Summary</h6>
                                 <Row>
                                     <div className='col-md-8'>
                                         {/* <div className="main-div" ref={observedDiv}>
@@ -79,7 +44,7 @@ export default function FulfillmentOrderSummary() {
                                 </Row>
                             </div>
                         </div>
-                        <div className="col-md-8">
+                        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div className=" bg_col p-3">
                                 <div className="form-group cus-form-group">
                                     <Form.Control placeholder="Wholesale Price" className='fill-input' />

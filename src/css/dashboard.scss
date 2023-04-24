@@ -24,7 +24,7 @@ body {
     padding: 0 !important;
 
     .layout_content {
-        overflow-y: scroll;
+        overflow-y: auto;
         width: 100%;
     }
 }
@@ -444,10 +444,13 @@ accordion-header {
     border-radius: 50px;
 }
 
-.color-2 {
-    background-image: linear-gradient(to right, $green-color, $green-color, #30dd8a, $green-color);
-    border-radius: 50px;
-}
+// Replace with .btn-blue-border on button.scss
+// .color-2 {
+//     color:$theme-color !important;
+//     border-radius: 50px !important;
+//     border: 1px solid $theme-color !important;
+//     background-color: $color-white !important;
+// }
 
 .color-3 {
     background-image: linear-gradient(to right, $theme-color, $theme-color, #04befe, $theme-color);
