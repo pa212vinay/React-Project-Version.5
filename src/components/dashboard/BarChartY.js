@@ -8,7 +8,7 @@ ChartJS.register(
     BarElement
 )
 
-const BarChart = () => {
+const BarChartY = () => {
     var data = {
         labels: ['1', '2', '3', '4', '5', '6', '8', '10', '11', '12', '13'],
         datasets: [{
@@ -33,25 +33,26 @@ const BarChart = () => {
     }
 
     var options = {
-        animation: true,
+        // animation: true,
+        indexAxis: 'y',
         plugins: {
-            legend: {
-                display: true
-            },
-            tooltip: {
-                enabled: true
-            },
-            layout: {
-                padding: 30
-            },
-            title: {
-                display: true,
-                text: 'Custom Chart Title',
-                padding: {
-                    top: 10,
-                    bottom: 30
-                }
-            },
+            // legend: {
+            //     display: true
+            // },
+            // tooltip: {
+            //     enabled: true
+            // },
+            // layout: {
+            //     padding: 30
+            // },
+            // title: {
+            //     display: true,
+            //     text: 'Custom Chart Title',
+            //     padding: {
+            //         top: 10,
+            //         bottom: 30
+            //     }
+            // },
         }
     }
 
@@ -65,4 +66,4 @@ const BarChart = () => {
         </div>
     )
 }
-export default BarChart;
+export default BarChartY;
