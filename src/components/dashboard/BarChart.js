@@ -1,6 +1,8 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale } from "chart.js";
+import { Row, Col } from "react-bootstrap";
+import { Icon } from '@iconify/react';
 
 ChartJS.register(
     CategoryScale,
@@ -44,25 +46,45 @@ const BarChart = () => {
             layout: {
                 padding: 30
             },
-            title: {
-                display: true,
-                text: 'Custom Chart Title',
-                padding: {
-                    top: 10,
-                    bottom: 30
-                }
-            },
         }
     }
 
     return (
-        <div>
-            <Bar
-                data={data}
-                height={250}
-                options={options}
-            />
-        </div>
+        <Row>
+            <Col md={12}>
+                <h3>REVENUE BY PRODUCT</h3>
+                <p>DAILY SALES PERFORMANCE</p>
+                <hr className="bottomBorder" />
+            </Col>
+            <Col md={8}>
+                <Bar
+                    data={data}
+                    height={250}
+                    options={options}
+                />
+                <div className="mt-3">
+                    <span className="ps-5 fw-bold">Demo export prdos</span>
+                    <span className="float-end pe-5 fw-bold">Product variation testing</span>
+                </div>
+            </Col>
+            <Col md={4}>
+                <div className="dateChange">
+                    <span><Icon icon="material-symbols:play-arrow-rounded" rotate={2} width="32" className="txt_color" /></span>
+                    <span className="text-gray">MAR 22, 2023</span>
+                    <span><Icon icon="material-symbols:play-arrow-rounded" width="32" className="txt_color" /></span>
+                </div>
+                <div className="mt-4 text-center">
+                    <h3>Today</h3>
+                    <p>$1K</p>
+
+                    <h3>Yesterday</h3>
+                    <p>$1K</p>
+
+                    <h3>Today</h3>
+                    <p>$1K</p>
+                </div>
+            </Col>
+        </Row>
     )
 }
 export default BarChart;

@@ -1016,7 +1016,8 @@ button#controlled-tab-example-tab-Manual-1 {
         padding: 3px 5px;
         font-size: 15px;
         box-shadow: none !important;
-        @include md{
+
+        @include md {
             top: 8px;
         }
     }
@@ -1312,7 +1313,7 @@ span.icon-suffix {
 .subheader {
     background: $color-white;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 30px;
     min-height: 62px;
     height: 100% !important;
 }
@@ -1344,6 +1345,7 @@ span.icon-suffix {
         min-width: 150px;
         text-align: center;
         display: flow-root;
+        
     }
 
     a.active {
@@ -1352,8 +1354,9 @@ span.icon-suffix {
         border: 0.5px solid $theme-color;
         box-shadow: 0px 0px 20px rgb(0 0 0 / 20%);
         font-weight: 500;
-        border-radius: 10px;
+        border-radius: 22px;
         text-align: center;
+
 
     }
 
@@ -1828,7 +1831,7 @@ button.refeshBtn {
     .custom_tab.active::after {
         position: absolute;
         content: "";
-        top: 42px;
+        top: 40px;
         left: 50%;
         width: 0;
         height: 0;
@@ -2162,7 +2165,7 @@ button.refeshBtn {
         .nav-item {
             width: 33.33%;
             border-radius: 30px;
-            text-align: center; 
+            text-align: center;
         }
 
         .nav-link {
@@ -2181,19 +2184,38 @@ button.refeshBtn {
         border-radius: 25px;
         box-shadow: 0px 0px 10px 0px #4b4b4b3d;
     }
+
     .icon-add {
         font-size: 25px;
         color: #0b76c9;
         margin-top: 5px;
     }
+
     .icon-minus {
         font-size: 25px;
         color: #FF6B6B;
         margin-top: 5px;
     }
-    .pixel_boder{
+
+    .pixel_boder {
         border: 1px solid #ccc;
         border-radius: 7px;
         padding: 15px;
     }
+}
+
+// -----------------------Dashboard
+// .hightCanvas canvas {
+//     max-height: 422px !important;
+// }
+
+.bottomBorder {
+    border-color: $theme-color;
+    width: 70px !important;
+}
+
+.dateChange {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
 }

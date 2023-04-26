@@ -21,23 +21,21 @@ const LineChartM = () => {
             pointBorderColor:'rgba(11, 118, 201, 0.36)',
             fill: true,
             tension: 0.4,
-            
-
-        }],
-        
-    }
-    var data1 = {
-    labels: ['10', '20', '30', '40', '50', '60', '80', '70'],
-        datasets: [{
+        },
+        {
             label: 'Multiline Chart',    
             data: [33, 51, 5, 22, 30, 11, 73, 24],
             borderColor: 'rgba(11, 118, 201, 0.36)',
             backgroundColor:'red',
             pointBorderColor:'rgba(11, 118, 201, 0.36)',
             fill: true,
+            tension: 0.4,
             
-        }]
+        }
+    ],
+        
     }
+   
     var options = {
         plugins: {
             legend:  true
@@ -53,9 +51,7 @@ const LineChartM = () => {
         <div>
             <Line
                 data={data}
-                data1={data1}
                 options={options}
-
             />
         </div>
     )

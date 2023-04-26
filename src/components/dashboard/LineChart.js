@@ -21,10 +21,11 @@ const LineChart = () => {
             pointBorderColor:'rgba(11, 118, 201, 0.36)',
             fill: true,
             tension: 0.4,
-            
-
+            // anchor :'end',
+            // align :'top',
         }]
     }
+ 
     var options = {
         plugins: {
             legend:  true
@@ -41,7 +42,6 @@ const LineChart = () => {
             <Line
                 data={data}
                 options={options}
-
             />
         </div>
     )
