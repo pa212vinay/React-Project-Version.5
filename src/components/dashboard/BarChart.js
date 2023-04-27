@@ -50,7 +50,8 @@ const BarChart = () => {
     }
 
     return (
-        <Row>
+
+        <Row className="chart">
             <Col md={12}>
                 <h3>REVENUE BY PRODUCT</h3>
                 <p>DAILY SALES PERFORMANCE</p>
@@ -68,6 +69,7 @@ const BarChart = () => {
                 </div>
             </Col>
             <Col md={4}>
+                <div className="my-auto">
                 <div className="dateChange">
                     <span><Icon icon="material-symbols:play-arrow-rounded" rotate={2} width="32" className="txt_color" /></span>
                     <span className="text-gray">MAR 22, 2023</span>
@@ -82,6 +84,7 @@ const BarChart = () => {
 
                     <h3>Today</h3>
                     <p>$1K</p>
+                </div>
                 </div>
             </Col>
         </Row>

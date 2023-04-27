@@ -1341,7 +1341,7 @@ span.icon-suffix {
 
     a {
         text-decoration: none;
-        padding: 10px 5px;
+        padding: 10px 10px;
         min-width: 150px;
         text-align: center;
         display: flow-root;
@@ -2205,17 +2205,3 @@ button.refeshBtn {
 }
 
 // -----------------------Dashboard
-// .hightCanvas canvas {
-//     max-height: 422px !important;
-// }
-
-.bottomBorder {
-    border-color: $theme-color;
-    width: 70px !important;
-}
-
-.dateChange {
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-}

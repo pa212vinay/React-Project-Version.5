@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
 import './css/responsive.scss';
-import './css/dashboard.scss';
+import './css/main.scss';
 import './css/index.scss'
 
 import Layout from './components/common/Layout';
@@ -78,10 +78,13 @@ import Report from './components/report/Report';
 import Tracking from './components/tracking/Tracking';
 
 // -----Dashboard------- 
-import Dashboard from './components/dashboard/Dashboard';
-
-
-
+// import Dashboard from './components/dashboard/Revenue_Category';
+import Revenue_Products from './components/dashboard/Revenue_Products';
+import Revenue_Category from './components/dashboard/Revenue_Category';
+import Revenue_Channels from './components/dashboard/Revenue_Channels';
+import Products from './components/dashboard/Products';
+import Sales from './components/dashboard/Sales';
+import Customers from './components/dashboard/Customers';
 
 function App() {
   return (
@@ -158,7 +161,14 @@ function App() {
                 <Route path="/Tracking" element={<Tracking />} />
 
                  {/* -----Dashboard------- */}
-                 <Route path="/Dashboard" element={<Dashboard />} />
+                 {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
+                 <Route path="/Revenue_Products" element={<Revenue_Products />} />
+                 <Route path="/Revenue_Category" element={<Revenue_Category />} />
+                 <Route path="/Revenue_Channels" element={<Revenue_Channels />} />
+                 <Route path="/Products" element={<Products />} />
+                 <Route path="/Sales" element={<Sales />} />
+                 <Route path="/Customers" element={<Customers />} />
+
               </Route>
 
 
