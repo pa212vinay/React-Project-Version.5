@@ -54,7 +54,7 @@ const PieChart = () => {
                 // align: 'center',
                 
                 labels:{
-                    textAlign: 'right',
+                    // textAlign: 'right',
                     pointStyle:'circle',
                     usePointStyle: true
                 }
@@ -68,8 +68,7 @@ const PieChart = () => {
 
     return (
         <div className="chart">
-            <h3>REVENUE BY PRODUCT</h3>
-            {/* <p>DAILY SALES PERFORMANCE</p> */}
+            <h3>PRODUCT SALESBY RANGE</h3>
             <hr className="bottomBorder" />
             <Pie
                 data={data}

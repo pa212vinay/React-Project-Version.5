@@ -10,24 +10,24 @@ const Dashboard_Tab = () => {
         <Container fluid>
           <Navbar.Toggle aria-controls="basic-navbar-nav bg-light" className='margin_auto my-1' />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav variant="pills" defaultActiveKey="/" className=''>
+            <Nav variant="pills" defaultActiveKey="/Revenue_Products" className=''>
               <Nav.Item>
-                <NavLink to="" eventKey="link-00"><Icon icon="clarity:dashboard-line" width="24" className='me-1 submenuIcon'/>Revenue by products</NavLink>
+                <NavLink to="/Revenue_Products" eventKey="link-00"><Icon icon="uil:chart-growth" width="24" className='me-1 submenuIcon'/>Revenue by products</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <NavLink to="" eventKey="link-11"><Icon icon="material-symbols:format-list-bulleted-rounded" width="24" className='me-1 submenuIcon'/>Revenue by category</NavLink>
+                <NavLink to="/Revenue_Category" eventKey="link-11"><Icon icon="fluent:arrow-growth-20-filled" width="24" className='me-1 submenuIcon'/>Revenue by category</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <NavLink to="" eventKey="link-22"><Icon icon="ci:paperclip-attechment-tilt" width="24" className='me-1 submenuIcon'/>Revenue by channels</NavLink>
+                <NavLink to="/Revenue_Channels" eventKey="link-22"><Icon icon="uil:arrow-growth" width="24" className='me-1 submenuIcon'/>Revenue by channels</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <NavLink to="" eventKey="link-33"><Icon icon="icomoon-free:infinite" width="24" className='me-1 submenuIcon'/>Products</NavLink>
+                <NavLink to="/Products" eventKey="link-33"><Icon icon="fluent-mdl2:product-variant" width="24" className='me-1 submenuIcon'/>Products</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <NavLink to="" eventKey="link-44"><Icon icon="game-icons:card-pickup" width="24" className='me-1 submenuIcon'/>Sales</NavLink>
+                <NavLink to="/Sales" eventKey="link-44"><Icon icon="icon-park-outline:sales-report" width="24" className='me-1 submenuIcon'/>Sales</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <NavLink to="" eventKey="link-55"><Icon icon="mdi-light:note-text" width="24" className='me-1 submenuIcon'/>Customers</NavLink>
+                <NavLink to="/Customers" eventKey="link-55"><Icon icon="mdi:user-group" width="24" className='me-1 submenuIcon'/>Customers</NavLink>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

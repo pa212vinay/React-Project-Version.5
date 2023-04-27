@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale } from "chart.js";
+import { Row, Col } from "react-bootstrap";
 
 ChartJS.register(
     CategoryScale,
@@ -33,37 +34,33 @@ const BarChartY = () => {
     }
 
     var options = {
-        // animation: true,
         indexAxis: 'y',
         plugins: {
-            // legend: {
-            //     display: true
-            // },
-            // tooltip: {
-            //     enabled: true
-            // },
-            // layout: {
-            //     padding: 30
-            // },
-            // title: {
-            //     display: true,
-            //     text: 'Custom Chart Title',
-            //     padding: {
-            //         top: 10,
-            //         bottom: 30
-            //     }
-            // },
+            legend: {
+                position: 'right',
+                
+                labels:{
+                    // textAlign: 'right',
+                    pointStyle:'circle',
+                    usePointStyle: true
+                }
+            },
         }
     }
 
     return (
-        <div>
+        
+            <div className='chart'>
+            <h3>2023</h3>
+                <p>PRODUCT SALES BY RANGE</p>
+                <hr className="bottomBorder" />
             <Bar
                 data={data}
                 height={250}
                 options={options}
             />
-        </div>
+           </div>
+      
     )
 }
 export default BarChartY;
