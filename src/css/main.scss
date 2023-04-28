@@ -2,8 +2,6 @@
 @import './abstracts/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Poppins:wght@300;200&display=swap');
 
-
-
 .App {
     overflow-x: hidden;
     position: relative;
@@ -1550,7 +1548,7 @@ button.refeshBtn {
     margin-top: 15px !important;
 
     a.page-link {
-        padding: 1px 5px;
+        padding: 5px 10px;
         color: $theme-color;
 
     }
@@ -1884,7 +1882,7 @@ button.refeshBtn {
 }
 
 .rti--container {
-    max-height: 35px;
+    max-height: 40px;
     padding: 6px !important;
     overflow-y: auto;
 }

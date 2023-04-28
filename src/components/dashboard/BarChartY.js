@@ -1,7 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale } from "chart.js";
-import { Row, Col } from "react-bootstrap";
+// import { Row, Col } from "react-bootstrap";
 
 ChartJS.register(
     CategoryScale,
@@ -13,7 +13,7 @@ const BarChartY = () => {
     var data = {
         labels: ['1', '2', '3', '4', '5', '6', '8', '10', '11', '12', '13'],
         datasets: [{
-            label: '# of Votes',
+            label: '# of Votes new',
             data: [12, 19, 3, 5, 2, 3, 7, 11, 4, 8, 2, 9, 3],
             backgroundColor: [
                 'rgba(11, 118, 201, 0.6)',
@@ -35,6 +35,7 @@ const BarChartY = () => {
 
     var options = {
         indexAxis: 'y',
+        // plugins:[ChartDataLables],
         plugins: {
             legend: {
                 position: 'right',

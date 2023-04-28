@@ -8,7 +8,6 @@ ChartJS.register(
     LineElement,
     PointElement
 )
-
 const LineChartM = () => {
 
     var data = {
@@ -19,7 +18,7 @@ const LineChartM = () => {
             borderColor: 'rgba(11, 118, 201, 0.36)',
             backgroundColor: '#0B76C9',
             pointBorderColor: 'rgba(11, 118, 201, 0.36)',
-            fill: true,
+            // fill: true,
             tension: 0.4,
         },
         {
@@ -28,30 +27,48 @@ const LineChartM = () => {
             borderColor: 'rgba(11, 118, 201, 0.36)',
             backgroundColor: 'red',
             pointBorderColor: 'rgba(11, 118, 201, 0.36)',
-            fill: true,
+            // fill: true,
             tension: 0.4,
-
-        }
+        },
+        {
+            label: 'Multiline Chart',
+            data: [40 , 30, 50, 35, 30, 11, 75, 24],
+            borderColor: 'rgba(11, 118, 201, 0.36)',
+            backgroundColor: 'green',
+            pointBorderColor: 'rgba(11, 118, 201, 0.36)',
+            // fill: true,
+            tension: 0.4,
+        },
+        {
+            label: 'Multiline Chart',
+            data: [75, 50, 25, 52, 60, 71, 33, 44],
+            borderColor: 'rgba(11, 118, 201, 0.36)',
+            backgroundColor: 'blue',
+            pointBorderColor: 'rgba(11, 118, 201, 0.36)',
+            // fill: true,
+            tension: 0.4,
+        },
+        {
+            label: 'Multiline Chart',
+            data: [73, 31, 55, 22, 40, 61, 43, 64],
+            borderColor: 'rgba(11, 118, 201, 0.36)',
+            backgroundColor: 'black',
+            pointBorderColor: 'rgba(11, 118, 201, 0.36)',
+            // fill: true,
+            tension: 0.4,
+        },
         ],
-
     }
-
     var options = {
         plugins: {
             legend: {
                 position: 'bottom',
-
                 labels: {
                     // textAlign: 'right',
                     pointStyle: 'circle',
                     usePointStyle: true
                 }
             },
-            scales: {
-                y: {
-                    min: 3,
-                }
-            }
         }
     }
     return (
