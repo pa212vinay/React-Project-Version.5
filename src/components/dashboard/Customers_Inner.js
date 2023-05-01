@@ -103,17 +103,6 @@ const Customers = () => {
         <div className=" col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
           <div className='bg_col p-3 h-100'>
             <div style={{ height: '100%', width: '100%' }}>
-              <GoogleMapReact
-                bootstrapURLKeys={{ key: "$ gcloud alpha services api-keys get-key-string 1234" }}
-                defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-              >
-                <AnyReactComponent
-                  lat={59.955413}
-                  lng={30.337844}
-                  text="Whearhouse"
-                />
-              </GoogleMapReact>
             </div>
           </div>
         </div>
