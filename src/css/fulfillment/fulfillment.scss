@@ -46,33 +46,64 @@
                         width: calc(100vw - 23px);
                     }
 
-                    .fforderStatusDate {
-                        display: flex;
-                        padding-bottom: 15px;
+                    .orderSummarybox {
+                        .orderSummaryCard {
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #d8e9f6;
+                            padding-bottom: 10px;
 
-                        & .ffOrderStatus {
-                            min-width: 150px;
-                            font-weight: 600;
+                            .orderSummaryDateSec {
+                                .fforderStatusDate {
+                                    display: flex;
+                                    padding-bottom: 15px;
+
+                                    & .ffOrderStatus {
+                                        min-width: 150px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            .orderSummaryPrintSec {
+                                .fforderSlipSec {
+                                    display: inline-flex;
+                                    flex-direction: column;
+
+                                    & .ffOrderSlip {
+                                        background: #0b76c929;
+                                        margin-bottom: 7px;
+                                        padding: 5px 15px;
+                                        border-radius: 50px;
+                                    }
+
+                                    & .ffOrderAddNote {
+                                        background: #00800040;
+                                        color: #008000;
+                                        padding: 5px 15px;
+                                        border-radius: 50px;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .addressVerifySec {
+                            padding: 10px 0px 0px 0px;
+                            text-align: right;
+                            font-weight: 700;
+                            & a {
+                                display: flex;
+                                align-items: center;
+                                justify-content: end;
+                                & svg{
+                                    font-size: $font-size-base-px + 4;
+                                }
+                            }
                         }
                     }
 
-                    .fforderSlipSec {
-                        display: inline-flex;
-                        flex-direction: column;
 
-                        & .ffOrderSlip {
-                            background: #0b76c929;
-                            margin-bottom: 7px;
-                            padding: 5px 15px;
-                            border-radius: 50px;
-                        }
-                        & .ffOrderAddNote{
-                            background: #00800040;
-                            color: #008000;
-                            padding: 5px 15px;
-                            border-radius: 50px;
-                        }
-                    }
                 }
             }
         }
