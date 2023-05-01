@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Table, Form } from 'react-bootstrap';
 import LineChart from './LineChart.js';
+import LineChart_color from './LineChart_color.js';
 const Customers_Inner = () => {
   return (
     <>
