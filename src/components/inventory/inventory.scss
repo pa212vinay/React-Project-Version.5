@@ -1,0 +1,112 @@
+@import '../../css/abstracts/abstract-dir';
+@import '../../css/base/base-dir';
+@import '../../css/utility/utility-dir';
+
+.inventory_tab {
+    .nav-item {
+        padding: 0 6px;
+        position: relative;
+    }
+
+    .custom_tab {
+        width: 165px;
+        display: inherit;
+        text-align: center;
+        padding: 10px !important;
+        list-style: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.7s;
+        color: #666666 !important;
+        background: $color-white;
+        border: 1px solid #CCCCCC !important;
+        border-radius: 10px !important;
+        text-decoration: none;
+    }
+
+    .custom_tab.active {
+        background-color: $theme-color !important;
+        color: $color-white !important;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .back-btn {
+        margin-top: 24px;
+        font-size: $font-size-base-px + 9;
+        color: green;
+    }
+
+    .custom_tab.active::after {
+        position: absolute;
+        content: "";
+        top: 40px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 11px solid $theme-color;
+    }
+}
+
+.contact_inner {
+
+    .nav-tabs {
+        border-bottom: unset;
+
+        #noanim-tab-example-tab-Email {
+            border-top-right-radius: 0 !important;
+            border: 1px solid $theme-color !important;
+            border-bottom-left-radius: 6px;
+        }
+
+        #noanim-tab-example-tab-Task {
+            border-top-left-radius: 0 !important;
+            border-bottom-right-radius: 6px !important;
+            border: 1px solid $theme-color !important;
+        }
+
+        .nav-link.active {
+            background-color: $darl_blue !important;
+            color: $color-white;
+        }
+    }
+}
+
+.product_details {
+    .accordion-flush .accordion-item .accordion-button {
+        border-radius: 0 !important;
+    }
+}
+
+.port_lookup {
+    .strick {
+        color: $dark_red;
+    }
+}
+
+.addtab {
+    .nav-pills .nav-link.active {
+        background-color: $darl_blue !important;
+        color: $color-white !important;
+    }
+
+    #left-tabs-example-tab-first .nav-link,
+    #left-tabs-example-tab-second .nav-link {
+        color: $theme-color !important;
+    }
+
+    #left-tabs-example-tab-first {
+        border: 1px solid $theme-color;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    #left-tabs-example-tab-second {
+        border: 1px solid $theme-color;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+    }
+}
