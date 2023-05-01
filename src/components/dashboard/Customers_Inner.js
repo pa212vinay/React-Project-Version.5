@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Table, Form } from 'react-bootstrap';
 import LineChart from './LineChart.js';
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Customers = () => {
   return (
     <>
