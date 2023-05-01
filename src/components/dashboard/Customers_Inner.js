@@ -2,6 +2,10 @@ import React from "react";
 import { Row, Table, Form } from 'react-bootstrap';
 import LineChart from './LineChart.js';
 const Customers = () => {
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 3e32ebf6da5aeabf77c550da9fcda4f91e8dc2e1
   return (
     <>
       <Row className="g-3 hightCanvas mt-1">
@@ -93,8 +97,8 @@ const Customers = () => {
         </div>
         <div className=" col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
           <div className='bg_col p-3 h-100'>
-            <div style={{ height: '100%', width: '100%' }}>
-            </div>
+            {/* <div style={{ height: '100%', width: '100%' }}>
+            </div> */}
           </div>
         </div>
         <div className=" col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
