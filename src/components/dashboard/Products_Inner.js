@@ -11,7 +11,6 @@ const Products_Inner = () => {
       <Row className="g-3 hightCanvas mt-1">
         <div className=" col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div className='bg_col p-3 h-100'>
-            <h6 className='fw-bold'></h6>
             <Table responsive>
               <thead>
                 <tr>

@@ -5,9 +5,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
-// import { Link } from "react-router-dom";
-import { BsSearch } from "react-icons/bs";
-
 const Tracking_Ad = () => {
     // -------------------Custom
     const [edit, setEdit] = useState(false);
@@ -1710,7 +1707,8 @@ const Tracking_Ad = () => {
                             <button type="button" class="btn btn-outline-primary me-2 r_mt-2"><Icon icon="uiw:table" /></button>
                             <div className="form-group cus-form-group d-inline-block r_mt-2">
                                 <Form.Control placeholder="Supplier Name" className='fill-input' />
-                                <label className='float-label'>Search</label><BsSearch className='inputIcon' />
+                                <label className='float-label'>Search</label>
+                                <Icon icon="material-symbols:search-rounded" className='inputIcon'/>
                             </div>
                         </div>
                     </div>

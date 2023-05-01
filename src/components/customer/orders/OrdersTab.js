@@ -42,7 +42,7 @@ const newOrder = () => {
           </Link>
         </div>
         <div className="col-xl-12 col-lg-6">
-          <Link to="/Invoice" className='cusOrderTab'>
+          <Link to="/Auth_Capture" className='cusOrderTab'>
             <div className='cusIdDate'>
               <span className='cusOrderId'>#8814  </span>
               <span className='cusOrderDate'>11/06/2023</span>
@@ -54,7 +54,7 @@ const newOrder = () => {
           </Link>
         </div>
         <div className="col-xl-12 col-lg-6">
-          <Link to="/Invoice" className='cusOrderTab'>
+          <Link to="/Declined" className='cusOrderTab'>
             <div className='cusIdDate'>
               <span className='cusOrderId'>#8830  </span>
               <span className='cusOrderDate'>02/07/2023</span>
@@ -66,7 +66,7 @@ const newOrder = () => {
           </Link>
         </div>
         <div className="col-xl-12 col-lg-6">
-          <Link to="/Invoice" className='cusOrderTab'>
+          <Link to="/Error" className='cusOrderTab'>
             <div className='cusIdDate'>
               <span className='cusOrderId'>#8013  </span>
               <span className='cusOrderDate'>15/06/2023</span>
@@ -78,7 +78,7 @@ const newOrder = () => {
           </Link>
         </div>
         <div className="col-xl-12 col-lg-6">
-          <Link to="/Invoice" className='cusOrderTab'>
+          <Link to="/Completed" className='cusOrderTab'>
             <div className='cusIdDate'>
               <span className='cusOrderId'>#8823  </span>
               <span className='cusOrderDate'>12/06/2023</span>
@@ -90,7 +90,7 @@ const newOrder = () => {
           </Link>
         </div>
         <div className="col-xl-12 col-lg-6">
-          <Link to="/Invoice" className='cusOrderTab'>
+          <Link to="/Refund" className='cusOrderTab'>
             <div className='cusIdDate'>
               <span className='cusOrderId'>#8803  </span>
               <span className='cusOrderDate'>16/06/2023</span>
@@ -102,7 +102,7 @@ const newOrder = () => {
           </Link>
         </div>
         <div className="col-xl-12 col-lg-6">
-          <Link to="/Invoice" className='cusOrderTab'>
+          <Link to="/Pending" className='cusOrderTab'>
             <div className='cusIdDate'>
               <span className='cusOrderId'>#8523  </span>
               <span className='cusOrderDate'>08/06/2023</span>

@@ -2,6 +2,7 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import { Container } from 'react-bootstrap';
 import Inventory_Inner from './Inventory_Inner';
+import './inventory.scss'
 
 
 

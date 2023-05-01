@@ -1,7 +1,8 @@
 import * as React from 'react';
 import Row from 'react-bootstrap/Row';
 import { Container } from 'react-bootstrap';
-import Tracking_Ad from './Tracking_Ad';
+import Tracking_Ad from './Tracking_Ad.js';
+import './tracking.scss';
 
 
 
