@@ -19,7 +19,11 @@
     "boxicons": "^2.1.2",
     "cdbreact": "^1.5.3",
     "chart.js": "^4.2.1",
+<<<<<<< HEAD
+    "google-map-react": "^2.2.0",
+=======
     "formik": "^2.2.9",
+>>>>>>> 747b62464e7b9af0f6197644e85fb70736f33eb1
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-bootstrap-floating-label": "^1.6.0",
