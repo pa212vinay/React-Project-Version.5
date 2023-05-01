@@ -1,16 +1,9 @@
 import React from "react";
 import { Row, Table, Form } from 'react-bootstrap';
 import LineChart from './LineChart.js';
-import GoogleMapReact from 'google-map-react';
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Customers = () => {
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 11
-  };
+  
   return (
     <>
       <Row className="g-3 hightCanvas mt-1">
