@@ -2,10 +2,7 @@ import React from "react";
 import { Row, Table, Form } from 'react-bootstrap';
 import LineChart from './LineChart.js';
 const Customers = () => {
-<<<<<<< HEAD
   
-=======
->>>>>>> 3e32ebf6da5aeabf77c550da9fcda4f91e8dc2e1
   return (
     <>
       <Row className="g-3 hightCanvas mt-1">
