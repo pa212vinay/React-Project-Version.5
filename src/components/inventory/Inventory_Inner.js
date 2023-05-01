@@ -229,7 +229,7 @@ const Inventory_Inner = () => {
                                         <th>Primary Category</th>
                                         <th>UPC</th>
                                         <th>Action</th>
-                                    </tr> qe  6997
+                                    </tr> 
                                 </thead>
                                 <tbody>
                                     <tr>
