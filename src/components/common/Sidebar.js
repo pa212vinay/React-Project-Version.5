@@ -39,11 +39,11 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="chart-line">Email</CDBSidebarMenuItem>
             </NavLink>
             </Nav.Item>
-            {/* <Nav.Item>
+            <Nav.Item>
             <NavLink exact to="/Ecommerce" activeClassName="activeClicked" eventKey="link-3.4">
               <CDBSidebarMenuItem icon="shopping-cart">Ecommerce</CDBSidebarMenuItem>
             </NavLink>
-            </Nav.Item> */}
+            </Nav.Item>
             <Nav.Item>
             <NavLink exact to="/Social" activeClassName="activeClicked" eventKey="link-3.5">
               <CDBSidebarMenuItem icon="globe">Social</CDBSidebarMenuItem>

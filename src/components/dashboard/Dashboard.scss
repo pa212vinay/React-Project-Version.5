@@ -3,23 +3,20 @@
 @import '../../css/base/base-dir';
 @import '../../css/utility/utility-dir';
 
-.hightCanvas {
+.hightCanvas{ 
     canvas {
-        max-height: 315px !important;
+    max-height: 422px !important;
+}
+}
+.chart {
+    .bottomBorder {
+        border-color: $theme-color;
+        width: 70px !important;
     }
 
-    .chart {
-        .bottomBorder {
-            border-color: $theme-color;
-            width: 70px !important;
-        }
-
-        .dateChange {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .dateChange {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-
-
 }
