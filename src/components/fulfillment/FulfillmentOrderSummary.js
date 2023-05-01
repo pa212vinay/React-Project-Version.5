@@ -10,52 +10,119 @@ export default function FulfillmentOrderSummary() {
 
     return (
         <>
-            <Modal size="md" show={verifyadd} onHide={() => setVerifyAdd(false)} aria-labelledby="example-modal-6">
-                <div className="px-2">
-                    <Modal.Header closeButton>
-                        <Modal.Title id="example-modal-6">
-                            <h6 className="fw-bold">Verify Address</h6>
-                        </Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Row className='g-3'>
-                            <Col md={12}>
-                                <Formik initialValues={{ picked: ' ' }}>
-                                    <Form>
+            <Modal size="lg" show={verifyadd} onHide={() => setVerifyAdd(false)} aria-labelledby="example-modal-6">
+
+                <Modal.Header closeButton>
+                    <Modal.Title className='ffverifyAddress'>
+                        Verify Address
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Row className='g-3'>
+                        <Col md={12}>
+                            <Formik initialValues={{ picked: ' ', fname: '', lname: '', companyname: '', firstadd: '', secadd: '', city: '', state: '', zip: '', country: '', override: '' }}>
+                                <Form>
+                                    <Row>
                                         <div className='cus-quantity-checkbox pb-4'>
-                                            <label>
-                                                <Field className="formControl" type="radio" name="picked" value="One" />&nbsp;
+                                            <label className='curntAddrLabel'>
+                                                <Field className="formControl" type="radio" name="picked" value="One" checked />&nbsp;
                                                 Current
                                             </label>
+                                            <div className='curntAddrName'>United State</div>
                                         </div>
-                                        <div className='cus-quantity-checkbox pb-4'>
-                                            <label>
+
+                                        <div className='cus-quantity-checkbox pb-2'>
+                                            <label className='curntAddrLabel'>
                                                 <Field className="formControl" type="radio" name="picked" value="two" />&nbsp;
                                                 Manually Override
                                             </label>
                                         </div>
-                                        <div className='form-group cus-form-group'>
-                                            <Field className="form-control fill-input" type="text" placeholder="none"/>
-                                            <label htmlFor="productId" className='float-label'>First Name</label>
-                                        </div>
-                                        <div className="form-group cus-form-group">
 
-                                            <Field className="form-control fill-input" placeholder="none" />
-                                            <label htmlFor="productId" className='float-label'>Title</label>
+                                        <Col md={6}>
+                                            <div className='form-group cus-form-group'>
+                                                <Field className="form-control fill-input" type="text" placeholder="none" name="fname" />
+                                                <label htmlFor="productId" className='float-label'>First Name</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={6}>
+                                            <div className="form-group cus-form-group">
+                                                <Field className="form-control fill-input" type="text" placeholder="none" name="lname" />
+                                                <label htmlFor="productId" className='float-label'>Last Name</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={12} className='pt-3'>
+                                            <div className="form-group cus-form-group">
+                                                <Field className="form-control fill-input" type="text" placeholder="none" name="companyname" />
+                                                <label htmlFor="productId" className='float-label'>Company Name</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={12} className='pt-3'>
+                                            <div className="form-group cus-form-group">
+                                                <Field className="form-control fill-input" type="text" placeholder="none" name="firstadd" />
+                                                <label htmlFor="productId" className='float-label'>Address (First)</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={12} className='pt-3'>
+                                            <div className="form-group cus-form-group">
+                                                <Field className="form-control fill-input" type="text" placeholder="none" name="secadd" />
+                                                <label htmlFor="productId" className='float-label'>Address (Second)</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={4} className='pt-3'>
+                                            <div className="form-group cus-form-group">
+                                                <Field className="form-control fill-input" type="text" placeholder="none" name="city" />
+                                                <label htmlFor="productId" className='float-label'>City</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={4} className='pt-3'>
+                                            <div className="form-group cus-select-group" >
+                                                <Field as="select" className="form-control fill-input" name='state'>
+                                                    <option value="india">India</option>
+                                                    <option value="china">China</option>
+                                                    <option value="norway">Norway</option>
+                                                </Field>
+                                                <label htmlFor="State" className='float-label'>State</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={4} className='pt-3'>
+                                            <div className="form-group cus-form-group" >
+                                                <Field className="form-control fill-input" type="text" placeholder="none" name='zip' />
+                                                <label htmlFor="productId" className='float-label'>Zip</label>
+                                            </div>
+                                        </Col>
+                                        <Col md={4} className='pt-3'>
+                                            <div className="form-group cus-select-group" >
+                                                <Field as="select" className="form-control fill-input" name='country'>
+                                                    <option value="india">India</option>
+                                                    <option value="china">China</option>
+                                                    <option value="norway">Norway</option>
+                                                </Field>
+                                                <label htmlFor="country" className='float-label'>Country</label>
+                                            </div>
+                                        </Col>
+                                        <div className='cus-quantity-checkbox pt-4'>
+                                            <label className='curntAddrLabel'>
+                                                <Field className="formControl" type="checkbox" name="override" value="One" />&nbsp;
+                                                Force Override
+                                            </label>
                                         </div>
-                                        <button >Submit</button>
-                                    </Form>
-                                </Formik>
-                            </Col>
-                        </Row>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <div className="text-end mb-2 mt-4">
-                            <button className="btn-hover color-1" closeButton onClick={() => setVerifyAdd(false)}>Close</button>
-                            <button className="btn-hover color-2" >Submit</button>
-                        </div>
-                    </Modal.Footer>
-                </div>
+                                        <div className='closeSubmitBtn'>
+                                            <button className="btn-hover color-1" onClick={() => setVerifyAdd(false)}>Close</button>
+                                            <button className="btn-hover " >Submit</button>
+                                        </div>
+                                    </Row>
+                                </Form>
+                            </Formik>
+                        </Col>
+                    </Row>
+                </Modal.Body>
+                <Modal.Footer>
+                    <div className="float-end mb-2 mt-3">
+                        <button className="btn-hover color-1" onClick={() => setVerifyAdd(false)}>Close</button>
+                        <button className="btn-hover " >Submit</button>
+                    </div>
+                </Modal.Footer>
+
             </Modal>
             <tr>
                 <td colSpan={18} className="cus-os-td" >

@@ -92,11 +92,13 @@
                             padding: 10px 0px 0px 0px;
                             text-align: right;
                             font-weight: 700;
+
                             & a {
                                 display: flex;
                                 align-items: center;
                                 justify-content: end;
-                                & svg{
+
+                                & svg {
                                     font-size: $font-size-base-px + 4;
                                 }
                             }
@@ -113,3 +115,24 @@
 // .cus-ffos-row{
 //     @include 
 // }
+.ffverifyAddress.h4 {
+    font-size: 16px !important;
+    margin-bottom: 0;
+}
+
+.curntAddrLabel {
+    font-weight: 600;
+}
+
+.curntAddrName {
+    padding-left: 20px;
+}
+
+.modal-dialog {
+    .closeSubmitBtn {
+        padding-top: 16px;
+        border-top: 1px solid #00000036;
+        margin-top: 30px;
+        text-align: right;
+    }
+}
