@@ -52,7 +52,7 @@ const Customer = () => {
             <div className='bg_col p-3 mt-3'>
               <Row>
                 <div className='col-md-12 col-lg-6'>
-                  <div className='position-relative '>
+                  <div className='position-relative lh-lg'>
                     <div className='font-16'><span className='fw-bold'>Order ID</span> <span className='gray'>22879</span></div>
                     <div className='font-16'><span className='fw-bold'>Order Status:</span> <span className='gray'>Received</span></div>
                     <div className='font-16'><span className='fw-bold'>Payment Status:</span> <span className='gray'>AUTH_CAPTURE</span></div>
@@ -61,7 +61,7 @@ const Customer = () => {
                   </div>
                 </div>
                 <div className='col-md-12 col-lg-6'>
-                  <div className='position-relative '>
+                  <div className='position-relative lh-lg'>
                     <div className='font-16'><span className='fw-bold'>Sale Location:</span> <span className='gray'>INVOICE</span> </div>
                     <div className='font-16'><span className='fw-bold'>Encrypted Order ID:</span> <span className='gray text-break'>SkvjbFc3In20DNoNmFjUGc3WUtUDz09</span><MdOutlineFileCopy className='txt_color' /></div>
                     <div className='font-16'><span className='fw-bold'>Company:</span> <span className='gray'>furniture Gallery</span></div>
@@ -173,8 +173,7 @@ const Customer = () => {
             </div>
           </div>
           <div className='col-md-12 col-lg-12 col-xl-3 col-xxl-3 col-sm-12'>
-            <div className='bg_col mt-3 p-3'>
-              <div className='position-relative '>
+            <div className='bg_col mt-3 p-3 lh-lg'>
                 <h6 className='mb-3 fw-bold'>Moses S & Arianna K Glick</h6>
                 <div className='font-16'><span className='fw-bold'>Company:</span> <span className='gray'>Hiecor</span></div>
                 <div className='font-16'><span className='fw-bold'>Address:</span> <span className='gray'>385 Frogtown Rd</span></div>
@@ -183,7 +182,7 @@ const Customer = () => {
                 <div className='font-16'><span className='fw-bold'>Postal Code:</span> <span className='gray'>17565</span></div>
                 <div className='font-16'><span className='fw-bold'>Country:</span> <span className='gray'>US</span></div>
               </div>
-            </div>
+           
           </div>
         </Row>
       </div>

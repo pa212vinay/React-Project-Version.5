@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Container } from 'react-bootstrap';
 import Contact_Inner from "./Contact_Inner";
 import Subheader from "../common/Subheader";
+import './contact.scss';
 
 
 const Contact = () => {

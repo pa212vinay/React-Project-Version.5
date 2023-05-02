@@ -5,8 +5,7 @@ import OrdersTab from "../orders/OrdersTab";
 import Subheader from '../../common/Subheader';
 import Customer_Nav from '../Customer_Nav';
 import Invoice_Order from './Invoice_Order';
-
-
+import './order_details.scss';
 
 const subheader = () =>{
 

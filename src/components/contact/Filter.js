@@ -1,6 +1,6 @@
 import { Form, Row, Col } from 'react-bootstrap';
 import { CgClose } from "react-icons/cg";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { Icon } from '@iconify/react';
 
 const Filter = () => {
   return (
@@ -12,7 +12,7 @@ const Filter = () => {
           </Col>
           <Col xl={7} md={12}>
             <Row className='g-3'>
-              <div className="col-sm-5">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                 <div className="form-group cus-select-group">
                   <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                     <option>Select</option>
@@ -21,15 +21,15 @@ const Filter = () => {
                     <option value="3">Three</option>
                   </Form.Control>
                   <label className='float-label' htmlFor="require_shipping">Select</label>
-                  <IoMdArrowDropdown className='inputIcon' />
+                  <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                 </div>
               </div>
-              <div className="col-sm-5">
+              <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
                 <div className="form-group cus-form-group">
                   <Form.Control placeholder="Zip" className='fill-input' />
                 </div>
               </div>
-              <div className="col-sm-2">
+              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
                 <button className='btn-icon color-3'><CgClose /></button>
               </div>
             </Row>

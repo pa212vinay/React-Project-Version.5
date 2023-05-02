@@ -1,7 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import { HiOutlineRefresh, HiPlus } from "react-icons/hi";
 import { Form, Button } from 'react-bootstrap';
-import { IoMdArrowDropdown } from "react-icons/io";
+import { Icon } from '@iconify/react';
 
 const Shipping_info= () => {
   return (
@@ -51,7 +51,7 @@ const Shipping_info= () => {
                       <option value="3">Three</option>
                     </Form.Control>
                     <label className='float-label' htmlFor="require_shipping">Carrier</label>
-                    <IoMdArrowDropdown className='inputIcon' />
+                    <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                   </div>
                 </div>
                 <div className="col-sm-5 col-md-5">
@@ -63,7 +63,7 @@ const Shipping_info= () => {
                       <option value="3">Three</option>
                     </Form.Control>
                     <label className='float-label' htmlFor="require_shipping">Service</label>
-                    <IoMdArrowDropdown className='inputIcon' />
+                    <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                   </div>
                 </div>
                 <div className="col-sm-2  col-md-2">
@@ -78,7 +78,7 @@ const Shipping_info= () => {
                       <option value="3">Three</option>
                     </Form.Control>
                     <label className='float-label' htmlFor="require_shipping">Insurance</label>
-                    <IoMdArrowDropdown className='inputIcon' />
+                    <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                   </div>
                 </div>
                 <div className="col-sm-7 ">

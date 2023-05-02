@@ -13,7 +13,7 @@ const Subscription = () => {
         <Container fluid className='p-3'>
           <Subheader />
               <Row className="">              
-                <div className=" col-lg-12 col-md-12">
+                <div className=" col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <Subscription_Inner />
                 </div>
               </Row>

@@ -1,0 +1,68 @@
+@import '../../../css/abstracts/abstract-dir';
+@import '../../../css/base/base-dir';
+@import '../../../css/utility/utility-dir';
+
+/* ------------ OrderTab Start ------------ */
+
+.orderSerch {
+    background: $color-white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border: unset;
+}
+
+.cusOrderTab {
+    background: #FEBCBC !important;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 7px 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+    color: $color-text;
+    position: relative;
+
+    .cusIdDate {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 20px;
+
+        &::before {
+            content: url('../../../images/carban.svg');
+            position: absolute;
+            width: 11px;
+            height: 20px;
+            left: 10px;
+            top: 27%;
+            transform: translateY(18%);
+        }
+
+        .cusOrderId {
+            padding-bottom: 5px;
+            font-size: $font-size-base-px - 4;
+        }
+
+        .cusOrderDate {
+            font-size: $font-size-base-px - 4;
+        }
+    }
+
+    .cusInvoicePrice {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        .cusTypeInvoice {
+            padding-bottom: 5px;
+            font-size: $font-size-base-px - 4;
+            text-transform: uppercase;
+        }
+
+        .cusInvoiceValue {
+            font-size: $font-size-base-px - 4;
+        }
+    }
+}
+
+/* ------------ OrderTab Start End ------------ */
