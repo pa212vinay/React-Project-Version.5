@@ -90,8 +90,16 @@
 
                         .addressVerifySec {
                             padding: 10px 0px 0px 0px;
-                            text-align: right;
-                            font-weight: 700;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: start;
+
+                            .ffShipAddSec {
+                                .ffShipAdd {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                            }
 
                             & a {
                                 display: flex;

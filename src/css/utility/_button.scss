@@ -88,3 +88,13 @@ button {
         color: $btn-success !important;
     }
 }
+
+.cusSuccessBtn{
+    background-color: $btn-success;
+}
+
+.modalError {
+    margin: 8px 0px 0px 0px;
+    font-size: $font-size-base-px - 3;
+    color: $error-color;
+}
