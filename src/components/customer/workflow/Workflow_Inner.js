@@ -1,11 +1,12 @@
 import Row from 'react-bootstrap/Row';
 import { Form, Table } from 'react-bootstrap';
-import { IoMdArrowDropdown } from "react-icons/io";
+import { Icon } from '@iconify/react';
+
 const Workflow_Inner = () => {
     return (
         <>
             <div className='p-3'>
-                {/* <div className='col-md-12'> */}
+              
                     <div className="p-3 bg_col">
                         <div className='boxborder mt-3'>
                             <h6 className='fw-bold mb-3'>LOG ACTION</h6>
@@ -19,7 +20,7 @@ const Workflow_Inner = () => {
                                             <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Action</label>
-                                        <IoMdArrowDropdown className='inputIcon' />
+                                       <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                     </div>
                                 </div>
                                 <div className="col-md-4 col-sm-6">
@@ -31,7 +32,7 @@ const Workflow_Inner = () => {
                                             <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Disposition</label>
-                                        <IoMdArrowDropdown className='inputIcon' />
+                                       <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                     </div>
                                 </div>
                                 <div className="col-md-4 col-sm-6">
@@ -43,7 +44,7 @@ const Workflow_Inner = () => {
                                             <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Next Action</label>
-                                        <IoMdArrowDropdown className='inputIcon' />
+                                       <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                     </div>
                                 </div>
                                 <div className="col-md-4 col-sm-6">

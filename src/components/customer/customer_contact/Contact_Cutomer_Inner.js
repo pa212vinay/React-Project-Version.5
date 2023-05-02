@@ -7,7 +7,7 @@ const Contact_Cutomer_Inner = () => {
             <div className="col-md-12">
                 <div className=" bg_col p-3">
                     <h6 className="fw-bold">Contact Customer</h6>
-                    <div className="mb-3">
+                    <div className="my-3">
                         <Form.Check inline label="Email" name="group1" type="radio" />
                         <Form.Check inline label="SMS Message" name="group1" type="radio" />
                     </div>

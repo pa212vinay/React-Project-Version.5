@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col, Form, Table, Modal } from "react-bootstrap";
-import { HiPlus } from "react-icons/hi";
+import { Icon } from '@iconify/react';
 
 
 const Import_Contact_Inner = () => {
@@ -30,9 +30,9 @@ const Import_Contact_Inner = () => {
       </Modal>
       <div className="mt-2">
         <Row className='g-3'>
-          <Col md={{ span: 6, offset: 3 }} >
+          <Col xxl={{ span: 6, offset: 3 }} xl={{ span: 6, offset: 3 }} lg={{ span: 6, offset: 3 }} md={12} sm={12} xs={12}>
             <div className='dropFile mt-5'>
-              <h6 className='fw-bold'>Upload CSV <a>Example</a></h6>
+              <h6 className='fw-bold mb-3'>Upload CSV <a>Example</a></h6>
               <label for="images" class="drop-container">
                 <span class="drop-title">Bulk Upload</span>
                 or
@@ -46,7 +46,7 @@ const Import_Contact_Inner = () => {
         </Row>
 
         <div class="row clearfix">
-          <Col>
+          <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12}>
             <Table className='table table-bordered table-hover ' id="tab_logic" responsive >
               <thead>
                 <tr className='bg_color_lightblue'>
@@ -69,7 +69,7 @@ const Import_Contact_Inner = () => {
                   <td>Contact List</td>
                   <td>
                     <Row>
-                      <Col>
+                      <Col xxl={5} xl={5} lg={5} md={5} sm={12} xs={12}>
                         <div className="form-group cus-select-group w-100">
                           <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                             <option>Mapped</option>
@@ -78,16 +78,18 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
-                      <Col>
+                      <Col xxl={5} xl={5} lg={5} md={5} sm={12} xs={12}>
                         <div className="form-group cus-form-group">
                           <Form.Control placeholder="Address" className='fill-input' />
                           <label htmlFor="shipping" className='float-label'>Address</label>
                         </div>
                       </Col>
-                      <Col md={1}>
-                        <button className='btn-icon color-3 ms-2' onClick={() => setContact(!Contact)}><HiPlus /></button>
+                      <Col xxl={2} xl={2} lg={2} md={2} sm={12} xs={12}>
+                        <button className='btn-icon color-3 ms-2' onClick={() => setContact(!Contact)}><Icon icon="ic:round-plus" width={20}/></button>
                       </Col>
                     </Row>
                   </td>
@@ -107,7 +109,7 @@ const Import_Contact_Inner = () => {
                   <td>User Id</td>
                   <td>
                     <Row>
-                      <Col>
+                      <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                         <div className="form-group cus-select-group">
                           <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                             <option>Mapped</option>
@@ -116,9 +118,11 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
-                      <Col>
+                      <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                         <div className="form-group cus-select-group">
                           <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                             <option>User ID</option>
@@ -127,6 +131,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">User ID</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -145,7 +150,7 @@ const Import_Contact_Inner = () => {
                   <td>Owner</td>
                   <td>
                     <Row>
-                      <Col>
+                      <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                         <div className="form-group cus-select-group w-100">
                           <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                             <option>Mapped</option>
@@ -154,9 +159,10 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
-                      <Col>
+                      <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                         <div className="form-group cus-form-group">
                           <Form.Control placeholder="Address" className='fill-input' />
                           <label htmlFor="shipping" className='float-label'>Address</label>
@@ -168,7 +174,7 @@ const Import_Contact_Inner = () => {
                     <Form.Check inline name="group1" className='mx-auto' />
                   </td>
                   <td>
-                    70717926
+                    
                   </td>
                 </tr>
 
@@ -186,6 +192,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -211,6 +218,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -236,6 +244,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -261,6 +270,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -296,6 +306,8 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Ignore</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -319,6 +331,8 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Ignore</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
+
                         </div>
                       </Col>
                     </Row>
@@ -342,6 +356,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Ignore</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -375,6 +390,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col md={6}>
@@ -386,6 +402,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">First Name</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -409,6 +426,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col md={6}>
@@ -420,6 +438,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Last Name</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -443,6 +462,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col md={6}>
@@ -454,6 +474,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Phone</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -477,6 +498,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -500,6 +522,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -523,6 +546,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -546,6 +570,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -569,6 +594,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -602,6 +628,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col md={6}>
@@ -613,6 +640,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">First Name</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -636,6 +664,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col md={6}>
@@ -647,6 +676,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Last Name</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -670,6 +700,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col md={6}>
@@ -681,6 +712,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Phone</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -704,6 +736,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -727,6 +760,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -750,6 +784,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -773,6 +808,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -796,6 +832,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -819,6 +856,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -842,6 +880,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col>
@@ -853,6 +892,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Zip</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -876,6 +916,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -899,6 +940,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                       <Col>
@@ -910,6 +952,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">State</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -933,6 +976,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -966,6 +1010,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
 
@@ -990,6 +1035,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
 
@@ -1014,6 +1060,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
 
@@ -1038,6 +1085,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -1061,6 +1109,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -1084,6 +1133,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>
@@ -1107,6 +1157,7 @@ const Import_Contact_Inner = () => {
                             <option value="3">Three</option>
                           </Form.Control>
                           <label className='float-label' htmlFor="require_shipping">Mapped</label>
+                          <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                         </div>
                       </Col>
                     </Row>

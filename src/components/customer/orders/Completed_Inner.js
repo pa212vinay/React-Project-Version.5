@@ -13,23 +13,21 @@ const Customer = () => {
               <div className='col-md-12 col-lg-12 col-xl-9 col-xxl-9 col-sm-12'>
                 <div className='p-3 bg_col mt-3'>
                   <Row>
-                    <div className='col-md-12 col-lg-6'>
-                      <div className='position-relative '>
+                    <div className='col-md-12 col-lg-6 lh-lg'>
                         <div className='font-16'><span className='fw-bold'>Order ID</span> <span className='gray'>6773</span></div>
                         <div className='font-16'><span className='fw-bold'>Order Status:</span> <span className='gray'>COMPLETED</span></div>
                         <div className='font-16'><span className='fw-bold'>Payment Status:</span> <span className='gray'>COMPLETED</span></div>
                         <div className='font-16'><span className='fw-bold'>Date:</span> <span className='gray'>08/12/2022 00:00:02</span></div>
                       </div>
-                    </div>
-                    <div className='col-md-12 col-lg-6'>
-                      <div className='position-relative '>
+                  
+                    <div className='col-md-12 col-lg-6 lh-lg'>
                         <div className='font-16'><span className='fw-bold'>Sale Location:</span> <span className='gray'>PURCHASE ORDER</span> </div>
                         <div className='font-16'><span className='fw-bold'>Encrypted Order ID:</span> <span className='gray text-break'>SkvjbFc3In20DNoNmFjUGc3WUtUDz09</span><MdOutlineFileCopy className='txt_color' /></div>
                         <div className='font-16'><span className='fw-bold'>Company:</span> <span className='gray'>hiecor</span></div>
                         <div className='font-16'><span className='fw-bold'>PO Number:</span> <span className='gray'>6773</span></div>
                         <div className='font-16'><span className='fw-bold'>Representative:</span> <span className='gray'>Hello test</span></div>
                       </div>
-                    </div>
+                    
                   </Row>
                 </div>
                 <div className='p-3 bg_col mt-3'>
@@ -132,7 +130,7 @@ const Customer = () => {
 
              
 
-              <div className='col-md-12 col-lg-12 col-xl-3 col-xxl-3 col-sm-12'>
+              <div className='col-md-12 col-lg-12 col-xl-3 col-xxl-3 col-sm-12 '>
               <button className="btn-hover color-2 w-100 mt-3">Edit</button>
               <button className="btn-hover color-2 w-100 mt-3">Print Labels</button>
               <button className="btn-hover color-2 w-100 mt-3">Print Full Receipt</button>

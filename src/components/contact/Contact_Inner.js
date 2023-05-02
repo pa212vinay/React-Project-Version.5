@@ -2,11 +2,9 @@ import { Form, Row, Table, Col, Dropdown, Tab, Tabs } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import Filter from './Filter';
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { ImAttachment } from "react-icons/im";
+import { Icon } from '@iconify/react';
 import { Editor } from 'react-draft-wysiwyg';
 import '../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import { IoMdArrowDropdown } from "react-icons/io";
 
 
 const Contact_Inner = () => {
@@ -16,7 +14,7 @@ const Contact_Inner = () => {
     <>
       <div className="contact_inner my-3">
         <Row>
-          <Col md={4}>
+          <Col xxl={4} xl={4} lg={4} md={4} sm={12} xs={12}>
             <div className="form-group cus-select-group">
               <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                 <input type='text' />
@@ -26,13 +24,14 @@ const Contact_Inner = () => {
                 <option value="3">Three</option>
               </Form.Control>
               <label className='float-label' htmlFor="require_shipping">Contact</label>
-              <IoMdArrowDropdown className='inputIcon' />
+              
+              <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
             </div>
           </Col>
-          <Col md={8}>
+          <Col xxl={8} xl={8} lg={8} md={8} sm={12} xs={12}>
             <Dropdown className='float-end r_mt-2'>
               <Dropdown.Toggle className='btn-icon color-3'>
-                <BsThreeDotsVertical />
+                <Icon icon="mdi:dots-vertical" width={24}/>
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item as={Link} to="/New_Details">Save</Dropdown.Item>
@@ -98,10 +97,10 @@ const Contact_Inner = () => {
               {
                 contact ?  
                 <tr>
-                  <td colSpan={18} className="py-3">
+                  <td colSpan={18} className="p-3">
 
-                    <div className='row g-3 my-3'>
-                      <div className='col-md-6'>
+                    <div className='row g-3'>
+                      <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12'>
                         <div className=" bg_col p-3">
                           <Tabs
                             defaultActiveKey="Email"
@@ -111,9 +110,9 @@ const Contact_Inner = () => {
                           >
                             <Tab eventKey="Email" title="Email">
                               <Row className="mt-3 g-3">
-                                <div className="col-md-12">
+                                <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                   <Row className='g-3'>
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className="form-group cus-select-group">
                                         <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                           <option>Select Template</option>
@@ -122,38 +121,40 @@ const Contact_Inner = () => {
                                           <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping"></label>
-                                        <IoMdArrowDropdown className='inputIcon' />
+                                        <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                       </div>
                                     </div>
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className='upload-btn-wrapper col-md-3 col-sm-12'>
-                                        <button className="btn-icon color-3"><ImAttachment className='' /></button>
+                                        <button className="btn-icon color-3">
+                                        <Icon icon="ci:paperclip-attechment-tilt" width={22} />
+                                        </button>
                                         <input type="file" name="myfile" />
                                       </div>
                                     </div>
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className="form-group cus-form-group">
                                         <Form.Control placeholder="From" className='fill-input' />
                                         <label htmlFor="ticket" className='float-label'>From</label>
                                       </div>
                                     </div>
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className="form-group cus-form-group">
                                         <Form.Control placeholder="To" className='fill-input' />
                                         <label htmlFor="ticket" className='float-label'>To</label>
                                       </div>
                                     </div>
-                                    <div className="col-sm-12">
+                                    <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                       <div className="form-group cus-form-group">
                                         <Form.Control placeholder="Subject" className='fill-input' />
                                         <label htmlFor="ticket" className='float-label'>Subject</label>
                                       </div>
                                     </div>
-                                    <div className='col-md-12 mt-3'>
+                                    <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3'>
                                       <h6 className='fw-bold'>Body</h6>
                                       <Editor />
                                     </div>
-                                    <div className="col-sm-12">
+                                    <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                       <button className="btn-hover color-3 float-end w-auto">Send Email</button>
                                     </div>
                                   </Row>
@@ -165,7 +166,7 @@ const Contact_Inner = () => {
                                 <div className="col-md-12">
 
                                   <Row className='g-3'>
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className="form-group cus-select-group">
                                         <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                           <option>Select Template</option>
@@ -174,10 +175,11 @@ const Contact_Inner = () => {
                                           <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Action</label>
-                                        <IoMdArrowDropdown className='inputIcon' />
+              
+                                        <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                       </div>
                                     </div>
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className="form-group cus-select-group">
                                         <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                           <option>Select Template</option>
@@ -186,17 +188,19 @@ const Contact_Inner = () => {
                                           <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Disposition</label>
-                                        <IoMdArrowDropdown className='inputIcon' />
+              
+                                        <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
+                                        
                                       </div>
                                     </div>
 
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className="form-group cus-form-group">
                                         <Form.Control className='fill-input form-control' name="datepic" placeholder="DateRange" type="date" />
                                         <label htmlFor="shipping" className='float-label'>Next Action Date</label>
                                       </div>
                                     </div>
-                                    <div className="col-sm-6">
+                                    <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                       <div className="form-group cus-select-group">
                                         <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                           <option>Select Template</option>
@@ -205,16 +209,17 @@ const Contact_Inner = () => {
                                           <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Select Celendar</label>
-                                        <IoMdArrowDropdown className='inputIcon' />
+              
+                                        <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                       </div>
                                     </div>
-                                    <div className='col-md-12 mt-3'>
+                                    <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3'>
                                       <div className="form-group cus-form-group">
                                         <Form.Control placeholder="Message" as="textarea" rows={6} className='fill-input' />
                                         <label htmlFor="shipping" className='float-label'>Notes</label>
                                       </div>
                                     </div>
-                                    <div className="col-sm-12">
+                                    <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                       <button className="btn-hover color-3 float-end w-auto">Save</button>
                                     </div>
                                   </Row>
@@ -224,20 +229,19 @@ const Contact_Inner = () => {
                           </Tabs>
                         </div>
                       </div>
-                      <div className="col-md-6">
+                      <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div className=" bg_col p-3">
-                          <h6 className='fw-bold'>NOTES</h6>
+                          <h6 className='fw-bold mb-3'>NOTES</h6>
                           <Row className='g-3'>
-                            <div className='col-md-12 mt-3'>
+                            <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3'>
                               <div className="form-group cus-form-group">
                                 <Form.Control placeholder="Enter a Note here" as="textarea" rows={6} className='fill-input' />
                                 <label htmlFor="shipping" className='float-label'>Message</label>
                               </div>
                             </div>
-                            <div className="col-sm-12">
+                            <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                               <button className="btn-hover color-3 float-end w-auto">Save</button>
                             </div>
-
                             <div>
                               <Table responsive>
                                 <thead>
@@ -260,7 +264,6 @@ const Contact_Inner = () => {
                                     <td>$399.00</td>
                                     <td>$399.00</td>
                                     <td>$399.00</td>
-
                                   </tr>
                                   <tr>
                                     <td><Form.Check inline name="group1" /></td>
@@ -278,7 +281,6 @@ const Contact_Inner = () => {
                         </div>
                       </div>
                     </div>
-
                   </td>
                 </tr>
                 : null

@@ -498,7 +498,7 @@ accordion-header {
 }
 
 .accordion-button {
-    font-size: $font-size-base-px -2 !important;
+    font-size: $font-size-base-px - 2 !important;
     font-weight: 600;
     color: $gray-color;
 }
@@ -890,12 +890,6 @@ button#controlled-tab-example-tab-Manual-1 {
                     }
                 }
 
-                // .fw-bold {
-                //     span {
-                //         @include xxl {}
-                //     }
-                // }
-
                 // ---------------19-12-2022
                 .menu-align {
                     display: flex;
@@ -931,12 +925,6 @@ button#controlled-tab-example-tab-Manual-1 {
             }
 
             .navMenu {
-                // .cus-menu-text {
-                //     @include xl_bt_xl-b-xxl {
-                //         flex-direction: column;
-                //     }
-                // }
-
                 @include lg {
                     justify-content: center;
                     align-items: center;
@@ -1021,244 +1009,16 @@ button#controlled-tab-example-tab-Manual-1 {
     }
 }
 
-// @media(max-width:991px) {
-//     .align {
-//         align-items: unset;
-//     }
-
-//     .switchImg {
-//         justify-content: unset;
-//     }
-// }
 
 // -------------------Header--------
 
 // -------------------OrderSection--------
 
-.txt_balence {
-    text-align: center;
-    font-size: $font-size-base-px + 4;
-    color: $theme-color;
-    font-weight: 600;
-    background: #0b76c914;
-    border: 1px dashed $theme-color;
-    border-radius: 7px;
-    padding: 50px;
-    box-shadow: 0px 0px 20px 0px #8080802e;
 
-    @include sm {
-        padding: 15px;
-    }
-}
-
-.line {
-    height: 70px;
-    background: $theme-color;
-    width: 2px;
-    position: absolute;
-    left: 0;
-    top: 35%;
-    transform: translate(50%);
-}
-
-.bg_row {
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.input_code {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    border: unset;
-    padding: 10px;
-    animation: ease-out;
-}
-
-input.me-2.radiobtn {
-    height: 22px;
-    width: 22px;
-}
-
-.select_color {
-    color: #ccc;
-}
-
-paddingTRB {
-    padding-left: 35px;
-}
-
-.sigCanvas {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.signCan {
-    border-radius: 10px;
-    position: relative;
-}
-
-.clearsig {
-    position: absolute;
-    bottom: 32px;
-    right: 5px;
-
-    @include sm-d {
-        bottom: 30px;
-        right: 3px;
-    }
-}
-
-.cursor {
-    cursor: pointer;
-}
-
-@media(max-width:991px) {
-    .react-tabs__tab {
-        margin-top: 5px;
-    }
-
-    .react-tabs__tab-list {
-        display: unset;
-    }
-
-    .Tabs {
-        margin-top: 25px;
-    }
-}
 
 // -------------------OrderSection--------
 
-/* ------------ OrderTab Start ------------ */
 
-.orderSerch {
-    background: $color-white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    border: unset;
-}
-
-// ::placeholder,
-// .form-select {
-//     color: #A5A5A6 !important;
-//     font-size: $font-size-base-px - 2 !important;
-// }
-
-
-.cusOrderTab {
-    background: #FEBCBC !important;
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    border-radius: 8px;
-    padding: 7px 10px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
-    color: $color-text;
-    position: relative;
-
-    .cusIdDate {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        padding-left: 20px;
-
-        &::before {
-            content: url('../images/carban.svg');
-            position: absolute;
-            width: 11px;
-            height: 20px;
-            left: 10px;
-            top: 27%;
-            transform: translateY(18%);
-        }
-
-        .cusOrderId {
-            padding-bottom: 5px;
-            font-size: $font-size-base-px - 4;
-        }
-
-        .cusOrderDate {
-            font-size: $font-size-base-px - 4;
-        }
-    }
-
-    .cusInvoicePrice {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-
-        .cusTypeInvoice {
-            padding-bottom: 5px;
-            font-size: $font-size-base-px - 4;
-            text-transform: uppercase;
-        }
-
-        .cusInvoiceValue {
-            font-size: $font-size-base-px - 4;
-        }
-    }
-}
-
-// .bg_card_order {
-//     border-radius: 10px !important;
-//     padding: 7px;
-//     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
-// }
-
-// .card_order1 {
-//     background: #FEBCBC !important;
-//     border-radius: 10px !important;
-// }
-
-// .card_order2 {
-//     background: #F9A8E7 !important;
-//     border-radius: 10px !important;
-// }
-
-// .card_order3 {
-//     background: #E4C8FB !important;
-//     border-radius: 10px !important;
-// }
-
-// .card_order4 {
-//     background: #FEBCBC !important;
-//     border-radius: 10px !important;
-// }
-
-// .card_order5 {
-//     border-radius: 10px !important;
-// }
-
-// .card_order1,
-// .card_order2,
-// .card_order3,
-// .card_order4,
-// .card_order5 {
-//     :hover {
-//         color: $black-color;
-//     }
-// }
-
-// .orderText {
-//     position: absolute;
-//     top: 15px;
-//     right: 20px;
-// }
-
-// .orderimg {
-//     width: 11px;
-//     height: 20px;
-// }
-
-// .orderTab {
-//     .orderText {
-//         font-size: $font-size-base - 4px;
-//     }
-// }
-
-/* ------------ OrderTab Start End ------------ */
 
 // -------------------SideBar--------
 .sidebar {
@@ -1553,6 +1313,9 @@ button.refeshBtn {
 
     }
 }
+ul.pagination a {
+    color: $theme-color !important;
+}
 
 // -------------------------
 
@@ -1631,6 +1394,7 @@ button.refeshBtn {
     min-height: 30px;
     max-height: 150px;
     overflow: scroll;
+    border-radius: 5px;
 }
 
 .mappingBox::-webkit-scrollbar {

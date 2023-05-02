@@ -12,24 +12,19 @@ import { IoMdArrowDropdown } from "react-icons/io";
 const Ordersection = () => {
   const [visible, setVisible] = useState(false);
   const [status, setStatus] = useState(true);
-
   const [show, setShow] = useState(false);
-
   let sigPad = React.useRef({});
   function clear() {
     sigPad.current.clear();
   }
-
   const target = useRef(null);
-
   return (
     <>
       <div className=''>
-        <div className='bg_row mt-3 p-3'>
+        <div className='bg_col mt-3 p-3'>
           <Row>
             <div><h6 className='txt_color fw-bold'>INVOICE DETAILS</h6></div>
-            <div className='col-lg-4 col-md-6 col-xl-4 '>
-              <div className='position-relative'>
+            <div className='col-lg-4 col-md-6 col-xl-4 lh-lg'>
                 <h6 className='mt-3 mb-0 fw-bold'>Address</h6>
                 <span className='gray '>Shceme No. 54</span>
                 <h6 className='my-3 fw-bold'>Customer information</h6>
@@ -39,9 +34,9 @@ const Ordersection = () => {
                 <div className=''><span className='fw-bold gray'>Phone:</span> <span className='gray'>55755424423</span></div>
                 <div className=''><span className='fw-bold gray'>Company:</span> <span className='gray'>a13</span></div>
               </div>
-            </div>
-            <div className='col-lg-4 col-md-6 col-xl-4 '>
-              <div className='position-relative'>
+            
+            <div className='col-lg-4 col-md-6 col-xl-4 lh-lg'>
+             
                 <h6 className='my-3 fw-bold'>Invoice</h6>
                 <div className=''><span className='fw-bold gray'>Invoice Number:</span> <span className='gray'>19263</span> <MdOutlineFileCopy className='txt_color' /></div>
                 <div className=''><span className='fw-bold gray'>Invoice Date:</span> <span className='gray'>08/12/2022</span></div>
@@ -51,18 +46,16 @@ const Ordersection = () => {
                 <div className=''><span className='fw-bold gray'>Order Status:</span> <span className='gray'>Received</span></div>
                 <div className=''><span className='fw-bold gray'>Rep:</span> <span className='gray'>Ishwer devloper</span></div>
               </div>
-            </div>
+            
             <div className='col-lg-4 col-md-12 col-xl-4 my-auto'>
-              <div className='position-relative  '>
                 <div className='txt_balence'>
                 Balance Due <br /> $135.30
                 </div>
-              </div>
             </div>
           </Row>
         </div>
 
-        <div className='bg_row mt-3 p-3'>
+        <div className='bg_col mt-3 p-3'>
           <Row>
             <div className=' mb-3'><span className='txt_color font-16 fw-bold'>Bill to:</span> <span className='gray'>james@gmail.com</span></div>
             <div>
@@ -143,7 +136,7 @@ const Ordersection = () => {
 
                   <div className="float-end">
                     {['radio'].map((type) => (
-                      <div key={`inline-${type}`} className="mb-3">
+                      <div key={`inline-${type}`} className="my-3">
                         <Form.Check inline label="Pay Full Amount" name="group1" type={type} id={`inline-${type}-1`} onClick={() => setVisible(false)} />
                         <Form.Check inline label="Pay Partial" name="group1" type={type} id={`inline-${type}-2`} onClick={() => setVisible(true)} />
                         {visible &&
@@ -158,10 +151,9 @@ const Ordersection = () => {
           </Row>
         </div>
 
-
         <Row className='g-3'>
           <div className='col-md-12 col-lg-6'>
-            <div className='bg_row mt-3 p-3'>
+            <div className='bg_col mt-3 p-3'>
               <h6 className='txt_color fw-bold mb-3'>BILLING ADDRESS</h6>
               <Row className='g-3'>
                 <div className="col-sm-12">
@@ -294,7 +286,7 @@ const Ordersection = () => {
           </div>
           
           <div className='col-md-12 col-lg-6'>
-            <div className='bg_row mt-3 p-3'>
+            <div className='bg_col mt-3 p-3'>
               <h6 className='txt_color fw-bold mb-3'>PAYMENT DETAIL</h6>
               <Accordion defaultActiveKey="0" flush>
                 <Accordion.Item eventKey="0">
