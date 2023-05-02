@@ -187,9 +187,9 @@ export default function FulfillmentOrderSummary() {
                                     </div>
                                 </div>
                                 <div className='addressVerifySec'>
-                                    <div className='ffShipAddSec'>
+                                    <div className=''>
                                         <h4>Ship To</h4>
-                                        <div className='ffShipAdd'>
+                                        <div>
                                             <span>Richard Jones</span>
                                             <span>4055 haward ave western springs, IL 60558</span>
                                             <span>Richard@mailinator.com</span>
