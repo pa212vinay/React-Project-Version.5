@@ -10,8 +10,6 @@ const Log = () => {
     return(
       <>
         <Container fluid className='p-3'>
-          
-          <Subheader />
               <Row className="g-3">              
                 <div className=" col-lg-12 col-md-12">
                   <div className='mt-3'>

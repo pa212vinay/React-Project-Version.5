@@ -24,7 +24,6 @@ const Contact_Inner = () => {
                 <option value="3">Three</option>
               </Form.Control>
               <label className='float-label' htmlFor="require_shipping">Contact</label>
-              
               <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
             </div>
           </Col>
@@ -76,7 +75,7 @@ const Contact_Inner = () => {
             <tbody>
               <tr>
                 <td><Form.Check inline name="group1" /></td>
-                <td className="text-decoration-none cursor"><lable onClick={() => setContact(!contact)} >1</lable></td>
+                <td className="text-decoration-none cursor"><Icon icon="ic:round-play-arrow" width={18} onClick={() => setContact(!contact)} className='me-2'/><lable>1</lable></td>
                 <td>menual testing</td>
                 <td>$399.00</td>
                 <td>$399.00</td>
@@ -106,9 +105,9 @@ const Contact_Inner = () => {
                             defaultActiveKey="Email"
                             transition={false}
                             id="noanim-tab-example"
-                            className=" contact_tab"
+                            className=" contact_tab me-0"
                           >
-                            <Tab eventKey="Email" title="Email">
+                            <Tab eventKey="Email" title="Email" className='me-0'>
                               <Row className="mt-3 g-3">
                                 <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                   <Row className='g-3'>
@@ -175,7 +174,6 @@ const Contact_Inner = () => {
                                           <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Action</label>
-              
                                         <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                       </div>
                                     </div>
@@ -188,7 +186,6 @@ const Contact_Inner = () => {
                                           <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Disposition</label>
-              
                                         <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                         
                                       </div>
@@ -209,13 +206,12 @@ const Contact_Inner = () => {
                                           <option value="3">Three</option>
                                         </Form.Control>
                                         <label className='float-label' htmlFor="require_shipping">Select Celendar</label>
-              
                                         <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                       </div>
                                     </div>
                                     <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3'>
                                       <div className="form-group cus-form-group">
-                                        <Form.Control placeholder="Message" as="textarea" rows={6} className='fill-input' />
+                                        <Form.Control placeholder="Message" as="textarea" rows={12} className='fill-input' />
                                         <label htmlFor="shipping" className='float-label'>Notes</label>
                                       </div>
                                     </div>
@@ -235,7 +231,7 @@ const Contact_Inner = () => {
                           <Row className='g-3'>
                             <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3'>
                               <div className="form-group cus-form-group">
-                                <Form.Control placeholder="Enter a Note here" as="textarea" rows={6} className='fill-input' />
+                                <Form.Control placeholder="Enter a Note here" as="textarea" rows={12} className='fill-input' />
                                 <label htmlFor="shipping" className='float-label'>Message</label>
                               </div>
                             </div>
@@ -281,13 +277,14 @@ const Contact_Inner = () => {
                         </div>
                       </div>
                     </div>
+
                   </td>
                 </tr>
                 : null
               }
               <tr>
                 <td><Form.Check inline name="group1" /></td>
-                <td><Link to="/" className="text-decoration-none">2</Link></td>
+                <td><Icon icon="ic:round-play-arrow" width={18} className='me-2'/>2</td>
                 <td>menual testing</td>
                 <td>$399.00</td>
                 <td>$399.00</td>
@@ -307,7 +304,7 @@ const Contact_Inner = () => {
               </tr>
               <tr>
                 <td><Form.Check inline name="group1" /></td>
-                <td><Link to="/" className="text-decoration-none">3</Link></td>
+                <td><Icon icon="ic:round-play-arrow" width={18} className='me-2'/>3</td>
                 <td>menual testing</td>
                 <td>$399.00</td>
                 <td>$399.00</td>
@@ -327,7 +324,7 @@ const Contact_Inner = () => {
               </tr>
               <tr>
                 <td><Form.Check inline name="group1" /></td>
-                <td><Link to="/" className="text-decoration-none">4</Link></td>
+                <td><Icon icon="ic:round-play-arrow" width={18} className='me-2'/>4</td>
                 <td>menual testing</td>
                 <td>$399.00</td>
                 <td>$399.00</td>
@@ -347,7 +344,7 @@ const Contact_Inner = () => {
               </tr>
               <tr>
                 <td><Form.Check inline name="group1" /></td>
-                <td><Link to="/" className="text-decoration-none">5</Link></td>
+                <td><Icon icon="ic:round-play-arrow" width={18} className='me-2'/>5</td>
                 <td>menual testing</td>
                 <td>$399.00</td>
                 <td>$399.00</td>

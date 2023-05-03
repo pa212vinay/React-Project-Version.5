@@ -56,12 +56,60 @@
     .accordion-flush .accordion-item .accordion-button {
         border-radius: 0 !important;
     }
+
+    .lable_icon {
+        position: absolute;
+        text-align: center;
+        color: $theme-color;
+        right: 8px;
+        top: 4px;
+        cursor: pointer;
+
+        p {
+            font-size: $font-size-base-px - 6 !important;
+            margin: 0;
+        }
+    }
+}
+
+.advanced {
+    .rti--container {
+        max-height: 40px;
+        overflow-y: auto;
+        padding: 10px !important;
+
+        .rti--tag {
+            background: $sky_blue;
+            color: $color-white;
+            padding: 0px 5px;
+            border-radius: 4px;
+
+            button {
+                color: $color-white;
+                padding: 0 2px 0 6px;
+            }
+
+            button:hover {
+                color: $red-color;
+            }
+
+            span {
+                font-size: 12px !important;
+            }
+        }
+    }
+}
+.supplier{
+    .btn-icon{
+        padding: 6px 6px !important;
+    }
 }
 
 .port_lookup {
     .strick {
         color: $dark_red;
     }
+
 }
 
 .addtab {
@@ -87,4 +135,10 @@
         border-bottom-left-radius: 0;
 
     }
+}
+
+.rti--container:focus-within {
+    border-color: $sky_blue !important;
+    outline: 0 !important;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%) !important;
 }

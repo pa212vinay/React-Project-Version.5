@@ -172,52 +172,55 @@ const New_Details = () => {
                 <Form>
                   <Row className="g-3">
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Name</label>
                       </div>
                     </div>
+
+                   
+
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Second Phone11</label>
                       </div>
                     </div>
 
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Gender</label>
                       </div>
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Additional Number</label>
                       </div>
                     </div>
 
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Custom Text 2</label>
                       </div>
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Contact Type</label>
                       </div>
                     </div>
 
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Social Media</label>
                       </div>
                     </div>
                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-group cus-form">
+                      <div className="form-group cus-form-group">
                         <Form.Control className='fill-input' />
                         <label htmlFor="shipping" className='cus-float-label'>Office Phone</label>
                       </div>
@@ -262,8 +265,8 @@ const New_Details = () => {
                         <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                       </div>
                     </div>
-
                   </Row>
+
                 </Form>
               </Accordion.Body>
             </Accordion.Item>
