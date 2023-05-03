@@ -187,10 +187,10 @@ const Inventory_Inner = () => {
                 </div>
             </Modal>
 
-            <div className="">
+        
                 <div className="bg_col p-3">
                     <Row>
-                        <div className='col-md-12'>
+                        <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                             <div className='float-end'>
                             <Link to="/Product_Details"className="">
                             <button type="button" class="btn-hover color-2 me-2">New Item</button>
@@ -681,7 +681,7 @@ const Inventory_Inner = () => {
                         </div>
                     </Row>
                 </div>
-            </div>,
+            
         </>
     );
 }

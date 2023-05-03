@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import { Navbar, Container } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import { NavLink } from 'react-router-dom';
+import './subheader.scss';
 
 const Subheader = () => {
   return (

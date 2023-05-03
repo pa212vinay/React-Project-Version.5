@@ -5,8 +5,6 @@ import { BsSearch } from "react-icons/bs";
 import { IoMdArrowDropdown } from "react-icons/io";
 import "react-datepicker/dist/react-datepicker.css";
 
-
-
 const New_order_Inner = () => {
     const [date, setDate] = useState(new Date());
     return (
