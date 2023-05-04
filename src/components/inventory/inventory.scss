@@ -109,7 +109,39 @@
     .strick {
         color: $dark_red;
     }
+ 
+    #left-tabs-example-tab-first{
+        border: 1px solid;
+        border-bottom-left-radius: 7px;
+        border-top-left-radius: 7px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        
+    }
+    #left-tabs-example-tab-second{
+        border: 1px solid;
+        border-bottom-right-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+        background-color: $theme-color !important;
+    }
+    .nav-link{
+        color: $theme-color;
+    }
+    @include sm
+    {
+        #left-tabs-example-tab-first{
+            border-radius: 7px;
+        }
 
+        #left-tabs-example-tab-second{
+            border-radius: 7px ;
+    }
+
+}
 }
 
 .addtab {

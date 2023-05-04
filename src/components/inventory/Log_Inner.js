@@ -12,18 +12,16 @@ const Log_Inner = () => {
 
     return (
         <>
-            <div className='row'>
-                <div className='col-md-12'>
+           
                     <div className="p-3 bg_col pt-0">
                         <Tab />
                         <Row className='g-3 mt-1'>
-                            <div className='col-md-12'>
-
+                            <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                                 <div className='float-end'>
                                     <button type="button" class="btn btn-outline-primary me-2">Reset</button>
                                     <button type="button" class="btn btn-outline-success me-2"><SiMicrosoftexcel className='text-green' /></button>
                                     <button type="button" class="btn btn-outline-primary me-2"><ImTable2 /></button>
-                                    <div className="form-group cus-form-group d-inline-block">
+                                    <div className="form-group cus-form-group d-inline-block r_mt-2">
                                         <Form.Control placeholder="Supplier Name" className='fill-input' />
                                         <label className='float-label'>Search</label>
                                         <BsSearch className='inputIcon' />
@@ -31,7 +29,7 @@ const Log_Inner = () => {
                                 </div>
 
                             </div>
-                            <div className='col-md-12'>
+                            <div className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                                 <div className='bg_col p-3'>
                                     <Table responsive>
                                         <thead>
@@ -73,8 +71,6 @@ const Log_Inner = () => {
                             </div>
                         </Row>
                     </div>
-                </div>
-            </div>
         </>
     );
 }
