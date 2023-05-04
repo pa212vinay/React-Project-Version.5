@@ -253,6 +253,7 @@ const Product_Details_Inner = () => {
                                         <Form.Control placeholder="Cost" className='fill-input' as="textarea" rows={6} />
                                         <label htmlFor="shipping" className='float-label'>Notes</label>
                                     </div>
+                                    <div class="upload-btn-wrapper col-md-3 col-sm-12"><button class="btn-hover color-3 px-3 mt-3">Upload Images<Icon icon="fluent:attach-20-filled" width={22} className='ms-2'/></button><input type="file" name="myfile"/></div>
                                 </div>
                                 <div className="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <Accordion defaultActiveKey="0" flush>

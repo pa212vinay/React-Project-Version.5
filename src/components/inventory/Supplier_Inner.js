@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
-import { FiDollarSign } from "react-icons/fi";
 import Tab from "./Tab";
-import { IoMdArrowDropdown } from "react-icons/io";
 import { Icon } from '@iconify/react';
 
 const Supplier_Inner = () => {
@@ -84,6 +82,7 @@ const Supplier_Inner = () => {
                                 <div className='bg_col p-3'>
                                     <h6 className='fw-bold mb-3'>Supplier Information</h6>
                                     <Row className='g-3'>
+
                                         <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div className="form-group cus-form-group">
                                                 <Form.Control placeholder="Supplier Name" className='fill-input' />
@@ -118,6 +117,7 @@ const Supplier_Inner = () => {
                                                <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                             </div>
                                         </div>
+
                                         <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-12 col-xs-12">
                                             <button className="btn-hover color-2 float-end" onClick={addInputFieldShiping}>Add New</button>
                                         </div>
@@ -128,13 +128,13 @@ const Supplier_Inner = () => {
                                             return (
                                                 <div className='row g-3 mt-0'>
                                                     <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12" key={index}>
-                                                        <div className="form-group d-flex cus-form-group">
+                                                        <div className="form-group cus-form-group">
                                                             <input type="text" onChange={(evnt) => handleChangeShiping(index, evnt)} value={fullName} name="fullName" className="form-control fill-input" placeholder="Full Name" />
                                                             <label className='float-label'>External Code</label>
                                                         </div>
                                                     </div>
-                                                    <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12" key={index}>
-                                                        <div className="form-group d-flex cus-select-group">
+                                                    <div className="d-flex col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-10 col-xs-10" key={index}>
+                                                        <div className="form-group cus-select-group w-100">
                                                             <Form.Control className="form-control fill-input" as="select" name="require_shipping" onChange={(evnt) => handleChangeShiping(index, evnt)} value={fullName}>
                                                                 <option>ISBN</option>
                                                                 <option value="1">One</option>
@@ -144,9 +144,8 @@ const Supplier_Inner = () => {
                                                             <label className='float-label'>External Code Type</label>
                                                            <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                                         </div>
-                                                    </div>
-                                                    <div className='col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12'>
-                                                        {(inputShiping.length !== 0) ? <button className="btn-icon color-1" onClick={removeInputShiping}><Icon icon="iconamoon:close-duotone" width={26}/></button> : ''}
+                                             
+                                                        {(inputShiping.length !== 0) ? <button className="btn-icon color-1 ms-2" onClick={removeInputShiping}><Icon icon="iconamoon:close-duotone" width={26}/></button> : ''}
                                                     </div>
                                                 </div>
                                             )
@@ -184,7 +183,6 @@ const Supplier_Inner = () => {
                                             <div className="form-group cus-form-group">
                                                 <Form.Control placeholder="Limit Purchase Quantity" className='fill-input' />
                                                 <label className='float-label'>Bin Location</label>
-
                                             </div>
                                             <Form.Check label="show for all location" className='shiftRigh' />
                                         </div>
@@ -201,18 +199,21 @@ const Supplier_Inner = () => {
                                                <Icon icon="mdi:arrow-down-drop" className='inputIcon'/>
                                             </div>
                                         </div>
+
                                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                                             <div className="form-group cus-form-group">
                                                 <Form.Control placeholder="Item Notes Title" className='fill-input' />
                                                 <label className='float-label'>Item Notes Title</label>
                                             </div>
                                         </div>
+
                                         <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                                             <div className="form-group cus-form-group">
                                                 <Form.Control placeholder="Gift Card Number" className='fill-input' />
                                                 <label className='float-label'>Item Meta 1</label>
                                             </div>
                                         </div>
+
                                         <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-xs-12">
                                             <button className="btn-hover color-2 float-end" onClick={addInputLogistics}>Add New</button>
                                         </div>
@@ -221,9 +222,7 @@ const Supplier_Inner = () => {
                                         {
                                             inputLogistics.map((data, Logistics) => {
                                                 const { fullName } = data;
-
                                                 return (
-
                                                     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12" key={Logistics}>
                                                         <div className="form-group d-flex cus-form-group">
                                                             <input type="text" onChange={(evnt) => handleChangeLogistics(Logistics, evnt)} value={fullName} name="fullName" className="form-control fill-input" placeholder="Full Name" />
