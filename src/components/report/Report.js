@@ -1,23 +1,16 @@
 import * as React from 'react';
-import Row from 'react-bootstrap/Row';
 import { Container } from 'react-bootstrap';
 import Report_Inner from "./Report_Inner";
 import './report.scss';
 
 const Report = () => {
-    
-    return(
-      <>
-        <Container fluid className='p-3'>
-              <Row className="g-3">              
-                <div className=" col-lg-12 col-md-12">
-                  <div className=''>
-                  <Report_Inner />
-                  </div>
-                </div>
-              </Row>
-        </Container>
-      </>
-    );
+
+  return (
+    <>
+      <Container fluid className='p-3'>
+        <Report_Inner />
+      </Container>
+    </>
+  );
 }
 export default Report;

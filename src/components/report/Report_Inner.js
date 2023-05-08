@@ -41,7 +41,7 @@ const Report_Inner = () => {
         <>
             <div fluid className='report'>
                 <Row>
-                    <Col md="12">
+                    <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12}>
                         <div id="wrapper" class="toggled">
                             <div className=" bg_col pt-0 addtab">
                                 <Row className='g-3'>
@@ -52,7 +52,7 @@ const Report_Inner = () => {
                                         <div id="page-content-wrapper" style={Sidemargin}>
                                             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                                                 <Row className="p-2">
-                                                    <Col sm={12} md={12} lg={12} className='mb-3'>
+                                                    <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12} className='mb-3'>
                                                         <div className="mb-3" onClick={showHide} >
                                                             {isActive ?
                                                                 <Icon icon="ic:round-close" className="baricon  close-icon" onClick={() => {
@@ -73,24 +73,24 @@ const Report_Inner = () => {
                                                             </Nav.Item>
                                                         </Nav>
                                                     </Col>
-                                                    <Col sm={12} md={12} lg={12}>
+                                                    <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12}>
                                                         <Tab.Content>
                                                             <Tab.Pane eventKey="first">
                                                                 <div className="bg_col p-3">
                                                                     <Row className="g-3 mt-4">
-                                                                        <Col md={3}>
+                                                                        <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                             <div className="form-group cus-form-group">
                                                                                 <Form.Control className='fill-input' type="date" name="datepic" placeholder="DateRange" value={date} onChange={(e) => setDate(e.target.value)} />
                                                                                 <label htmlFor="shipping" className='float-label'>Date From</label>
                                                                             </div>
                                                                         </Col>
-                                                                        <Col md={3}>
+                                                                        <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                             <div className="form-group cus-form-group">
                                                                                 <Form.Control className='fill-input' type="date" name="datepic" placeholder="DateRange" value={date} onChange={(e) => setDate(e.target.value)} />
                                                                                 <label htmlFor="shipping" className='float-label'>Date To</label>
                                                                             </div>
                                                                         </Col>
-                                                                        <Col md={3}>
+                                                                        <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                             <div className="form-group cus-select-group">
                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                     <option>Yes</option>
@@ -102,7 +102,7 @@ const Report_Inner = () => {
                                                                                 <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                             </div>
                                                                         </Col>
-                                                                        <Col md={3}>
+                                                                        <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                             <div className="form-group cus-select-group">
                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                     <option>Yes</option>
@@ -228,7 +228,7 @@ const Report_Inner = () => {
                                                             </Tab.Pane>
                                                             <Tab.Pane eventKey="second">
                                                                 <Row className="g-3">
-                                                                    <Col md={4}>
+                                                                    <Col xxl={4} xl={4} lg={4} md={4} sm={12} xs={12}>
                                                                         <div className="form-group cus-select-group my-4">
                                                                             <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                 <option>Yes</option>
@@ -241,7 +241,7 @@ const Report_Inner = () => {
                                                                         </div>
                                                                     </Col>
 
-                                                                    <Col md={4}>
+                                                                    <Col xxl={4} xl={4} lg={4} md={4} sm={12} xs={12}>
                                                                         <div className="mt-4 pt-2">
                                                                             <Form.Check inline label="Run Immediately" name="group1" type="radio" onClick={() => setShedule(false)} />
                                                                             <Form.Check inline label="Schedule" name="group1" type="radio" onClick={() => setShedule(true)} />
@@ -252,19 +252,19 @@ const Report_Inner = () => {
                                                                     visible1 &&
                                                                     <div className="bg_col p-3">
                                                                         <Row className=" g-3 mt-0">
-                                                                            <Col md={3}>
+                                                                            <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                                 <div className="form-group cus-form-group">
                                                                                     <Form.Control placeholder="Description" className='fill-input' />
                                                                                     <label htmlFor="shipping" className='float-label'>Description</label>
                                                                                 </div>
                                                                             </Col>
-                                                                            <Col md={3}>
+                                                                            <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                                 <div className="form-group cus-form-group">
                                                                                     <Form.Control placeholder="Email To" className='fill-input' />
                                                                                     <label htmlFor="shipping" className='float-label'>Email To</label>
                                                                                 </div>
                                                                             </Col>
-                                                                            <Col md={3}>
+                                                                            <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                                 <div className="form-group cus-select-group">
                                                                                     <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                         <option>Yes</option>
@@ -276,7 +276,7 @@ const Report_Inner = () => {
                                                                                     <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                                 </div>
                                                                             </Col>
-                                                                            <Col md={3}>
+                                                                            <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12}>
                                                                                 <div className="form-group cus-select-group">
                                                                                     <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                         <option>Yes</option>
@@ -297,17 +297,18 @@ const Report_Inner = () => {
                                                                             </div>
                                                                             {
                                                                                 hour &&
+                                                                                <div className="bg_col">
                                                                                 <Row className="hour"> 
-                                                                                    <Col md={6}>
+                                                                                    <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                         <Row className="g-3">
                                                                                             <h3 className="txt_color mt-4">Run the schedule every:</h3>
-                                                                                            <Col md={6}>
+                                                                                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                                 <div className="form-group cus-form-group">
                                                                                                     <Form.Control placeholder="Hourse" className='fill-input' />
                                                                                                     <label htmlFor="shipping" className='float-label'>Hourse</label>
                                                                                                 </div>
                                                                                             </Col>
-                                                                                            <Col md={6}>
+                                                                                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                                 <div className="form-group cus-form-group">
                                                                                                     <Form.Control placeholder="Minutes" className='fill-input' />
                                                                                                     <label htmlFor="shipping" className='float-label'>Minutes</label>
@@ -315,10 +316,10 @@ const Report_Inner = () => {
                                                                                             </Col>
                                                                                         </Row>
                                                                                     </Col>
-                                                                                    <Col md={6}>
+                                                                                    <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                         <Row className="g-3">
                                                                                             <h3 className="txt_color mt-4">Start Time</h3>
-                                                                                            <Col md={6}>
+                                                                                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                                 <div className="form-group cus-select-group">
                                                                                                     <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                         <option>Select Hours</option>
@@ -329,7 +330,7 @@ const Report_Inner = () => {
                                                                                                     <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                                                 </div>
                                                                                             </Col>
-                                                                                            <Col md={6}>
+                                                                                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                                 <div className="form-group cus-select-group">
                                                                                                     <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                         <option>Select Minuts</option>
@@ -351,11 +352,12 @@ const Report_Inner = () => {
                                                                                         </Row>
                                                                                     </Col>
                                                                                 </Row>
+                                                                                </div>
                                                                             }
                                                                             {
                                                                                 day &&
                                                                                 <Row className="day">
-                                                                                    <Col md={6}>
+                                                                                    <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                         <div className="mt-4">
                                                                                             <h3 className="txt_color mt-3">Daily Schedule</h3>
                                                                                             <Form.Check inline label="On the following Days" name="group2" type="radio" />
@@ -370,19 +372,19 @@ const Report_Inner = () => {
                                                                                             </div>
                                                                                             <Form.Check className="mt-3" inline label="On the following Days" name="group2" type="radio" />
                                                                                             <Form.Group as={Row} className="" controlId="formHorizontalEmail">
-                                                                                                <Col md={5}>
+                                                                                                <Col xxl={5} xl={5} lg={5} md={5} sm={12} xs={12}>
                                                                                                     <Form.Check className="mt-3" inline label="Repeat After this number of days" name="group2" type="radio" />
                                                                                                 </Col>
-                                                                                                <Col md={2}>
+                                                                                                <Col xxl={2} xl={2} lg={2} md={2} sm={12} xs={12}>
                                                                                                     <Form.Control type="text" placeholder="" />
                                                                                                 </Col>
                                                                                             </Form.Group>
                                                                                         </div>
                                                                                     </Col>
-                                                                                    <Col md={6}>
+                                                                                    <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                         <Row className="g-3">
                                                                                             <h3 className="txt_color mt-4">Start Time</h3>
-                                                                                            <Col md={6}>
+                                                                                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                                 <div className="form-group cus-select-group">
                                                                                                     <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                         <option>Select Hours</option>
@@ -393,7 +395,7 @@ const Report_Inner = () => {
                                                                                                     <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                                                 </div>
                                                                                             </Col>
-                                                                                            <Col md={6}>
+                                                                                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                                 <div className="form-group cus-select-group">
                                                                                                     <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                         <option>Select Minuts</option>
@@ -417,7 +419,7 @@ const Report_Inner = () => {
                                                                                 </Row>
                                                                             }
                                                                             <Row className="week">
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <div className="mt-4">
                                                                                         <h3 className="txt_color mt-3">Weekly Schedule</h3>
                                                                                         <Form.Check inline label="On the following Days" name="group2" type="radio" />
@@ -432,24 +434,24 @@ const Report_Inner = () => {
                                                                                         </div>
 
                                                                                         <Form.Group as={Row} className="mt-4" controlId="formHorizontalEmail">
-                                                                                            <Col md={5}>
+                                                                                            <Col xxl={5} xl={5} lg={5} md={5} sm={12} xs={12}>
                                                                                                 <lable>Repeat After this number of weeks:</lable>
                                                                                             </Col>
-                                                                                            <Col md={2} >
+                                                                                            <Col xxl={2} xl={2} lg={2} md={2} sm={12} xs={12} >
                                                                                                 <div className="d-flex">
                                                                                                     <Form.Control type="text" placeholder="" />
                                                                                                 </div>
                                                                                             </Col>
-                                                                                            <Col md={2}>
+                                                                                            <Col xxl={2} xl={2} lg={2} md={2} sm={12} xs={12}>
                                                                                                 <lable className='mt-3'>On Days</lable>
                                                                                             </Col>
                                                                                         </Form.Group>
                                                                                     </div>
                                                                                 </Col>
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <Row className="g-3">
                                                                                         <h3 className="txt_color mt-4">Start Time</h3>
-                                                                                        <Col md={6}>
+                                                                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                             <div className="form-group cus-select-group">
                                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                     <option>Select Hours</option>
@@ -460,7 +462,7 @@ const Report_Inner = () => {
                                                                                                 <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                                             </div>
                                                                                         </Col>
-                                                                                        <Col md={6}>
+                                                                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                             <div className="form-group cus-select-group">
                                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                     <option>Select Minuts</option>
@@ -484,7 +486,7 @@ const Report_Inner = () => {
                                                                             </Row>
 
                                                                             <Row className="Month">
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <div className="mt-4">
                                                                                         <h3 className="txt_color mt-3">Weekly Schedule</h3>
                                                                                         <Form.Check inline label="On the following Days" name="group3" type="radio" />
@@ -504,10 +506,10 @@ const Report_Inner = () => {
                                                                                         </div>
 
                                                                                         <Form.Group as={Row} className="mt-4" controlId="formHorizontalEmail">
-                                                                                            <Col md={5}>
+                                                                                            <Col xxl={5} xl={5} lg={5} md={5} sm={12} xs={12}>
                                                                                                 <Form.Check className="mt-2" inline label="On Week Of Months" name="group3" type="radio" />
                                                                                             </Col>
-                                                                                            <Col md={2} >
+                                                                                            <Col xxl={2} xl={2} lg={2} md={2} sm={12} xs={12} >
                                                                                                 <div className="d-flex">
                                                                                                     <div className="form-group cus-select-group">
                                                                                                         <Form.Control className="form-control fill-input" as="select" name="require_shipping">
@@ -534,23 +536,23 @@ const Report_Inner = () => {
                                                                                                 <Form.Check aria-label="option 7" label="Sun" inline />
                                                                                             </div>
                                                                                             <Form.Group as={Row} className="mt-4" controlId="formHorizontalEmail">
-                                                                                                <Col md={5}>
+                                                                                                <Col xxl={5} xl={5} lg={5} md={5} sm={12} xs={12}>
                                                                                                     <Form.Check className="mt-2" inline label="On calender day(s):" name="group2" type="radio" />
                                                                                                 </Col>
-                                                                                                <Col md={2}>
+                                                                                                <Col xxl={2} xl={2} lg={2} md={2} sm={12} xs={12}>
                                                                                                     <Form.Control type="text" placeholder="" />
                                                                                                 </Col>
-                                                                                                <Col md={2}>
+                                                                                                <Col xxl={2} xl={2} lg={2} md={2} sm={12} xs={12}>
                                                                                                 <lable className='mt-3'>Like 1,3-6</lable>
                                                                                             </Col>
                                                                                             </Form.Group>
                                                                                         </div>
                                                                                     </div>
                                                                                 </Col>
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <Row className="g-3">
                                                                                         <h3 className="txt_color mt-4">Start Time</h3>
-                                                                                        <Col md={6}>
+                                                                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                             <div className="form-group cus-select-group">
                                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                     <option>Select Hours</option>
@@ -561,7 +563,7 @@ const Report_Inner = () => {
                                                                                                 <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                                             </div>
                                                                                         </Col>
-                                                                                        <Col md={6}>
+                                                                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                             <div className="form-group cus-select-group">
                                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                     <option>Select Minuts</option>
@@ -585,12 +587,12 @@ const Report_Inner = () => {
                                                                                 
                                                                             </Row>
                                                                             <Row className="Once">
-                                                                            <Col md={6}>
+                                                                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <Row className="g-3">
                                                                                     <h3 className="txt_color mt-4">One-time Schedule</h3>
                                                                                     <h3 className="txt_color mt-2">Run Only Once:</h3>
                                                                                         <h3 className="txt_color mt-2">Start Time</h3>
-                                                                                        <Col md={6}>
+                                                                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                             <div className="form-group cus-select-group">
                                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                     <option>Select Hours</option>
@@ -601,7 +603,7 @@ const Report_Inner = () => {
                                                                                                 <Icon icon="ic:round-keyboard-arrow-down" className='inputIcon' />
                                                                                             </div>
                                                                                         </Col>
-                                                                                        <Col md={6}>
+                                                                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                             <div className="form-group cus-select-group">
                                                                                                 <Form.Control className="form-control fill-input" as="select" name="require_shipping">
                                                                                                     <option>Select Minuts</option>
@@ -639,7 +641,7 @@ const Report_Inner = () => {
                                                                             </div>
                                                                             <div className=" row mt-3">
                                                                                 <h6 className='mt-4 mb-3 fw-bold'>Details</h6>
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <Table responsive table-striped>
                                                                                         <thead>
                                                                                             <tr>
@@ -683,7 +685,7 @@ const Report_Inner = () => {
                                                                                         </tbody>
                                                                                     </Table>
                                                                                 </Col>
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <Table responsive>
                                                                                         <thead>
                                                                                             <tr>
