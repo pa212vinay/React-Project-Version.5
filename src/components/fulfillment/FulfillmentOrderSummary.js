@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Form, Row, Modal, Col } from 'react-bootstrap';
 import { Icon } from '@iconify/react';
 import { Formik, Field } from 'formik';
+import FulfillmentResize from './FulfillmentResize';
 
 
 export default function FulfillmentOrderSummary() {
@@ -204,15 +205,13 @@ export default function FulfillmentOrderSummary() {
                         <div className="col-xxl-7 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div className=" bg_col p-3">
                                 <div className="form-group cus-form-group">
-                                    <Form.Control placeholder="Wholesale Price" className='fill-input' />
-                                    <label htmlFor="shipping" className='float-label'>Search Product</label>
+                                    <FulfillmentResize />
 
                                 </div>
 
                             </div>
                         </div>
                     </div>
-
                 </td>
             </tr>
         </>
