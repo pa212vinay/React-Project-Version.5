@@ -3,7 +3,7 @@ import { Outlet } from 'react-router'
 import Header from '../common/Header';
 import Sidebar from '../common/Sidebar';
 
-export default function Layout() {
+export default function Layout () {
     return (
         <>
             <div className='app_page'>
@@ -16,3 +16,4 @@ export default function Layout() {
         </>
     )
 }
+

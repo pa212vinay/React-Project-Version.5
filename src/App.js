@@ -86,6 +86,9 @@ import Products from './components/dashboard/Products';
 import Sales from './components/dashboard/Sales';
 import Customers from './components/dashboard/Customers';
 
+// -----Login------- 
+import Login from './components/common/Login';
+
 function App() {
   return (
     <>
@@ -93,9 +96,13 @@ function App() {
       <div className='appnew'>
         <Router>
           <Routes>
+          <Route path="/" element={<Login />} />
             <Route>
               <Route path="/" element={<Layout />}>
-                <Route path="/" element={<Customer_Dashboard />} />
+            
+                {/* <Route path='' */}
+              
+                <Route path="/Customer_Dashboard" element={<Customer_Dashboard />} />
                 <Route path="/Invoice" element={<Invoice />} />
                 <Route path="/Attachment" element={<Attachment />} />
                 <Route path="/Subscription" element={<Subscription />} />
@@ -168,6 +175,8 @@ function App() {
                  <Route path="/Products" element={<Products />} />
                  <Route path="/Sales" element={<Sales />} />
                  <Route path="/Customers" element={<Customers />} />
+                 
+                 {/* <Route path="/Hello" element={<Hello />} /> */}
 
               </Route>
 

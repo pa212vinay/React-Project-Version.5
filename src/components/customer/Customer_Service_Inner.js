@@ -33,7 +33,7 @@ const Customer_service_inner = () => {
                             <tbody>
                                 <tr>
                                     <td><Form.Check inline name="group1" /></td>
-                                    <td><Link to="/" className="text-decoration-none">1</Link></td>
+                                    <td><Link to="/Customer_Dashboard" className="text-decoration-none">1</Link></td>
                                     <td>menual testing</td>
                                     <td>$399.00</td>
                                     <td>$399.00</td>
@@ -54,7 +54,7 @@ const Customer_service_inner = () => {
                                 </tr>
                                 <tr>
                                     <td><Form.Check inline name="group1" /></td>
-                                    <td><Link to="/" className="text-decoration-none">2</Link></td>
+                                    <td><Link to="/Customer_Dashboard" className="text-decoration-none">2</Link></td>
                                     <td>menual testing</td>
                                     <td>$399.00</td>
                                     <td>$399.00</td>
@@ -74,7 +74,7 @@ const Customer_service_inner = () => {
                                 </tr>
                                 <tr>
                                     <td><Form.Check inline name="group1" /></td>
-                                    <td><Link to="/" className="text-decoration-none">3</Link></td>
+                                    <td><Link to="/Customer_Dashboard" className="text-decoration-none">3</Link></td>
                                     <td>menual testing</td>
                                     <td>$399.00</td>
                                     <td>$399.00</td>
@@ -94,7 +94,7 @@ const Customer_service_inner = () => {
                                 </tr>
                                 <tr>
                                     <td><Form.Check inline name="group1" /></td>
-                                    <td><Link to="/" className="text-decoration-none">4</Link></td>
+                                    <td><Link to="/Customer_Dashboard" className="text-decoration-none">4</Link></td>
                                     <td>menual testing</td>
                                     <td>$399.00</td>
                                     <td>$399.00</td>
@@ -114,7 +114,7 @@ const Customer_service_inner = () => {
                                 </tr>
                                 <tr>
                                     <td><Form.Check inline name="group1" /></td>
-                                    <td><Link to="/" className="text-decoration-none">5</Link></td>
+                                    <td><Link to="/Customer_Dashboard" className="text-decoration-none">5</Link></td>
                                     <td>menual testing</td>
                                     <td>$399.00</td>
                                     <td>$399.00</td>
