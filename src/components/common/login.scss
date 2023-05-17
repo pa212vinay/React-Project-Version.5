@@ -1,0 +1,30 @@
+@import '../../css/abstracts/abstract-dir';
+@import '../../css/base/base-dir';
+@import '../../css/utility/utility-dir';
+
+
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  // display: inline-block;
+  display: flex;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  .Logo_blue {
+    width: 150px;
+  }
+
+  .form-right i {
+    font-size: 100px;
+  }
+
+  .Logo_white {
+    width: 250px;
+  }
+
+}

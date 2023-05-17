@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Row, Col, Nav, Tab, Form, Table } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import { Icon } from '@iconify/react';
 import "react-datepicker/dist/react-datepicker.css";
+// import  Login from '../login/Login';
 
 import Report_Sidebar from "./Report_Sidebar";
 
@@ -115,13 +117,15 @@ const Report_Inner = () => {
                                                                             </div>
                                                                         </Col>
                                                                         <div className="text-center">
+                                                                            <Link to="/Login">
                                                                             <button className="btn-hover color-3 my-3">View Report</button>
+                                                                            </Link>
                                                                         </div>
                                                                     </Row>
                                                                 </div>
                                                                 <div className="bg_col p-3 mt-3">
                                                                     <Row>
-                                                                        <Col md={12}>
+                                                                        <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12}>
                                                                             <h3 className="txt_color fw-bold mb-4">HieCOR - Beta Sales Summary Report</h3>
                                                                             <div>
 
@@ -132,7 +136,7 @@ const Report_Inner = () => {
                                                                             </div>
                                                                             <div className=" row mt-3">
                                                                                 <h6 className='mt-4 mb-3 fw-bold'>Details</h6>
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <Table responsive table-striped>
                                                                                         <thead>
                                                                                             <tr>
@@ -176,7 +180,7 @@ const Report_Inner = () => {
                                                                                         </tbody>
                                                                                     </Table>
                                                                                 </Col>
-                                                                                <Col md={6}>
+                                                                                <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                                                                     <Table responsive>
                                                                                         <thead>
                                                                                             <tr>
