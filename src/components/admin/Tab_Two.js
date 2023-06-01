@@ -33,38 +33,38 @@ const Tab_Two = () => {
         <Row className="mt-0 g-3">
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Alerts} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="arcticons:alertswiss" width="30" className="me-2" />Alerts
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Amazon_settings} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="uil:amazon" width="30" className="me-2" />Amazon Settings
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Coupons} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="mdi:coupon-outline" width="30" className="me-2" />Coupons
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Custom_domains} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="gridicons:domains" width="30" className="me-2" />Custom Domains
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
         </Row>

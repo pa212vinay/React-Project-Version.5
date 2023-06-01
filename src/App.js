@@ -92,8 +92,21 @@ import Login from './components/common/Login';
 // -----Admin------- 
 import Admin from './components/admin/Admin';
 import Setting from './components/admin/Setting';
-import Tab_One from './components/admin/Tab_One';
-import New from "./components/admin/New";
+// import Tab_One from './components/admin/Tab_One';
+// import Tab_Two from "./components/admin/Tab_Two";
+// import Tab_Three from "./components/admin/Tab_Three";
+// import Tab_Four from "./components/admin/Tab_Four";
+// import Tab_Five from "./components/admin/Tab_Five";
+// import Tab_Six from "./components/admin/Tab_Six";
+// import Tab_Seven from "./components/admin/Tab_Seven";
+// import Tab_Eight from "./components/admin/Tab_Eight";
+
+
+
+ 
+
+
+
 
 function App() {
   return (
@@ -186,8 +199,20 @@ function App() {
                  {/* -----Admin-------  */}
                  <Route path="/Admin" element={<Admin />} />
                  <Route path="/Setting" element={<Setting />} />
-                 <Route path="/Tab_One" element={<Tab_One />} />
-                 <Route path="/New" element={<New />} />
+                 {/* <Route path="/Tab_One" element={<Tab_One />} />
+                 <Route path="/Tab_Two" element={<Tab_Two />} />
+                 <Route path="/Tab_Three" element={<Tab_Three />} />
+                 <Route path="/Tab_Four" element={<Tab_Four />} />
+                 <Route path="/Tab_Five" element={<Tab_Five />} />
+                 <Route path="/Tab_Six" element={<Tab_Six />} />
+                 <Route path="/Tab_Seven" element={<Tab_Seven />} />
+                 <Route path="/Tab_Eight" element={<Tab_Eight />} /> */}
+
+
+                 
+
+
+
               </Route>
 
 

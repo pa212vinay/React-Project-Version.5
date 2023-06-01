@@ -32,8 +32,8 @@ const Tab_One = () => {
 
 
     return (
-        <div className="container-flute p-3">
-        <div className="bg_col Admin_tab">
+       
+        <div className="Admin_tab">
             <Row className="g-3">
                 
                 <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
@@ -79,7 +79,6 @@ const Tab_One = () => {
                 </Col>
             </Row>
 
-        </div>
         </div>
     )
 };

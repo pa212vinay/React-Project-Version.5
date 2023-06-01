@@ -33,38 +33,38 @@ const Tab_Six = () => {
         <Row className="mt-0 g-3">
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Order_status} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="dashicons:format-status" width="30" className="me-2" />Order Status
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={POS} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="mdi:point-of-sale" width="30" className="me-2" />Point Of Sale (POS)
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={PAX} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="cryptocurrency:pax" width="30" className="me-2" />PAX
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={QuickBooks} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="simple-icons:quickbooks" width="30" className="me-2" />QuickBooks
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
         </Row>

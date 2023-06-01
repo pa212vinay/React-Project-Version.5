@@ -20,31 +20,31 @@ const Tab_Eight = () => {
         </Tooltip>
     );
     return (
-        <div className="bg_col Admin_tab p-3">
+        // <div className="bg_col Admin_tab p-3">
 
             <Row className="mt-0 g-3">
 
                 <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                     <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Workflow} >
-                        <Link>
+                        
                             <div className="box-hight">
                                 <Icon icon="fa6-solid:network-wired" width="30" className="me-2" />Workflow
                             </div>
-                        </Link>
+                        
                     </OverlayTrigger>
                 </Col>
                 <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                     <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Zebra_barcode} >
-                        <Link>
+                        
                             <div className="box-hight">
                                 <Icon icon="ic:outline-barcode" width="30" className="me-2" />Zebra Barcode
                             </div>
-                        </Link>
+                        
                     </OverlayTrigger>
                 </Col>
 
             </Row>
-        </div>
+        // </div>
     )
 };
 

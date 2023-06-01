@@ -1,10 +1,19 @@
-import React from "react"
+import React, { useState, useRef } from 'react';
 import { Row, Form } from "react-bootstrap";
 import { Icon } from '@iconify/react';
 import "./Admin.scss"
 import Tab_One from './Tab_One';
+import Tab_Two from "./Tab_Two";
+import Tab_Three from "./Tab_Three";
+import Tab_Four from "./Tab_Four";
+import Tab_Five from "./Tab_Five";
+import Tab_Six from "./Tab_Six";
+import Tab_Seven from "./Tab_Seven";
+import Tab_Eight from "./Tab_Eight";
+
 
 const Setting = () => {
+    const [Check_hide, setCheck_hide] = useState(false);
 
     return (
         <div className="container-flude p-3">
@@ -170,14 +179,228 @@ const Setting = () => {
                         <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
                             <div className="card h-100">
                                 <div className="img-box m-auto">
-                                    hello
+                                    Image
                                 </div>
+                            </div>
+                        </div>
+                    </Row>
+                    <Row className="mt-5 g-3">
+                        <h3>System Features</h3>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="mdi:monitor-dashboard" width="30" className="me-2 txt_color" />
+                                Dashboard
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="medical-icon:i-interpreter-services" width="30" className="me-2 txt_color" />
+                                Customer Service
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="material-symbols:contact-phone-outline" width="30" className="me-2 txt_color" />
+                                Contacts
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="entypo:email" width="30" className="me-2 txt_color" />
+                                Marketing Emailer
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="fluent-mdl2:product-catalog" width="30" className="me-2 txt_color" />
+                                Inventory
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="streamline:shipping-transfer-cart-package-box-fulfillment-cart-warehouse-shipping-delivery" width="30" className="me-2 txt_color" />
+                                Fulfillment
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="tabler:report" width="30" className="me-2 txt_color" />
+                                Reporting
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="solar:routing-2-broken" width="30" className="me-2 txt_color" />
+                                Routing
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="healthicons:social-work-outline" width="30" className="me-2 txt_color" />
+                                Social Media
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="fluent-mdl2:join-online-meeting" width="30" className="me-2 txt_color" />
+                                HieCOR Public eCommerce Website
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="fluent:form-new-24-regular" width="30" className="me-2 txt_color" />
+                                New Order
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="la:file-invoice" width="30" className="me-2 txt_color" />
+                                Invoice
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="fontisto:shopping-pos-machine" width="18" className="me-2 txt_color" />
+                                Point Of Sale (POS)
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="simple-icons:googlecalendar" width="30" className="me-2 txt_color" />
+                                Google Calendar
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="streamline:interface-time-clock-hand-hand-clock-time-give-human-person" width="30" className="me-2 txt_color" />
+                                Anywhere Cart
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="mdi:workflow-outline" width="30" className="me-2 txt_color" />
+                                Workflow
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="icon-park-outline:tickets-two" width="30" className="me-2 txt_color" />
+                                Tickets
+                                <Form.Check aria-label="option 1" inline className="float-end" />
                             </div>
                         </div>
 
 
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="mdi:printer-receipt-cog-outline" width="30" className="me-2 txt_color" />
+                                Advanced Receipt Setup
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="fluent-mdl2:coupon" width="30" className="me-2 txt_color" />
+                                Coupons
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="heroicons-outline:receipt-tax" width="30" className="me-2 txt_color" />
+                                Taxes
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="simple-icons:quickbooks" width="30" className="me-2 txt_color" />
+                                QuickBooks
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="ic:outline-barcode" width="30" className="me-2 txt_color" />
+                                Barcode Printer
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="foundation:social-amazon" width="30" className="me-2 txt_color" />
+                                Amazon
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="cib:ebay" width="30" className="me-2 txt_color" />
+                                eBay
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <Icon icon="carbon:api" width="30" className="me-2 txt_color" />
+                                Web Service (API)
+                                <Form.Check aria-label="option 1" inline className="float-end" />
+                            </div>
+                        </div>
+                        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                            <div className="bg_col p-3 check-form">
+                                <div>
+                                    <Icon icon="iconoir:hand-card" width="30" className="me-2 txt_color" />
+                                    Accept Credit Cards
+                                    <Form.Check aria-label="option 1" inline className="float-end" onClick={() => setCheck_hide(!Check_hide)}/>
+                                </div>
+                                {
+                            Check_hide ?
+                                <div className="ps-3">
+                                    <div className="mt-2">
+                                        <Icon icon="material-symbols:tamper-detection-on-outline" width="20" className="me-2 txt_color" />
+                                        Fraud Detection
+                                        <Form.Check aria-label="option 1" inline className="float-end" />
+                                    </div>
+                                    <div className="mt-2">
+                                        <Icon icon="cryptocurrency:pax" width="20" className="me-2 txt_color" />
+                                        PAX/Ingenico
+                                        <Form.Check aria-label="option 1" inline className="float-end" />
+                                    </div>
+                                </div>
+                                : null
+}
+                            </div>
+                        </div>
                     </Row>
                 </div>
+                <Tab_Two />
+                <Tab_Three />
+                <Tab_Four />
+                <Tab_Five />
+                <Tab_Six />
+                <Tab_Seven />
+                <Tab_Eight />
             </div>
         </div>
     )

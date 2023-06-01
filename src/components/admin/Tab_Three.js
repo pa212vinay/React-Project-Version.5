@@ -32,38 +32,38 @@ const Tab_Three = () => {
         <Row className="mt-0 g-3">
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Custom_domains_details} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="streamline:computer-database-server-3-server-network-internet" width="30" className="me-2" />Custom Domains Details
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={eBay_settings} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="jam:ebay" width="50" className="me-2" />eBay Settings
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Email} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="ic:baseline-alternate-email" width="30" className="me-2" />Email
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Anywhere_settings} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="material-symbols:add-shopping-cart-rounded" width="30" className="me-2" />Anywhere Cart Settings
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
         </Row>

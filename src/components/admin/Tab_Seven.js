@@ -34,38 +34,38 @@ const Tab_Seven = () => {
         <Row className="mt-0 g-3">
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Receipt_setup} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="fluent:receipt-32-regular" width="30" className="me-2" />Receipt Setup
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Social_media} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="healthicons:social-work-outline" width="30" className="me-2" />Social Media
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Subscription} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="wpf:renew-subscription" width="30" className="me-2" />Subscription
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
             <Col xxl={3} xl={3} lg={6} md={6} sm={12} xs={12}>
                 <OverlayTrigger delay={{ show: 250, hide: 250 }} overlay={Taxes} >
-                    <Link>
+                    
                         <div className="box-hight">
                             <Icon icon="heroicons-outline:receipt-tax" width="30" className="me-2" />Taxes
                         </div>
-                    </Link>
+                    
                 </OverlayTrigger>
             </Col>
         </Row>
