@@ -89,10 +89,15 @@ import Customers from './components/dashboard/Customers';
 // -----Login------- 
 import Login from './components/common/Login';
 
+// -----Admin------- 
+import Admin from './components/admin/Admin';
+import Setting from './components/admin/Setting';
+import Tab_One from './components/admin/Tab_One';
+import New from "./components/admin/New";
+
 function App() {
   return (
     <>
-
       <div className='appnew'>
         <Router>
           <Routes>
@@ -178,6 +183,11 @@ function App() {
                  
                  {/* <Route path="/Hello" element={<Hello />} /> */}
 
+                 {/* -----Admin-------  */}
+                 <Route path="/Admin" element={<Admin />} />
+                 <Route path="/Setting" element={<Setting />} />
+                 <Route path="/Tab_One" element={<Tab_One />} />
+                 <Route path="/New" element={<New />} />
               </Route>
 
 

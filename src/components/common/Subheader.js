@@ -7,14 +7,14 @@ import './subheader.scss';
 
 const Subheader = () => {
   return (
-    <>
+    <>  
       <Navbar bg="light" expand="xl" className='subheader'>
         <Container fluid>
           <Navbar.Toggle aria-controls="basic-navbar-nav bg-light" className='margin_auto my-1' />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav variant="pills" defaultActiveKey="/" className=''>
               <Nav.Item>
-                <NavLink to="/" eventKey="link-0"><Icon icon="clarity:dashboard-line" width="24" className='me-1 submenuIcon'/>Dashbord</NavLink>
+                <NavLink to="/Customers" eventKey="link-0"><Icon icon="clarity:dashboard-line" width="24" className='me-1 submenuIcon'/>Dashbord</NavLink>
               </Nav.Item>
               <Nav.Item>
                 <NavLink to="/Auth_Capture" eventKey="link-1"><Icon icon="material-symbols:format-list-bulleted-rounded" width="24" className='me-1 submenuIcon'/>Order</NavLink>
