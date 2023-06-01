@@ -85,7 +85,7 @@ const Sidebar = () => {
             </NavLink>
             </Nav.Item>
             <Nav.Item>
-            <NavLink exact to="/Setting" activeClassName="activeClicked" eventKey="link-3.13">
+            <NavLink exact to="/Admin" activeClassName="activeClicked" eventKey="link-3.13">
               <CDBSidebarMenuItem icon="cog">Setting</CDBSidebarMenuItem>
             </NavLink>
             </Nav.Item>

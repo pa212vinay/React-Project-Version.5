@@ -52,7 +52,7 @@ const Customer_Details = () => {
                             <label htmlFor="shipping" className='float-label'>User ID</label>
                           </div>
                           <button className="btn-hover color-2 mt-3 me-2"><FaCheck /></button>
-                          <button className="btn-hover color-1 mt-3"><ImCross /></button>
+                          <button onClick={() => setShow(false)} className="btn-hover color-1 mt-3"><ImCross /></button>
                         </div>
                       </Tooltip>
                     )}
